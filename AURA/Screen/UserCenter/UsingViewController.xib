@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsingViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LtX-FD-yLd">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="457"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <mutableString key="text">aura使用指南
+
+亲爱的用户你好,非常感谢你使用aura，希望你能在aura里找到自己喜欢的东西。若有任何疑问或者建议等，请点击“反馈”留下你的看法，我会非常感激和重视。
+aura是基于活动的集体相册，能帮你和其他人一起分享集体活动的相关照片，让大家有更简单方式去记录集体活动，也能发现其他有趣的人或者事，分享你的精彩，探索世界的魅力。
+
+加入相册
+用aura拍照时aura会推荐给你一个附近的活跃相册，会显示该相册的种类、离你的距离、创建时刻离拍摄时刻的时间间隔，并且如果该相册有你关注的便会显示关注人的头像，如果想加入该相册可以点击此相册即可。为了让你有更多机会选择合适的相册，在经过简单编辑后，还会显示更多附近的活跃相册列表供你选择，你可以根据里面的信息按需加入。填写简单的信息便可分享你的照片，照片会上传到你选中的相册里。
+创建相册
+用aura拍摄照片后，如果你拍摄照片的相关活动没有合适的相册，请你在选择相册的页面点击创建按钮，填写简单的信息，选择合适的活动种类，分享照片后便建立了一个活跃相册。如果不选择种类，这张照片会上传至你的个人相册，个人相册不会成为活跃相册推荐给其他用户让其他照片加入。如果你希望你创建的相册只会被推荐给好友，可以打开“仅好友可见”功能。
+
+再次感谢你的使用，祝愉快！
+
+David
+
+2015.4.16 武汉</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

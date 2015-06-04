@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="SHn-sF-CqS" customClass="MainToolbar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PG-o7-PUH">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="47"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBtnFirstClick:" destination="SHn-sF-CqS" eventType="touchUpInside" id="bkY-RF-Fte"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="24u-Vf-pEh">
+                    <rect key="frame" x="34" y="9" width="32" height="29"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJ1-bY-ACs">
+                    <rect key="frame" x="220" y="0.0" width="100" height="47"/>
+                    <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="deviceRGB"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onBtnSecondClick:" destination="SHn-sF-CqS" eventType="touchUpInside" id="L2g-MD-icR"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personal center icon .png" translatesAutoresizingMaskIntoConstraints="NO" id="7Tb-qS-Vwk">
+                    <rect key="frame" x="258" y="9" width="29" height="29"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tTx-yn-1SD">
+                    <rect key="frame" x="110" y="0.0" width="100" height="47"/>
+                    <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="deviceRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnFrist" destination="4PG-o7-PUH" id="L5b-oc-aav"/>
+                <outlet property="btnSecond" destination="IJ1-bY-ACs" id="DMj-X7-XwU"/>
+                <outlet property="discoveryBackground" destination="tTx-yn-1SD" id="18N-Eh-PlE"/>
+                <outlet property="home" destination="24u-Vf-pEh" id="eyf-dm-8RI"/>
+                <outlet property="userCenter" destination="7Tb-qS-Vwk" id="0cw-9q-R3t"/>
+            </connections>
+            <point key="canvasLocation" x="206" y="100"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home.png" width="32" height="29"/>
+        <image name="personal center icon .png" width="32" height="32"/>
+    </resources>
+</document>

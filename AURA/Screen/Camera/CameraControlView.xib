@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="CameraControlView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="c矩形 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Zj-rX-blw">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaN-mI-RNJ">
+                    <rect key="frame" x="10" y="0.0" width="40" height="64"/>
+                    <state key="normal" image="关闭icon.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickCancel:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="YgG-An-Ie2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEx-iP-fmZ">
+                    <rect key="frame" x="271" y="0.0" width="40" height="64"/>
+                    <state key="normal" image="闪光灯A.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickFlash:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="iKV-iT-c67"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9G-YI-k7x">
+                    <rect key="frame" x="140" y="12" width="40" height="40"/>
+                    <state key="normal" image="前后摄像头切换.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="OnClickSwith:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="m1w-gE-7Le"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="c矩形1.png" translatesAutoresizingMaskIntoConstraints="NO" id="bAt-S6-alN">
+                    <rect key="frame" x="0.0" y="384" width="320" height="184"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFO-jY-7yN">
+                    <rect key="frame" x="38" y="483" width="47" height="47"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickImage:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="Yh8-KZ-ZXI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8v-ff-HUd">
+                    <rect key="frame" x="126" y="462" width="68" height="68"/>
+                    <state key="normal" image="照相机icon.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickTake:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="7MH-CK-Y1N"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q04-rB-aqm">
+                    <rect key="frame" x="232" y="497" width="52" height="32"/>
+                    <state key="normal" image="设想icon.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="照片缩略图.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vsh-xX-91w">
+                    <rect key="frame" x="38" y="471" width="50" height="50"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qyT-na-8ut">
+                    <rect key="frame" x="0.0" y="384" width="320" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="i5M-Pr-FkT" id="3mn-pP-3sr"/>
+                        <outlet property="delegate" destination="i5M-Pr-FkT" id="kB1-Nd-Fce"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="btnFlashMode" destination="eEx-iP-fmZ" id="CYt-9W-Jsn"/>
+                <outlet property="lastImage" destination="Vsh-xX-91w" id="ejc-sR-hfY"/>
+                <outlet property="tableView" destination="qyT-na-8ut" id="kIC-gB-Pf4"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="c矩形 2.png" width="320" height="64"/>
+        <image name="c矩形1.png" width="320" height="122"/>
+        <image name="关闭icon.png" width="19" height="19"/>
+        <image name="前后摄像头切换.png" width="40" height="31"/>
+        <image name="照片缩略图.png" width="47" height="47"/>
+        <image name="照相机icon.png" width="68" height="68"/>
+        <image name="设想icon.png" width="52" height="32"/>
+        <image name="闪光灯A.png" width="16" height="28"/>
+    </resources>
+</document>

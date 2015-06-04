@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HomeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="470"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="来自相册" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAQ-Hw-G4Z">
+                        <rect key="frame" x="65" y="8" width="60" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="de.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lqh-aw-oIi">
+                        <rect key="frame" x="0.0" y="54" width="320" height="320"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="用户头像.png" translatesAutoresizingMaskIntoConstraints="NO" id="171-jv-2eL">
+                        <rect key="frame" x="10" y="7" width="40" height="40"/>
+                        <gestureRecognizers/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="俱乐部会员活动" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJu-Jl-P3U">
+                        <rect key="frame" x="126" y="8" width="180" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mick 5m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ge-JF-U6d">
+                        <rect key="frame" x="65" y="26" width="240" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="05相册外_点赞人数.png" translatesAutoresizingMaskIntoConstraints="NO" id="yGv-9Z-rSn">
+                        <rect key="frame" x="10" y="384" width="16" height="14"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="989" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trX-vt-uGP">
+                        <rect key="frame" x="33" y="380" width="200" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5Z-Af-5e3">
+                        <rect key="frame" x="0.0" y="469" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJN-yq-h5j">
+                        <rect key="frame" x="70" y="7" width="250" height="40"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="onClickDetail:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="U3g-nv-Txz"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="05相册外_箭头.png" translatesAutoresizingMaskIntoConstraints="NO" id="tis-26-oF1">
+                        <rect key="frame" x="303" y="21" width="7" height="12"/>
+                        <gestureRecognizers/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEt-SQ-nbb">
+                        <rect key="frame" x="60" y="403" width="60" height="50"/>
+                        <state key="normal" image="05相册外_评论.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="onClickComment:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uup-fr-Cy5"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7y-K2-CAE">
+                        <rect key="frame" x="252" y="403" width="60" height="50"/>
+                        <state key="normal" image="05相册外_更多.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="onClickMore:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kmr-uC-5iL"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1M-41-lZV">
+                        <rect key="frame" x="0.0" y="403" width="60" height="50"/>
+                        <state key="normal" image="05相册外_赞.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted" image="05相册外_赞点击态.png"/>
+                        <connections>
+                            <action selector="onClickLike:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Nbj-oy-cFs"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgY-Kp-Ap4">
+                        <rect key="frame" x="4" y="6" width="50" height="40"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="onClickUser:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="X30-zk-0r4"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <gestureRecognizers/>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="btnDetail" destination="LJN-yq-h5j" id="KFN-nt-dNq"/>
+                <outlet property="btnLike" destination="d1M-41-lZV" id="ey3-oF-VOE"/>
+                <outlet property="imageArrow" destination="tis-26-oF1" id="KLW-Ei-jcb"/>
+                <outlet property="imgPhoto" destination="lqh-aw-oIi" id="zRG-eM-JrW"/>
+                <outlet property="imgUser" destination="171-jv-2eL" id="9Fs-PL-N53"/>
+                <outlet property="lblAlbumName" destination="jJu-Jl-P3U" id="UTH-ZP-gMP"/>
+                <outlet property="lblDescription" destination="4Ge-JF-U6d" id="fUb-cU-mIP"/>
+                <outlet property="lblLikeCount" destination="trX-vt-uGP" id="JpN-Ay-xtx"/>
+                <outlet property="lblTitle" destination="aAQ-Hw-G4Z" id="J2U-5P-ctL"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="05相册外_更多.png" width="42" height="42"/>
+        <image name="05相册外_点赞人数.png" width="16" height="14"/>
+        <image name="05相册外_箭头.png" width="7" height="12"/>
+        <image name="05相册外_评论.png" width="42" height="42"/>
+        <image name="05相册外_赞.png" width="42" height="42"/>
+        <image name="05相册外_赞点击态.png" width="42" height="42"/>
+        <image name="de.jpg" width="640" height="960"/>
+        <image name="用户头像.png" width="70" height="70"/>
+    </resources>
+</document>
