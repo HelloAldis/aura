@@ -243,8 +243,4 @@ typedef enum : NSUInteger {
 }
 */
 
-- (void)dealloc {
-  DDLogDebug(@"AlbumDetailViewController dealloc");
-}
-
 @end

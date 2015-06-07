@@ -67,10 +67,6 @@
   [self performSelector:@selector(popAnimation) withObject:nil afterDelay:0.0];
 }
 
-- (void)dealloc {
-  DDLogDebug(@"LoginViewController dealloc");
-}
-
 - (void)popAnimation {
   [UIView beginAnimations:nil context:nil];
   [UIView setAnimationDuration:0.3];

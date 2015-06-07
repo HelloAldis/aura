@@ -54,7 +54,6 @@
 }
 
 - (IBAction)onClickLike:(id)sender {
-  
   if (!self.photo.haveFavourte) {
     FavouriteRequest *request = [[FavouriteRequest alloc] init];
     [request setPhotoid:self.photo.photoid];
@@ -67,7 +66,7 @@
 }
 
 - (IBAction)onClickComment:(id)sender {
-
+  [ViewControllerContainer showPhotoDetail:self.photo];
 }
 
 - (IBAction)onClickMore:(id)sender {

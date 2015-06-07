@@ -157,8 +157,4 @@
   self.fldBirthday.text = [NSDate stringFromDate:self.datePicker.date];
 }
 
-- (void)dealloc {
-  DDLogDebug(@"UserSettingViewController dealloc");
-}
-
 @end

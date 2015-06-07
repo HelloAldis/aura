@@ -45,7 +45,8 @@
 + (UIImage *)defaultUserImage;
 + (void)setDiscoveryArray:(NSMutableArray *)array;
 + (NSMutableArray *)discoveryArray;
-
++ (void)setComments:(NSMutableArray *)array;
++ (NSMutableArray *)comments;
 
 + (BOOL)isMe:(NSString *)userId;
 + (void)logout;

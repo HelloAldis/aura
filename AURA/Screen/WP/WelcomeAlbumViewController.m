@@ -292,10 +292,6 @@
   self.sumDx = 0;
 }
 
-- (void)dealloc {
-  DDLogDebug(@"WelcomeAlbumViewController dealloc");
-}
-
 //#pragma mark - gesture delegate 
 //- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
 //  DDLogDebug(@"shouldBeRequiredToFailByGestureRecognizer");

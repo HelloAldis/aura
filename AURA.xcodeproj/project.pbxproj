@@ -169,6 +169,22 @@
 		ADCA6F5F19D45DAB0055E46A /* MainToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCA6F5E19D45DAB0055E46A /* MainToolbar.xib */; };
 		ADCA6F6619D45E0A0055E46A /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCA6F6319D45E0A0055E46A /* AwesomeMenu.m */; };
 		ADCA6F6719D45E0A0055E46A /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCA6F6519D45E0A0055E46A /* AwesomeMenuItem.m */; };
+		ADD131151B242D8D00AE9972 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131121B242D8D00AE9972 /* Aspects.m */; };
+		ADD131161B242D8D00AE9972 /* LeakMoniter.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131141B242D8D00AE9972 /* LeakMoniter.m */; };
+		ADD131221B24329D00AE9972 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131201B24329D00AE9972 /* PhotoDetailViewController.m */; };
+		ADD131231B24329D00AE9972 /* PhotoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD131211B24329D00AE9972 /* PhotoDetailViewController.xib */; };
+		ADD131271B24365D00AE9972 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131251B24365D00AE9972 /* CommentTableViewCell.m */; };
+		ADD131281B24365D00AE9972 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD131261B24365D00AE9972 /* CommentTableViewCell.xib */; };
+		ADD1312B1B24390F00AE9972 /* UUInputFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD1312A1B24390F00AE9972 /* UUInputFunctionView.m */; };
+		ADD1312F1B244F2500AE9972 /* TagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD1312D1B244F2500AE9972 /* TagTableViewCell.m */; };
+		ADD131301B244F2500AE9972 /* TagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD1312E1B244F2500AE9972 /* TagTableViewCell.xib */; };
+		ADD131371B244FC000AE9972 /* PhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131351B244FC000AE9972 /* PhotoTableViewCell.m */; };
+		ADD131381B244FC000AE9972 /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD131361B244FC000AE9972 /* PhotoTableViewCell.xib */; };
+		ADD1313B1B247FB800AE9972 /* QueryCommentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD1313A1B247FB800AE9972 /* QueryCommentRequest.m */; };
+		ADD1313E1B24899200AE9972 /* AddCommentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD1313D1B24899200AE9972 /* AddCommentRequest.m */; };
+		ADD131411B248EC500AE9972 /* QueryCommentResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131401B248EC500AE9972 /* QueryCommentResponse.m */; };
+		ADD131441B248F2A00AE9972 /* QueryCommentDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131431B248F2A00AE9972 /* QueryCommentDataHandler.m */; };
+		ADD131471B248F8B00AE9972 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131461B248F8B00AE9972 /* Comment.m */; };
 		ADD18C8A1ADBFF8400FA514A /* 04相册_默认赞@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD18C891ADBFF8400FA514A /* 04相册_默认赞@2x.png */; };
 		ADD1BFA81ADFE15400DBA7D0 /* 筛选框@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD1BFA71ADFE15400DBA7D0 /* 筛选框@2x.png */; };
 		ADD3AF851AEB4809003A5FFC /* RecommendPhotoesByCityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3AF841AEB4809003A5FFC /* RecommendPhotoesByCityRequest.m */; };
@@ -512,6 +528,34 @@
 		ADCA6F6319D45E0A0055E46A /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
 		ADCA6F6419D45E0A0055E46A /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
 		ADCA6F6519D45E0A0055E46A /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
+		ADD131111B242D8D00AE9972 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		ADD131121B242D8D00AE9972 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		ADD131131B242D8D00AE9972 /* LeakMoniter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakMoniter.h; sourceTree = "<group>"; };
+		ADD131141B242D8D00AE9972 /* LeakMoniter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakMoniter.m; sourceTree = "<group>"; };
+		ADD1311F1B24329D00AE9972 /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		ADD131201B24329D00AE9972 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
+		ADD131211B24329D00AE9972 /* PhotoDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDetailViewController.xib; sourceTree = "<group>"; };
+		ADD131241B24365D00AE9972 /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		ADD131251B24365D00AE9972 /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		ADD131261B24365D00AE9972 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		ADD131291B24390F00AE9972 /* UUInputFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUInputFunctionView.h; sourceTree = "<group>"; };
+		ADD1312A1B24390F00AE9972 /* UUInputFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUInputFunctionView.m; sourceTree = "<group>"; };
+		ADD1312C1B244F2500AE9972 /* TagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagTableViewCell.h; sourceTree = "<group>"; };
+		ADD1312D1B244F2500AE9972 /* TagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagTableViewCell.m; sourceTree = "<group>"; };
+		ADD1312E1B244F2500AE9972 /* TagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagTableViewCell.xib; sourceTree = "<group>"; };
+		ADD131341B244FC000AE9972 /* PhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTableViewCell.h; sourceTree = "<group>"; };
+		ADD131351B244FC000AE9972 /* PhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTableViewCell.m; sourceTree = "<group>"; };
+		ADD131361B244FC000AE9972 /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
+		ADD131391B247FB800AE9972 /* QueryCommentRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryCommentRequest.h; sourceTree = "<group>"; };
+		ADD1313A1B247FB800AE9972 /* QueryCommentRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryCommentRequest.m; sourceTree = "<group>"; };
+		ADD1313C1B24899200AE9972 /* AddCommentRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCommentRequest.h; sourceTree = "<group>"; };
+		ADD1313D1B24899200AE9972 /* AddCommentRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCommentRequest.m; sourceTree = "<group>"; };
+		ADD1313F1B248EC500AE9972 /* QueryCommentResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryCommentResponse.h; sourceTree = "<group>"; };
+		ADD131401B248EC500AE9972 /* QueryCommentResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryCommentResponse.m; sourceTree = "<group>"; };
+		ADD131421B248F2A00AE9972 /* QueryCommentDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryCommentDataHandler.h; sourceTree = "<group>"; };
+		ADD131431B248F2A00AE9972 /* QueryCommentDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryCommentDataHandler.m; sourceTree = "<group>"; };
+		ADD131451B248F8B00AE9972 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		ADD131461B248F8B00AE9972 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		ADD18C891ADBFF8400FA514A /* 04相册_默认赞@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04相册_默认赞@2x.png"; sourceTree = "<group>"; };
 		ADD1BFA71ADFE15400DBA7D0 /* 筛选框@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "筛选框@2x.png"; sourceTree = "<group>"; };
 		ADD3AF831AEB4809003A5FFC /* RecommendPhotoesByCityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendPhotoesByCityRequest.h; sourceTree = "<group>"; };
@@ -965,6 +1009,12 @@
 		ADAAAF7219EAA47C00070A63 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				ADD131291B24390F00AE9972 /* UUInputFunctionView.h */,
+				ADD1312A1B24390F00AE9972 /* UUInputFunctionView.m */,
+				ADD131111B242D8D00AE9972 /* Aspects.h */,
+				ADD131121B242D8D00AE9972 /* Aspects.m */,
+				ADD131131B242D8D00AE9972 /* LeakMoniter.h */,
+				ADD131141B242D8D00AE9972 /* LeakMoniter.m */,
 				C0A746E71ABC0ED300C3FFFF /* LogFormatter.h */,
 				C0A746E81ABC0ED300C3FFFF /* LogFormatter.m */,
 				ADAAAF6F19EAA46B00070A63 /* NSString+Util.h */,
@@ -1039,6 +1089,10 @@
 				2327FA391AE8DD7500347981 /* DeletePhotoRequest.m */,
 				ADD3AF831AEB4809003A5FFC /* RecommendPhotoesByCityRequest.h */,
 				ADD3AF841AEB4809003A5FFC /* RecommendPhotoesByCityRequest.m */,
+				ADD131391B247FB800AE9972 /* QueryCommentRequest.h */,
+				ADD1313A1B247FB800AE9972 /* QueryCommentRequest.m */,
+				ADD1313C1B24899200AE9972 /* AddCommentRequest.h */,
+				ADD1313D1B24899200AE9972 /* AddCommentRequest.m */,
 			);
 			name = Request;
 			path = ../Model/Request;
@@ -1082,6 +1136,8 @@
 				C0B4333E1ADF8F0C00DE2CE9 /* QueryRecentlyInfoResponse.m */,
 				ADD3AF891AEB4C1D003A5FFC /* DiscoveryResponse.h */,
 				ADD3AF8A1AEB4C1D003A5FFC /* DiscoveryResponse.m */,
+				ADD1313F1B248EC500AE9972 /* QueryCommentResponse.h */,
+				ADD131401B248EC500AE9972 /* QueryCommentResponse.m */,
 			);
 			name = Response;
 			path = ../Model/Response;
@@ -1125,6 +1181,8 @@
 				AD716DC91ADA274F006750F9 /* Photo.m */,
 				ADC0124C1AE7D45100F1C92F /* CreatorInfo.h */,
 				ADC0124D1AE7D45100F1C92F /* CreatorInfo.m */,
+				ADD131451B248F8B00AE9972 /* Comment.h */,
+				ADD131461B248F8B00AE9972 /* Comment.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -1157,6 +1215,25 @@
 				ADCA6F6519D45E0A0055E46A /* AwesomeMenuItem.m */,
 			);
 			path = AwesomeMenu;
+			sourceTree = "<group>";
+		};
+		ADD1311B1B24322B00AE9972 /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				ADD1311F1B24329D00AE9972 /* PhotoDetailViewController.h */,
+				ADD131201B24329D00AE9972 /* PhotoDetailViewController.m */,
+				ADD131211B24329D00AE9972 /* PhotoDetailViewController.xib */,
+				ADD131241B24365D00AE9972 /* CommentTableViewCell.h */,
+				ADD131251B24365D00AE9972 /* CommentTableViewCell.m */,
+				ADD131261B24365D00AE9972 /* CommentTableViewCell.xib */,
+				ADD1312C1B244F2500AE9972 /* TagTableViewCell.h */,
+				ADD1312D1B244F2500AE9972 /* TagTableViewCell.m */,
+				ADD1312E1B244F2500AE9972 /* TagTableViewCell.xib */,
+				ADD131341B244FC000AE9972 /* PhotoTableViewCell.h */,
+				ADD131351B244FC000AE9972 /* PhotoTableViewCell.m */,
+				ADD131361B244FC000AE9972 /* PhotoTableViewCell.xib */,
+			);
+			name = PhotoDetail;
 			sourceTree = "<group>";
 		};
 		C0042FE019FE33520017DA8F /* Filter */ = {
@@ -1262,6 +1339,7 @@
 		C02A9D7719D3AA2A00D3113C /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				ADD1311B1B24322B00AE9972 /* PhotoDetail */,
 				C05DB79D1ADB55EA00ED118E /* Discovery */,
 				C0ACC0BB1AB82D0B00F78B06 /* Share */,
 				ADBCA83C19FFDF7F00CA4E2A /* Home */,
@@ -1360,6 +1438,8 @@
 				C0B433411ADF8FCF00DE2CE9 /* QueryRecentlyInfoDataHandler.m */,
 				ADD3AF861AEB49F8003A5FFC /* DiscoveryDataHandler.h */,
 				ADD3AF871AEB49F8003A5FFC /* DiscoveryDataHandler.m */,
+				ADD131421B248F2A00AE9972 /* QueryCommentDataHandler.h */,
+				ADD131431B248F2A00AE9972 /* QueryCommentDataHandler.m */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -1628,6 +1708,7 @@
 				C0ACC0AD1AB6D04600F78B06 /* ActivitySearchingCell.xib in Resources */,
 				AD8125351AB9B24200CB4768 /* comment icon@2x.png in Resources */,
 				C02A9D8B19D3F86700D3113C /* SignUpViewController.xib in Resources */,
+				ADD131381B244FC000AE9972 /* PhotoTableViewCell.xib in Resources */,
 				AD8125701AB9B24200CB4768 /* home@2x.png in Resources */,
 				AD81252F1AB9B24200CB4768 /* 选中@2x.png in Resources */,
 				AD96AA701AC7B14F00E5DEF4 /* 05相册外_箭头_purole@2x.png in Resources */,
@@ -1657,6 +1738,7 @@
 				C0A747101ABC2C8D00C3FFFF /* README.txt in Resources */,
 				AD81256D1AB9B24200CB4768 /* 登陆框@2x.png in Resources */,
 				AD8125271AB9B24200CB4768 /* 按钮@2x.png in Resources */,
+				ADD131281B24365D00AE9972 /* CommentTableViewCell.xib in Resources */,
 				C0A7A5FB1A5A6CA800E3E017 /* FolloweeViewController.xib in Resources */,
 				AD8125741AB9B24200CB4768 /* icon picture@2x.png in Resources */,
 				AD8125191AB9B24200CB4768 /* 1.jpeg in Resources */,
@@ -1671,6 +1753,7 @@
 				AD8125691AB9B24200CB4768 /* signin@2x.png in Resources */,
 				C02A9D8619D3B75B00D3113C /* GoViewController.xib in Resources */,
 				AD8125211AB9B24200CB4768 /* 12个人中心_icon_图片@2x.png in Resources */,
+				ADD131301B244F2500AE9972 /* TagTableViewCell.xib in Resources */,
 				ADCA6F5F19D45DAB0055E46A /* MainToolbar.xib in Resources */,
 				C099BB9B1A021EFF0070A5D9 /* AlbumPhotoCell.xib in Resources */,
 				ADD3AF931AEB81B6003A5FFC /* AboutViewController.xib in Resources */,
@@ -1711,6 +1794,7 @@
 				AD8125581AB9B24200CB4768 /* 照相机icon@2x.png in Resources */,
 				AD8125451AB9B24200CB4768 /* 04相册_好友数@2x.png in Resources */,
 				AD81253E1AB9B24200CB4768 /* 定位icon@2x.png in Resources */,
+				ADD131231B24329D00AE9972 /* PhotoDetailViewController.xib in Resources */,
 				C0ACC0C01AB82D2100F78B06 /* ShareViewController.xib in Resources */,
 				AD8125321AB9B24200CB4768 /* 缩略图 效果图@2x.png in Resources */,
 				AD8125381AB9B24200CB4768 /* map icon@2x.png in Resources */,
@@ -1777,6 +1861,8 @@
 				ADBD48FD1A624FAF003F3B6A /* GetAllFollowerResponse.m in Sources */,
 				ADB2D28B19E97BC100AC58C1 /* BaseResponse.m in Sources */,
 				C0553D9219EF9D3D00FCB616 /* ConfirmRequest.m in Sources */,
+				ADD131411B248EC500AE9972 /* QueryCommentResponse.m in Sources */,
+				ADD131271B24365D00AE9972 /* CommentTableViewCell.m in Sources */,
 				ADD3AF851AEB4809003A5FFC /* RecommendPhotoesByCityRequest.m in Sources */,
 				C0ACC0A21AB6CD4F00F78B06 /* ActivityCell.m in Sources */,
 				C0A747061ABC2C8D00C3FFFF /* CLIColor.m in Sources */,
@@ -1823,6 +1909,7 @@
 				C0B433421ADF8FCF00DE2CE9 /* QueryRecentlyInfoDataHandler.m in Sources */,
 				C07D5A9B19F4AED20076F591 /* LoginResponse.m in Sources */,
 				C0A7471C1ABC3B7400C3FFFF /* DelFavouriteResponse.m in Sources */,
+				ADD131471B248F8B00AE9972 /* Comment.m in Sources */,
 				AD2C4D6619FD2EC500F3424D /* CreateAlbumResponse.m in Sources */,
 				C0A7A5EA1A5A3B5D00E3E017 /* FollowerViewController.m in Sources */,
 				ADA8C16019D6F57F0064125D /* AlbumInfo.m in Sources */,
@@ -1840,20 +1927,24 @@
 				C02A9D8519D3B75B00D3113C /* GoViewController.m in Sources */,
 				AD90BAC21A5042CE00EAFF2D /* FollowRequest.m in Sources */,
 				ADBAB04419F55372002ADD3B /* CheckNickNameResponse.m in Sources */,
+				ADD1312B1B24390F00AE9972 /* UUInputFunctionView.m in Sources */,
 				C07D5A9E19F4AF9C0076F591 /* DataManager.m in Sources */,
 				ADD3AF971AEB8329003A5FFC /* LicenseViewController.m in Sources */,
 				C0B4334F1ADFB87C00DE2CE9 /* BaseTableView.m in Sources */,
 				ADD3AF921AEB81B6003A5FFC /* AboutViewController.m in Sources */,
 				C0A7A5EF1A5A3E2B00E3E017 /* FollowerCell.m in Sources */,
+				ADD131151B242D8D00AE9972 /* Aspects.m in Sources */,
 				C0AAD5751A135999000D24FC /* ImageCacheEntity.m in Sources */,
 				C0E5DA1C19E77DD6002CC027 /* CameraControlView.m in Sources */,
 				C0B4333F1ADF8F0C00DE2CE9 /* QueryRecentlyInfoResponse.m in Sources */,
 				C0ACC0BF1AB82D2100F78B06 /* ShareViewController.m in Sources */,
+				ADD131441B248F2A00AE9972 /* QueryCommentDataHandler.m in Sources */,
 				C0ACC0D01AB9691400F78B06 /* CreateAlbumDataHandler.m in Sources */,
 				C02A9D3B19D25C5600D3113C /* AppDelegate.m in Sources */,
 				C0C993901AAD8C5C00E59F0E /* DelFavouriteRequest.m in Sources */,
 				C0ACC0B11AB808E600F78B06 /* CreateAlbumRequest.m in Sources */,
 				C05DB79C1AD3CE6700ED118E /* QueryMostPopPhotoRequest.m in Sources */,
+				ADD1313E1B24899200AE9972 /* AddCommentRequest.m in Sources */,
 				AD2C4D6C19FD31DA00F3424D /* GPSManager.m in Sources */,
 				C0C9938A1AAD8B8600E59F0E /* FavouriteRequest.m in Sources */,
 				AD94D2591A0270D800660529 /* UIImage+Util.m in Sources */,
@@ -1861,6 +1952,7 @@
 				ADBD48FA1A624F7B003F3B6A /* GetAllFolloweeResponse.m in Sources */,
 				ADD3AF9C1AEB83E7003A5FFC /* UsingViewController.m in Sources */,
 				ADB2D28E19E97C3200AC58C1 /* BaseRequest.m in Sources */,
+				ADD1313B1B247FB800AE9972 /* QueryCommentRequest.m in Sources */,
 				AD950F6E1ADA732B0097AA08 /* QueryMostPopPhotoDataHandler.m in Sources */,
 				C0A7A5FA1A5A6CA800E3E017 /* FolloweeViewController.m in Sources */,
 				C0A747091ABC2C8D00C3FFFF /* DDASLLogger.m in Sources */,
@@ -1868,14 +1960,17 @@
 				AD716DC71ADA258C006750F9 /* QueryPhotoInfoDataHandler.m in Sources */,
 				C02A9D3819D25C5600D3113C /* main.m in Sources */,
 				AD716DCA1ADA274F006750F9 /* Photo.m in Sources */,
+				ADD131221B24329D00AE9972 /* PhotoDetailViewController.m in Sources */,
 				C0A7470B1ABC2C8D00C3FFFF /* DDLog.m in Sources */,
 				ADEA965F19E6BCEB00549BB5 /* APIManager.m in Sources */,
 				C0A747071ABC2C8D00C3FFFF /* DDAbstractDatabaseLogger.m in Sources */,
 				ADBD490A1A62C250003F3B6A /* APIObject.m in Sources */,
 				C02A9D9819D4024A00D3113C /* AURA.m in Sources */,
 				ADC0124E1AE7D45100F1C92F /* CreatorInfo.m in Sources */,
+				ADD1312F1B244F2500AE9972 /* TagTableViewCell.m in Sources */,
 				AD90BAC81A5043C200EAFF2D /* GetAllFollowerRequest.m in Sources */,
 				C0A7470C1ABC2C8D00C3FFFF /* DDTTYLogger.m in Sources */,
+				ADD131371B244FC000AE9972 /* PhotoTableViewCell.m in Sources */,
 				C07D5AA819F4FCA90076F591 /* NSDate+Util.m in Sources */,
 				AD94D25C1A02803400660529 /* CryptoUtil.m in Sources */,
 				C0AAD5781A1359CC000D24FC /* CoreDataManager.m in Sources */,
@@ -1888,6 +1983,7 @@
 				C0C9939C1AAD959000E59F0E /* QueryPhotoInfoByCtimeRequest.m in Sources */,
 				ADC024D31A616CD000D96B5D /* MathUtil.m in Sources */,
 				ADB837E01A1B8EC300FA5AC2 /* TagLabel.m in Sources */,
+				ADD131161B242D8D00AE9972 /* LeakMoniter.m in Sources */,
 				C0B4334C1ADFA34400DE2CE9 /* BaseTableViewController.m in Sources */,
 				ADBB74DB1A1798E60041C1C1 /* CommitRequest.m in Sources */,
 				C07D5AA219F4B2A50076F591 /* BaseDataHandler.m in Sources */,

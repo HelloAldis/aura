@@ -28,6 +28,7 @@
 @property(strong, nonatomic) NSArray *mostPopPhotoArray;
 @property(strong, nonatomic) NSArray *recommendAlbumArray;
 @property(strong, nonatomic) NSMutableArray *discoveryArray;
+@property(strong, nonatomic) NSMutableArray *comments;
 
 @end
 
@@ -201,8 +202,13 @@ static DataManager *dataManager;
   return dataManager.discoveryArray;
 }
 
++ (void)setComments:(NSMutableArray *)array {
+  dataManager.comments = array;
+}
 
-
++ (NSMutableArray *)comments {
+  return  dataManager.comments;
+}
 
 + (BOOL)isMe:(NSString *)userId {
   return [[DataManager meId] isEqualToString:userId];

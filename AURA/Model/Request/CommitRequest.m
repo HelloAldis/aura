@@ -36,4 +36,8 @@
   [self.data setObject:sha1 forKey:@"sha1"];
 }
 
+- (void)setTag:(NSArray *)tag {
+  [self.data setObject:tag forKey:@"tag"];
+}
+
 @end

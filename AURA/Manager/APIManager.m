@@ -376,5 +376,28 @@ static AFHTTPRequestOperationManager *_oos;
   [APIManager discoveryCity:success failure:failure];
 }
 
++ (void)addComment:(AddCommentRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [_manager POST:@"/aura/addComment"
+      parameters:request.data
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           success();
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+           failure();
+           [ResponseHandler handleNetworkIssue];
+         }];
+}
+
++ (void)queryComment:(QueryCommentRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [_manager POST:@"/aura/queryComment"
+      parameters:request.data
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           [ResponseHandler handleResponse:[[QueryCommentResponse alloc] initWithData:responseObject] success:success failure:failure];
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+           failure();
+           [ResponseHandler handleNetworkIssue];
+         }];
+}
 
 @end

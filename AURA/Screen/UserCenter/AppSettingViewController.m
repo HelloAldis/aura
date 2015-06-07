@@ -66,8 +66,4 @@
   [ViewControllerContainer showUsing];
 }
 
-- (void)dealloc {
-  DDLogDebug(@"AppSettingViewController dealloc");
-}
-
 @end

@@ -60,6 +60,8 @@
     [QueryRecentlyInfoDataHandler handleResponse:baseResponse];
   } else if ([baseResponse class] == [DiscoveryResponse class]) {
     [DiscoveryDataHandler handleResponse:baseResponse];
+  } else if ([baseResponse class] == [QueryCommentResponse class]) {
+    [QueryCommentDataHandler handleResponse:baseResponse];
   }
 
   [SVProgressHUD dismiss];

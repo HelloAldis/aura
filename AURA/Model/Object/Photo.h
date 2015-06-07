@@ -21,5 +21,6 @@
 - (BOOL)haveFavourte;
 - (void)setHaveFavourte:(BOOL)value;
 - (CreatorInfo *)creatorinfo;
+- (NSString *)tag;
 
 @end

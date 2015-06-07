@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareViewController">
             <connections>
                 <outlet property="addPanel" destination="p6l-XM-HMc" id="3n0-WP-mrx"/>
                 <outlet property="btnShare" destination="D4Z-Xa-w3j" id="pWU-Mo-2EU"/>
+                <outlet property="btnTag" destination="ngd-Tb-ArB" id="5D9-IL-sPI"/>
                 <outlet property="createPanel" destination="OGb-OG-9UF" id="uyi-Q1-3Fd"/>
                 <outlet property="effectParty" destination="d3R-Ov-0D3" id="91J-e1-bix"/>
                 <outlet property="effectShow" destination="7D9-1Y-bkQ" id="dw0-7S-GlO"/>
                 <outlet property="effectSport" destination="E7q-L8-kej" id="5Ej-Py-war"/>
                 <outlet property="effectTravel" destination="hLB-3y-Nnf" id="6BD-qb-yvl"/>
+                <outlet property="fldTagInput" destination="hH9-PI-a6E" id="V2j-5f-crg"/>
                 <outlet property="imageView" destination="8ug-pJ-zKn" id="9ye-Ye-h4e"/>
                 <outlet property="lblPlaceHolder" destination="f7J-qv-bHY" id="STK-xQ-WCL"/>
                 <outlet property="shareImageView" destination="fJJ-lk-oAW" id="H7W-kS-s6h"/>
                 <outlet property="shareIndicator" destination="UC8-Kq-r1M" id="KRB-ZA-5JR"/>
                 <outlet property="switchOnlyShare" destination="i3j-I5-MBT" id="Ygx-CT-DUW"/>
                 <outlet property="tableView" destination="acF-ih-yxd" id="dq3-qW-iaq"/>
+                <outlet property="tagView" destination="wcI-3Y-8u4" id="Jr5-Hu-GfP"/>
                 <outlet property="text" destination="33y-mO-vya" id="Ma2-zm-olJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -40,7 +43,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33y-mO-vya">
                     <rect key="frame" x="103" y="5" width="200" height="90"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <connections>
@@ -62,19 +65,31 @@
                     <rect key="frame" x="0.0" y="100" width="320" height="1"/>
                     <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcI-3Y-8u4">
+                    <rect key="frame" x="8" y="108" width="300" height="30"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hH9-PI-a6E">
+                            <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="hgG-47-3u8"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngd-Tb-ArB">
-                    <rect key="frame" x="274" y="99" width="46" height="44"/>
+                    <rect key="frame" x="280" y="99" width="40" height="44"/>
                     <fontDescription key="fontDescription" type="system" pointSize="31"/>
                     <state key="normal" title="+">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="onClickTag:" destination="-1" eventType="touchUpInside" id="xU7-fb-t4B"/>
+                    </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zAh-3l-vFJ">
-                    <rect key="frame" x="8" y="108" width="300" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                </textField>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S87-1O-QgF">
                     <rect key="frame" x="0.0" y="145" width="320" height="1"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,7 +100,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="仅分享给好友" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eai-JI-7xE">
                             <rect key="frame" x="10" y="12" width="159" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQj-yR-VoX">
@@ -98,7 +113,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="选择分类" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzB-AV-ESE">
                             <rect key="frame" x="10" y="59" width="159" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0v-eT-M6t">
@@ -238,7 +253,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="如果没有合适的相册，请您创建一个" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGu-Ui-olW">
                             <rect key="frame" x="10" y="253" width="297" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6i-fj-eke">
@@ -252,9 +267,9 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="选择合适的相册" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxg-KB-46K">
-                            <rect key="frame" x="10" y="9" width="148" height="21"/>
+                            <rect key="frame" x="10" y="6" width="148" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="acF-ih-yxd">
@@ -265,6 +280,12 @@
                                 <outlet property="delegate" destination="-1" id="4Uc-4S-IWf"/>
                             </connections>
                         </tableView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="请选择活动类别，不选将会为您创建个人相册" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXg-e6-KCL">
+                            <rect key="frame" x="10" y="23" width="246" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>

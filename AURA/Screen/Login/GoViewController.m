@@ -114,8 +114,4 @@
   return ![self.fldPassword.text isEmpty];
 }
 
-- (void)dealloc {
-  DDLogDebug(@"GoViewController dealloc");
-}
-
 @end

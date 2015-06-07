@@ -66,8 +66,4 @@
   [ViewControllerContainer showAlbumDetail:self.photo.albuminfo];
 }
 
-- (void)dealloc {
-  DDLogDebug(@"AlbumInfoView dealloc");
-}
-
 @end

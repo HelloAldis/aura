@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailViewController">
+            <connections>
+                <outlet property="bottom" destination="Xqc-th-prY" id="Pl4-E8-7Iw"/>
+                <outlet property="tableView" destination="0uD-m4-ZBx" id="ywa-jF-xGX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="rrk-XM-Mc3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0uD-m4-ZBx" customClass="BaseTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="464"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Aqc-JO-ujY"/>
+                        <outlet property="delegate" destination="-1" id="S22-am-tZX"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0uD-m4-ZBx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1k4-ol-OMp"/>
+                <constraint firstAttribute="bottom" secondItem="0uD-m4-ZBx" secondAttribute="bottom" constant="40" id="Xqc-th-prY"/>
+                <constraint firstItem="0uD-m4-ZBx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hqT-CH-gam"/>
+                <constraint firstAttribute="trailing" secondItem="0uD-m4-ZBx" secondAttribute="trailing" id="qZ1-5J-enH"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

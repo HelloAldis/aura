@@ -25,5 +25,6 @@
 #import "QueryMostPopPhotoResponse.h"
 #import "QueryRecentlyInfoResponse.h"
 #import "DiscoveryResponse.h"
+#import "QueryCommentResponse.h"
 
 #endif

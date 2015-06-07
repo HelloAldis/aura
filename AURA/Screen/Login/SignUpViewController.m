@@ -41,10 +41,6 @@
   [self.frame.layer addAnimation:anmation forKey:nil];
 }
 
-- (void)dealloc {
-  DDLogDebug(@"SignUpViewController dealloc");
-}
-
 - (IBAction)onClickSign:(id)sender {
   [self doSign];
 }

@@ -50,4 +50,8 @@
   return [[CreatorInfo alloc] initWithData:[self.data objectForKey:@"creatorinfo"]];
 }
 
+- (NSString *)tag {
+  return [self.data objectForKey:@"tag"];
+}
+
 @end

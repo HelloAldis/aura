@@ -12,6 +12,7 @@
 #import "ShareActivityCell.h"
 #import "ViewControllerContainer.h"
 #import "NSString+Util.h"
+#import "TagLabel.h"
 
 @interface ShareViewController ()
 
@@ -29,8 +30,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnShare;
 @property (weak, nonatomic) IBOutlet UIImageView *shareImageView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *shareIndicator;
+@property (weak, nonatomic) IBOutlet UIView *tagView;
+@property (weak, nonatomic) IBOutlet UITextField *fldTagInput;
+@property (weak, nonatomic) IBOutlet UIButton *btnTag;
 
 @property (strong, nonatomic) NSString *type;
+@property (strong, nonatomic) NSMutableArray *tags;
+@property (assign, nonatomic) CGFloat nextTagX;
 
 @end
 
@@ -42,6 +48,9 @@
   [self initUI];
   [self.tableView registerNib:[UINib nibWithNibName:@"ShareActivityCell" bundle:nil] forCellReuseIdentifier:@"ShareActivityCell"];
   self.type = PRIVATE;
+  self.nextTagX = 0;
+  self.tags = [[NSMutableArray alloc] init];
+//  self.fldTagInput.hidden = YES;
 }
 
 - (void)initUI {
@@ -90,6 +99,7 @@
         CommitRequest *cReq = [[CommitRequest alloc] init];
         [cReq setAlbumId:[DataManager latestCreatedAlbumId]];
         [cReq setSha1:[DataManager latestUploadedImageId]];
+        [cReq setTag:self.tags];
         [APIManager commit:cReq success:^{
           [self shareFinished];
           [self shareSuccessfully];
@@ -110,6 +120,7 @@
       Photo* photo = [[DataManager recommendAlbumArray] objectAtIndex:indexPath.row];
       [cReq setAlbumId:photo.albuminfo.albumid];
       [cReq setSha1:[DataManager latestUploadedImageId]];
+      [cReq setTag:self.tags];
       [APIManager commit:cReq success:^{
         [self shareFinished];
         [self shareSuccessfully];
@@ -211,6 +222,41 @@
   self.effectShow.hidden = YES;
   self.effectSport.hidden = NO;
   self.type = SHOW;
+}
+
+- (IBAction)onClickTag:(id)sender {
+  self.btnTag.hidden = YES;
+  self.fldTagInput.hidden = NO;
+  [self.fldTagInput setFrame:CGRectMake(self.nextTagX, 0, 280-self.nextTagX, 30)];
+  
+  [self.fldTagInput becomeFirstResponder];
+}
+
+#pragma - mark UITextFiled delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [self.view endEditing:YES];
+  [self.tags addObject:textField.text];
+  TagLabel *tagLabel = [TagLabel tagLabelWithTagString:textField.text];
+  [tagLabel setFrame:CGRectMake(self.nextTagX, 4, tagLabel.frame.size.width, 22)];
+  [self.tagView addSubview:tagLabel];
+  self.nextTagX = tagLabel.frame.origin.x + tagLabel.frame.size.width + 10;
+  textField.text = nil;
+  
+  return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+  if (self.nextTagX < 260) {
+    self.btnTag.hidden = NO;
+  }
+  self.fldTagInput.hidden = YES;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+  NSString *newStr = [textField.text stringByReplacingCharactersInRange:range withString:string];
+  CGFloat widht = [TagLabel calcTagLength:newStr];
+  
+  return widht < textField.frame.size.width;
 }
 
 @end

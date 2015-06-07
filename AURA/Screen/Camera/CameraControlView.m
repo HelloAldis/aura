@@ -143,10 +143,6 @@
   self.imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 }
 
-- (void)dealloc {
-  DDLogDebug(@"CameraControlView dealloc");
-}
-
 - (void)getLastestImageFromPhoto {
   PHFetchOptions *options = [[PHFetchOptions alloc] init];
   options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];

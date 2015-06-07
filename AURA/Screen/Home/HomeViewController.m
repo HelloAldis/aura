@@ -163,9 +163,4 @@
   }];
 }
 
-
-- (void)dealloc {
-  DDLogDebug(@"HomeViewController dealloc");
-}
-
 @end

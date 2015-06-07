@@ -28,6 +28,7 @@
 #import "AboutViewController.h"
 #import "UsingViewController.h"
 #import "LicenseViewController.h"
+#import "PhotoDetailViewController.h"
 
 @interface ViewControllerContainer ()
 
@@ -197,6 +198,14 @@ static ViewControllerContainer *container;
 + (void)showUsing {
   UsingViewController *a = [[UsingViewController alloc] initWithNibName:nil bundle:nil];
   [container.userCenterNav pushViewController:a animated:YES];
+}
+
++ (void)showPhotoDetail:(id)photo {
+  PhotoDetailViewController *p = [[PhotoDetailViewController alloc] initWithNibName:nil bundle:nil];
+  p.photo = photo;
+  UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
+  [MainToolbar hideMainToolbar];
+  [nav pushViewController:p animated:YES];
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface ShareViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate, UITextViewDelegate>
+@interface ShareViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) UIImage *image;
 

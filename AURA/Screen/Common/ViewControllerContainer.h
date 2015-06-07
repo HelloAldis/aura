@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "AlbumInfo.h"
 #import "CreatorInfo.h"
+#import "Photo.h"
 
 @interface ViewControllerContainer : NSObject
 
@@ -31,4 +32,6 @@
 + (void)showAbout;
 + (void)showLicense;
 + (void)showUsing;
++ (void)showPhotoDetail:(Photo *)photo;
+
 @end

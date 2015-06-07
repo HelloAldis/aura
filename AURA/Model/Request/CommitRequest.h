@@ -12,5 +12,5 @@
 
 - (void)setAlbumId:(NSString *)albumId;
 - (void)setSha1:(NSString *)sha1;
-
+- (void)setTag:(NSArray *)tag;
 @end

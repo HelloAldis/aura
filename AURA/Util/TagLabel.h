@@ -10,4 +10,7 @@
 
 @interface TagLabel : UILabel
 
++ (instancetype)tagLabelWithTagString:(NSString *)tag;
++ (CGFloat)calcTagLength:(NSString *)tagText;
+
 @end

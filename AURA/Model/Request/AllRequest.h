@@ -29,5 +29,7 @@
 #import "DeleteAlbumRequest.h"
 #import "DeletePhotoRequest.h"
 #import "RecommendPhotoesByCityRequest.h"
+#import "QueryCommentRequest.h"
+#import "AddCommentRequest.h"
 
 #endif

@@ -21,5 +21,6 @@
 #import "QueryMostPopPhotoDataHandler.h"
 #import "QueryRecentlyInfoDataHandler.h"
 #import "DiscoveryDataHandler.h"
+#import "QueryCommentDataHandler.h"
 
 #endif

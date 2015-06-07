@@ -38,5 +38,7 @@
 + (void)discoveryNearSuccess:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)discoveryCity:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)discoveryAll:(void (^)(void))success failure:(void (^)(void))failure;
++ (void)addComment:(AddCommentRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
++ (void)queryComment:(QueryCommentRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
 
 @end

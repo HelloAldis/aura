@@ -105,8 +105,4 @@
   [ViewControllerContainer showFollowee];
 }
 
-- (void)dealloc {
-  DDLogDebug(@"UserCenterViewController dealloc");
-}
-
 @end
