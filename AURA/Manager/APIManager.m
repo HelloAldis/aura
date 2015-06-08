@@ -389,6 +389,7 @@ static AFHTTPRequestOperationManager *_oos;
 }
 
 + (void)queryComment:(QueryCommentRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [DataManager setComments:nil];
   [_manager POST:@"/aura/queryComment"
       parameters:request.data
          success:^(AFHTTPRequestOperation *operation, id responseObject) {

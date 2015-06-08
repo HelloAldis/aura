@@ -120,6 +120,7 @@
 		AD81257D1AB9B24200CB4768 /* 选中personal center icon @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8125181AB9B24200CB4768 /* 选中personal center icon @2x.png */; };
 		AD8125801AB9B9CC00CB4768 /* QueryAlbumRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD81257F1AB9B9CC00CB4768 /* QueryAlbumRequest.m */; };
 		AD8125831AB9B9EC00CB4768 /* QueryAlbumResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8125821AB9B9EC00CB4768 /* QueryAlbumResponse.m */; };
+		AD8CF8CD1B25C9B100565C7E /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = AD8CF8CC1B25C9B100565C7E /* iTunesArtwork */; };
 		AD90BAC21A5042CE00EAFF2D /* FollowRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC11A5042CE00EAFF2D /* FollowRequest.m */; };
 		AD90BAC51A50437800EAFF2D /* GetAllFolloweeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC41A50437800EAFF2D /* GetAllFolloweeRequest.m */; };
 		AD90BAC81A5043C200EAFF2D /* GetAllFollowerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC71A5043C200EAFF2D /* GetAllFollowerRequest.m */; };
@@ -440,6 +441,7 @@
 		AD81257F1AB9B9CC00CB4768 /* QueryAlbumRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryAlbumRequest.m; sourceTree = "<group>"; };
 		AD8125811AB9B9EC00CB4768 /* QueryAlbumResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryAlbumResponse.h; sourceTree = "<group>"; };
 		AD8125821AB9B9EC00CB4768 /* QueryAlbumResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryAlbumResponse.m; sourceTree = "<group>"; };
+		AD8CF8CC1B25C9B100565C7E /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		AD90BAC01A5042CE00EAFF2D /* FollowRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowRequest.h; sourceTree = "<group>"; };
 		AD90BAC11A5042CE00EAFF2D /* FollowRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowRequest.m; sourceTree = "<group>"; };
 		AD90BAC31A50437800EAFF2D /* GetAllFolloweeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetAllFolloweeRequest.h; sourceTree = "<group>"; };
@@ -1252,6 +1254,7 @@
 		C02A9D2919D25C5600D3113C = {
 			isa = PBXGroup;
 			children = (
+				AD8CF8CC1B25C9B100565C7E /* iTunesArtwork */,
 				ADCA6F6019D45E0A0055E46A /* Library */,
 				C02A9D3419D25C5600D3113C /* AURA */,
 				C02A9D4E19D25C5600D3113C /* AURATests */,
@@ -1713,6 +1716,7 @@
 				AD81252F1AB9B24200CB4768 /* 选中@2x.png in Resources */,
 				AD96AA701AC7B14F00E5DEF4 /* 05相册外_箭头_purole@2x.png in Resources */,
 				AD81254C1AB9B24200CB4768 /* 04相册_相机@2x.png in Resources */,
+				AD8CF8CD1B25C9B100565C7E /* iTunesArtwork in Resources */,
 				AD96AA6D1AC7B14F00E5DEF4 /* 04相册_标签_yellow@2x.png in Resources */,
 				AD8125661AB9B24200CB4768 /* login@2x.png in Resources */,
 				AD8125421AB9B24200CB4768 /* 矩形1@2x.png in Resources */,

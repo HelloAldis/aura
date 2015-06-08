@@ -12,6 +12,7 @@
 #import "TagTableViewCell.h"
 #import "APIManager.h"
 #import "DataManager.h"
+#import "MainToolbar.h"
 
 @interface PhotoDetailViewController ()
 
@@ -41,9 +42,7 @@
   
   [APIManager queryComment:request success:^{
     [self.tableView reloadData];
-    [self tableViewScrollToBottom];
   } failure:^{
-    [DataManager setComments:nil];
   }];
 }
 
@@ -60,6 +59,7 @@
 
 - (void)onBack {
   [self.navigationController popViewControllerAnimated:YES];
+  [MainToolbar showMainToolbar];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -117,7 +117,7 @@
   
   NSInteger row = 0;
   
-  if (self.photo.tag.length > 0) {
+  if ([self hasTag]) {
     row += 1;
   }
   row += [DataManager comments].count;
@@ -125,6 +125,10 @@
   [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
+- (NSInteger)hasTag {
+  return self.photo.tag != nil && self.photo.tag.length > 0;
+}
+//res_showResDetail('683364','酶反应器分类及其操作参数','1','ppt','6172')
 #pragma - mark UUInputFunctionView delegate
 - (void)UUInputFunctionView:(UUInputFunctionView *)funcView sendMessage:(NSString *)message {
   AddCommentRequest *request = [[AddCommentRequest alloc] init];
@@ -135,6 +139,8 @@
     funcView.TextViewInput.text = @"";
     funcView.btnSendMessage.enabled = NO;
     funcView.btnSendMessage.alpha = 0.5;
+    [self handleRefresh];
+    [self tableViewScrollToBottom];
   } failure:^{}];
 }
 
@@ -146,7 +152,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   NSInteger row = 1;
   
-  if (self.photo.tag.length > 0) {
+  if ([self hasTag]) {
     row += 1;
   }
   
@@ -159,14 +165,16 @@
   if (indexPath.row == 0) {
     return 321;
   } else {
-    if (self.photo.tag.length > 0) {
+    if ([self hasTag]) {
       if (indexPath.row == 1) {
         return 65;
       } else {
         // init with comments
+        return 60;
       }
     } else {
       // init with comments
+      return 60;
     }
   }
   
@@ -200,8 +208,6 @@
   
   return cell;
 }
-
-
 
 
 @end

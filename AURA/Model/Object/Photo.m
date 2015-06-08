@@ -51,7 +51,11 @@
 }
 
 - (NSString *)tag {
-  return [self.data objectForKey:@"tag"];
+  id o =[self.data objectForKey:@"tag"];
+  if (o == [NSNull null]) {
+    return nil;
+  }
+  return o;
 }
 
 @end

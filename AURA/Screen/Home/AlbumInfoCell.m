@@ -13,6 +13,7 @@
 #import "APIManager.h"
 #import "NSDate+Util.h"
 #import "UIImageView+Util.h"
+#import "TagLabel.h"
 
 typedef enum : NSUInteger {
   indexOne,
@@ -22,7 +23,7 @@ typedef enum : NSUInteger {
 @interface AlbumInfoCell ()
 
 @property (assign, nonatomic) SwipeIndex swipeIndex;
-@property (strong, nonatomic) UIScrollView *scrollView;
+@property (strong, nonatomic) UIView *tagView;
 @property (weak, nonatomic) IBOutlet UIView *infoView;
 @property (weak, nonatomic) IBOutlet UIImageView *indexOne;
 @property (weak, nonatomic) IBOutlet UIImageView *indexTwo;
@@ -55,11 +56,11 @@ typedef enum : NSUInteger {
   [self.contentView addGestureRecognizer:gestureRight];
   
   self.swipeIndex = indexOne;
-  self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(320, 0, 320, 170)];
-  [self.contentView addSubview:self.scrollView];
+  self.tagView = [[UIView alloc] initWithFrame:CGRectMake(320, 0, 320, 170)];
+  [self.contentView addSubview:self.tagView];
 }
 
-- (void)initwithAlbumInfo:(AlbumInfo *)albumInfo andFirstImage:(Photo *)photo {
+- (void)initwithAlbumInfo:(AlbumInfo *)albumInfo andFirstImage:(Photo *)photo andTags:(NSSet *)tags{
   self.swipeIndex = indexOne;
   self.indexTwo.image = [UIImage imageNamed:@"04相册_轮播未选中"];
   self.indexOne.image = [UIImage imageNamed:@"04相册_轮播选中"];
@@ -77,6 +78,10 @@ typedef enum : NSUInteger {
   self.lblUsername.text = albumInfo.creatorinfo.nickname;
   [self.coverImageView setImageeWithSha1:photo.sha1 withPlaceHolder:nil];
   [self.backgroundImageView setImageeWithSha1:photo.sha1 withPlaceHolder:nil];
+  
+//  for (NSString *tag in tags) {
+//    [TagLabel tagLabelWithTagString:tags];
+//  }
 }
 
 - (void)swipeLeft:(UISwipeGestureRecognizer *)gesture{
@@ -84,7 +89,7 @@ typedef enum : NSUInteger {
     //TODO show tags
     [UIView animateWithDuration:0.4 animations:^{
       self.infoView.frame = CGRectOffset(self.infoView.frame, -320, 0);
-      self.scrollView.frame = CGRectOffset(self.scrollView.frame, -320, 0);
+      self.tagView.frame = CGRectOffset(self.tagView.frame, -320, 0);
     } completion:^(BOOL finished) {
       if (finished) {
         self.indexOne.image = [UIImage imageNamed:@"04相册_轮播未选中"];
@@ -101,7 +106,7 @@ typedef enum : NSUInteger {
     //TODO show info
     [UIView animateWithDuration:0.4 animations:^{
       self.infoView.frame = CGRectOffset(self.infoView.frame, 320, 0);
-      self.scrollView.frame = CGRectOffset(self.scrollView.frame, 320, 0);
+      self.tagView.frame = CGRectOffset(self.tagView.frame, 320, 0);
     } completion:^(BOOL finished) {
       if (finished) {
         self.indexTwo.image = [UIImage imageNamed:@"04相册_轮播未选中"];

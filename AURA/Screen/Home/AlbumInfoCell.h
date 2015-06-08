@@ -14,6 +14,6 @@
 
 @property (weak, nonatomic) UITableViewController *supperController;
 
-- (void)initwithAlbumInfo:(AlbumInfo *)albumInfo andFirstImage:(Photo *)photo;
+- (void)initwithAlbumInfo:(AlbumInfo *)albumInfo andFirstImage:(Photo *)photo andTags:(NSSet *)tags;
 
 @end
