@@ -34,6 +34,8 @@
 + (void)setLatestCreatedAlbumId:(NSString *)albumId;
 + (NSString *)latestUploadedImageId;
 + (void)setLatestUploadedImageId:(NSString *)imageId;
++ (NSString *)latestCommitPhotoId;
++ (void)setLatestCommitPhotoId:(NSString *)photoId;
 + (void)addToActivityArray:(NSMutableArray *)activityList;
 + (NSMutableArray *)activityArray;
 + (void)setPhotoArray:(NSMutableArray *)photoArray;

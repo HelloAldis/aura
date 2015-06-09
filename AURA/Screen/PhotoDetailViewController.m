@@ -131,14 +131,15 @@
 //res_showResDetail('683364','酶反应器分类及其操作参数','1','ppt','6172')
 #pragma - mark UUInputFunctionView delegate
 - (void)UUInputFunctionView:(UUInputFunctionView *)funcView sendMessage:(NSString *)message {
+  [self.view endEditing:YES];
+  funcView.TextViewInput.text = @"";
+  funcView.btnSendMessage.enabled = NO;
+  funcView.btnSendMessage.alpha = 0.5;
+  
   AddCommentRequest *request = [[AddCommentRequest alloc] init];
   [request setCommment:message];
   [request setPhotoid:self.photo.photoid];
   [APIManager addComment:request success:^{
-    [self.view endEditing:YES];
-    funcView.TextViewInput.text = @"";
-    funcView.btnSendMessage.enabled = NO;
-    funcView.btnSendMessage.alpha = 0.5;
     [self handleRefresh];
     [self tableViewScrollToBottom];
   } failure:^{}];
@@ -163,7 +164,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath; {
   if (indexPath.row == 0) {
-    return 321;
+    return 375;
   } else {
     if ([self hasTag]) {
       if (indexPath.row == 1) {

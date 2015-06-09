@@ -8,6 +8,9 @@
 
 #import "PhotoTableViewCell.h"
 #import "UIImageView+Util.h"
+#import "DataManager.h"
+#import "UIView+Util.h"
+#import "NSDate+Util.h"
 
 @implementation PhotoTableViewCell
 
@@ -21,6 +24,14 @@
 
 - (void)initWithPhoto:(Photo *)photo {
   [self.photoImageView setImageeWithSha1:photo.sha1 withPlaceHolder:nil];
+  self.lblInfo.text = [NSString stringWithFormat:@"%@ %@", photo.creatorinfo.nickname, [NSDate getTimeStringFrom:photo.ctime]];
+  self.userImageView.image = [DataManager defaultUserImage];
+  [self.userImageView setCornerRadius:20];
+  [self.userImageView setBorder:1 andColor:[[UIColor whiteColor] CGColor]];
+}
+
+- (IBAction)onClickUser:(id)sender {
+
 }
 
 @end

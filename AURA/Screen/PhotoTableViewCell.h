@@ -12,6 +12,8 @@
 @interface PhotoTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
+@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
 
 - (void)initWithPhoto:(Photo *)photo;
 

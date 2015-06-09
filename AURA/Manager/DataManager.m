@@ -23,6 +23,7 @@
 @property(strong, nonatomic) NSMutableArray *follower;
 @property(strong, nonatomic) NSString *latestCreatedAlbumId;
 @property(strong, nonatomic) NSString *latestUploadedImageId;
+@property(strong, nonatomic) NSString *latestCommitPhotoId;
 @property(strong, nonatomic) NSMutableArray *activityArray;
 @property(strong, nonatomic) NSMutableArray *photoArray;
 @property(strong, nonatomic) NSArray *mostPopPhotoArray;
@@ -142,6 +143,14 @@ static DataManager *dataManager;
 
 + (void)setLatestUploadedImageId:(NSString *)imageId {
   dataManager.latestUploadedImageId = imageId;
+}
+
++ (NSString *)latestCommitPhotoId {
+  return dataManager.latestCommitPhotoId;
+}
+
++ (void)setLatestCommitPhotoId:(NSString *)photoId {
+  dataManager.latestCommitPhotoId = photoId;
 }
 
 + (void)addToActivityArray:(NSMutableArray *)activityList {

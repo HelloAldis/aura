@@ -122,8 +122,15 @@
       [cReq setSha1:[DataManager latestUploadedImageId]];
       [cReq setTag:self.tags];
       [APIManager commit:cReq success:^{
-        [self shareFinished];
-        [self shareSuccessfully];
+        AddCommentRequest *aReq = [[AddCommentRequest alloc] init];
+        [aReq setPhotoid:[DataManager latestCommitPhotoId]];
+        [aReq setCommment:[self.text.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+        [APIManager addComment:aReq success:^{
+          [self shareFinished];
+          [self shareSuccessfully];
+        } failure:^{
+          [self shareFinished];
+        }];
       } failure:^{
         [self shareFinished];
       }];

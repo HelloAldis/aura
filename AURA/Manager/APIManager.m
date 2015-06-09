@@ -187,6 +187,7 @@ static AFHTTPRequestOperationManager *_oos;
   [_manager POST:@"/aura/commit"
       parameters:request.data
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           [DataManager setLatestCommitPhotoId:[responseObject objectForKey:@"photoid"]];
            success();
          }
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {

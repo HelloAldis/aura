@@ -15,6 +15,7 @@
 #import "UIView+Util.h"
 #import "ViewControllerContainer.h"
 #import "NSDate+Util.h"
+#import "SVProgressHUD.h"
 
 @interface AlbumPhotoCell ()
 
@@ -49,6 +50,7 @@
     [MainToolbar showMainToolbar];
   }]];
   [alertController addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+    [SVProgressHUD showSuccessWithStatus:@"你的举报我们已经收到"];
     [MainToolbar showMainToolbar];
   }]];
   [alertController addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
