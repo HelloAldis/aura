@@ -69,7 +69,7 @@
   
   self.btnDisAll = [[UIButton alloc] initWithFrame:CGRectMake(80, 20, 80, 44)];
   [self.btnDisAll setTitle:@"探索" forState:UIControlStateNormal];
-  [self.btnDisAll.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
+  [self.btnDisAll.titleLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
   [self.btnDisAll setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   [self.btnDisAll setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
   [self.btnDisAll addTarget:self action:@selector(onClickDiscoveryAll) forControlEvents:UIControlEventTouchUpInside];
@@ -100,7 +100,8 @@
     [self.btnDisAll setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btnDisNear setTitleColor:UNSELECT_COLOR forState:UIControlStateNormal];
     [self.btnDisCity setTitleColor:UNSELECT_COLOR forState:UIControlStateNormal];
-    
+    [self.btnDisAll.titleLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
+    [self.btnDisCity.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
     [self handleRefresh];
   }
 }
@@ -121,6 +122,8 @@
     [self.btnDisAll setTitleColor:UNSELECT_COLOR forState:UIControlStateNormal];
     [self.btnDisNear setTitleColor:UNSELECT_COLOR forState:UIControlStateNormal];
     [self.btnDisCity setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.btnDisCity.titleLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
+    [self.btnDisAll.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
     [self handleRefresh];
   }
 }

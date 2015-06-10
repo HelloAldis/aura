@@ -88,7 +88,7 @@
 }
 
 - (IBAction)onClickComment:(id)sender {
-  
+  [ViewControllerContainer showPhotoDetail:self.photo];
 }
 
 @end

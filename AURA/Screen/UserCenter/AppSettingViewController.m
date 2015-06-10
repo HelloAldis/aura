@@ -36,8 +36,15 @@
 }
 
 - (IBAction)onClickLogout:(id)sender {
-  [DataManager logout];
-  [ViewControllerContainer showLoginViewController];
+  UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确定要退出吗？" message:nil preferredStyle:UIAlertControllerStyleAlert];
+  [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+    [DataManager logout];
+    [ViewControllerContainer showLoginViewController];
+  }]];
+  [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+    
+  }]];
+  [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (IBAction)onClickClearCash:(id)sender {
