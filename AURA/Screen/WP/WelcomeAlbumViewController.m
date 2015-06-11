@@ -14,6 +14,7 @@
 #import "RecommendAlbumRequest.h"
 #import "APIManager.h"
 #import "DataManager.h"
+#import "MainToolbar.h"
 
 #define Y_DOT 425
 #define Y_DISCOVERY 422
@@ -140,6 +141,7 @@
 
       if ([self rightIndexView].image == self.discoveryImage) {
         [self rightIndexView].image = self.discoveryImageSelected;
+        [MainToolbar goDiscovery];
       } else {
         [self rightIndexView].image = self.dotImageSelected;
       }
@@ -190,7 +192,7 @@
 }
 
 - (BOOL)hasRightAlbumView {
-  if (self.index == (self.albumViewArray.count - 1)) {
+  if (self.index == self.albumViewArray.count) {
     return NO;
   } else {
     return YES;
@@ -206,7 +208,7 @@
 }
 
 - (AlbumInfoView *)rightAlbumView {
-  if ([self hasRightAlbumView]) {
+  if ([self hasRightAlbumView] && (self.index < self.albumViewArray.count -1)) {
     return [self.albumViewArray objectAtIndex:self.index + 1];
   } else {
     return nil;
@@ -259,7 +261,6 @@
     CGPoint currentLocation = [touch locationInView:touch.view];
     CGPoint previousLocation = [touch previousLocationInView:touch.view];
     CGFloat x = currentLocation.x - previousLocation.x;
-    DDLogDebug(@"%f", x);
     
     [[self currentAlbumView] setFrameByDeltaX:x];
     [[self rightAlbumView] setFrameByDeltaX:x];

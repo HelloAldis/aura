@@ -29,5 +29,6 @@
 + (void)bringToolbarToFront;
 + (void)clickSecond;
 + (void)clearToolbar;
++ (void)goDiscovery;
 
 @end

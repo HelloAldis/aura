@@ -175,18 +175,27 @@ static MainToolbar *toolbar = nil;
       [self setAImage];
       break;
     case 1:
-      [self setDiscoveryImage];
-      self.discoveryBackground.backgroundColor = kColorSelected;
-      self.btnSecond.backgroundColor = kColorUnselected;
-      self.btnFrist.backgroundColor = kColorUnselected;
-      self.home.image = [UIImage imageNamed:@"home"];
-      self.userCenter.image = [UIImage imageNamed:@"personal center icon "];
-      [ViewControllerContainer showDiscouvery];
-      self.index = DiscoveryIndex;
+      [self goDiscoveryScreen];
       break;
     default:
       break;
   }
+}
+
++ (void)goDiscovery {
+  MainToolbar *toolbar = [MainToolbar mainToolBar];
+  [toolbar goDiscoveryScreen];
+}
+
+- (void)goDiscoveryScreen {
+  [self setDiscoveryImage];
+  self.discoveryBackground.backgroundColor = kColorSelected;
+  self.btnSecond.backgroundColor = kColorUnselected;
+  self.btnFrist.backgroundColor = kColorUnselected;
+  self.home.image = [UIImage imageNamed:@"home"];
+  self.userCenter.image = [UIImage imageNamed:@"personal center icon "];
+  [ViewControllerContainer showDiscouvery];
+  self.index = DiscoveryIndex;
 }
 
 - (void)awesomeMenuDidFinishAnimationClose:(AwesomeMenu *)menu {
