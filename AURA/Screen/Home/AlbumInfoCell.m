@@ -154,7 +154,7 @@ typedef enum : NSUInteger {
   } else if ([type isEqualToString:SPORTS]) {
     return @"体育";
   }  else if ([type isEqualToString:TOURISM]) {
-    return @"旅游";
+    return @"活动";
   }  else if ([type isEqualToString:PARTY]) {
     return @"聚会";
   }  else if ([type isEqualToString:SHOW]) {

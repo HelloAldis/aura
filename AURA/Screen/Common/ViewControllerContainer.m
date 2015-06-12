@@ -130,7 +130,7 @@ static ViewControllerContainer *container;
   filter.orignalImage = image;
   UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
   container.originalScreenBeforeCamera = nav.topViewController;
-  [nav pushViewController:filter animated:YES];
+  [nav pushViewController:filter animated:NO];
 }
 
 + (void)showHome {
