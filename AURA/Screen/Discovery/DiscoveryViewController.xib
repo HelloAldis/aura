@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiscoveryViewController">
             <connections>
+                <outlet property="scope" destination="NNo-BQ-uJx" id="6eR-sc-qOU"/>
+                <outlet property="searchResultTableView" destination="7ix-9E-XSI" id="agZ-0C-S1f"/>
+                <outlet property="searchResultView" destination="OSz-A1-oNH" id="HCA-A4-kWF"/>
                 <outlet property="view" destination="MpC-xE-Owa" id="ina-F9-TTj"/>
             </connections>
         </placeholder>
@@ -18,5 +21,31 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="277" y="328"/>
         </tableView>
+        <view contentMode="scaleToFill" id="OSz-A1-oNH">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="457"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DoU-Y0-0fR">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NNo-BQ-uJx">
+                    <rect key="frame" x="98" y="10" width="123" height="29"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <segments>
+                        <segment title="相册"/>
+                        <segment title="用户"/>
+                    </segments>
+                    <color key="tintColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7ix-9E-XSI">
+                    <rect key="frame" x="0.0" y="49" width="329" height="408"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="277" y="915.5"/>
+        </view>
     </objects>
 </document>

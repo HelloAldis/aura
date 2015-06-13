@@ -40,5 +40,7 @@
 + (void)discoveryAll:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)addComment:(AddCommentRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)queryComment:(QueryCommentRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
++ (void)searchAlbumByName:(SearchAlbumByNameRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
++ (void)searchNickname;
 
 @end

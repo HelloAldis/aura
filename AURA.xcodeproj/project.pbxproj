@@ -124,6 +124,7 @@
 		AD90BAC21A5042CE00EAFF2D /* FollowRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC11A5042CE00EAFF2D /* FollowRequest.m */; };
 		AD90BAC51A50437800EAFF2D /* GetAllFolloweeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC41A50437800EAFF2D /* GetAllFolloweeRequest.m */; };
 		AD90BAC81A5043C200EAFF2D /* GetAllFollowerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC71A5043C200EAFF2D /* GetAllFollowerRequest.m */; };
+		AD94C74B1B2C6FF800516297 /* SearchAlbumByNameRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD94C74A1B2C6FF800516297 /* SearchAlbumByNameRequest.m */; };
 		AD94D2591A0270D800660529 /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = AD94D2581A0270D800660529 /* UIImage+Util.m */; };
 		AD94D25C1A02803400660529 /* CryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AD94D25B1A02803400660529 /* CryptoUtil.m */; };
 		AD950F6B1ADA71EF0097AA08 /* QueryMostPopPhotoResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AD950F6A1ADA71EF0097AA08 /* QueryMostPopPhotoResponse.m */; };
@@ -448,6 +449,8 @@
 		AD90BAC41A50437800EAFF2D /* GetAllFolloweeRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetAllFolloweeRequest.m; sourceTree = "<group>"; };
 		AD90BAC61A5043C200EAFF2D /* GetAllFollowerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetAllFollowerRequest.h; sourceTree = "<group>"; };
 		AD90BAC71A5043C200EAFF2D /* GetAllFollowerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetAllFollowerRequest.m; sourceTree = "<group>"; };
+		AD94C7491B2C6FF800516297 /* SearchAlbumByNameRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAlbumByNameRequest.h; sourceTree = "<group>"; };
+		AD94C74A1B2C6FF800516297 /* SearchAlbumByNameRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAlbumByNameRequest.m; sourceTree = "<group>"; };
 		AD94D2571A0270D800660529 /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
 		AD94D2581A0270D800660529 /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
 		AD94D25A1A02803400660529 /* CryptoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoUtil.h; sourceTree = "<group>"; };
@@ -1095,6 +1098,8 @@
 				ADD1313A1B247FB800AE9972 /* QueryCommentRequest.m */,
 				ADD1313C1B24899200AE9972 /* AddCommentRequest.h */,
 				ADD1313D1B24899200AE9972 /* AddCommentRequest.m */,
+				AD94C7491B2C6FF800516297 /* SearchAlbumByNameRequest.h */,
+				AD94C74A1B2C6FF800516297 /* SearchAlbumByNameRequest.m */,
 			);
 			name = Request;
 			path = ../Model/Request;
@@ -1938,6 +1943,7 @@
 				ADD3AF921AEB81B6003A5FFC /* AboutViewController.m in Sources */,
 				C0A7A5EF1A5A3E2B00E3E017 /* FollowerCell.m in Sources */,
 				ADD131151B242D8D00AE9972 /* Aspects.m in Sources */,
+				AD94C74B1B2C6FF800516297 /* SearchAlbumByNameRequest.m in Sources */,
 				C0AAD5751A135999000D24FC /* ImageCacheEntity.m in Sources */,
 				C0E5DA1C19E77DD6002CC027 /* CameraControlView.m in Sources */,
 				C0B4333F1ADF8F0C00DE2CE9 /* QueryRecentlyInfoResponse.m in Sources */,

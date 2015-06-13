@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface DiscoveryViewController : UITableViewController
+@interface DiscoveryViewController : UITableViewController<UISearchBarDelegate>
 
 @end

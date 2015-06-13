@@ -31,5 +31,6 @@
 #import "RecommendPhotoesByCityRequest.h"
 #import "QueryCommentRequest.h"
 #import "AddCommentRequest.h"
+#import "SearchAlbumByNameRequest.h"
 
 #endif

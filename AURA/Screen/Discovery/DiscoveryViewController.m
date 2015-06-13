@@ -24,7 +24,14 @@
 @property (nonatomic, strong) UIButton *btnDisAll;
 @property (nonatomic, strong) UIButton *btnDisNear;
 @property (nonatomic, strong) UIButton *btnDisCity;
+@property (nonatomic, strong) UIButton *btnSearch;
 @property (nonatomic, assign) NSInteger disType;
+@property (nonatomic, strong) UIView *searchView;
+@property (strong, nonatomic) IBOutlet UIView *searchResultView;
+@property (weak, nonatomic) IBOutlet UITableView *searchResultTableView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *scope;
+
+@property (nonatomic, assign) BOOL isInSearch;
 
 @end
 
@@ -34,10 +41,7 @@
   [super viewDidLoad];
   [self.tableView registerNib:[UINib nibWithNibName:@"HomeCell" bundle:nil] forCellReuseIdentifier:@"HomeCell"];
   self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 47, 0);
-//  self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-//  self.searchController.hidesNavigationBarDuringPresentation = NO;
-//  [self.searchController.searchBar sizeToFit];
-//  [self.view addSubview:self.searchController.searchBar];
+  self.isInSearch = NO;
   
   [self initNav];
   [self initRefreshControl];
@@ -50,18 +54,26 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  
-  [self.navigationController.view addSubview:self.btnDisAll];
-  [self.navigationController.view addSubview:self.btnDisNear];
-  [self.navigationController.view addSubview:self.btnDisCity];
+  [self addButtonsToNav];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
   [super viewWillDisappear:animated];
-  
+  [self removeButtonsFromNva];
+}
+
+- (void)addButtonsToNav {
+  [self.navigationController.view addSubview:self.btnDisAll];
+  [self.navigationController.view addSubview:self.btnDisNear];
+  [self.navigationController.view addSubview:self.btnDisCity];
+  [self.navigationController.view addSubview:self.btnSearch];
+}
+
+- (void)removeButtonsFromNva {
   [self.btnDisAll removeFromSuperview];
   [self.btnDisNear removeFromSuperview];
   [self.btnDisCity removeFromSuperview];
+  [self.btnSearch removeFromSuperview];
 }
 
 - (void)initNav {
@@ -86,6 +98,14 @@
   [self.btnDisCity setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
   [self.btnDisCity setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
   [self.btnDisCity addTarget:self action:@selector(onClickDiscoveryCity) forControlEvents:UIControlEventTouchUpInside];
+  
+  self.btnSearch = [[UIButton alloc] initWithFrame:CGRectMake(260, 20, 40, 44)];
+  [self.btnSearch setTitle:@"搜索" forState:UIControlStateNormal];
+  [self.btnSearch.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
+  [self.btnSearch setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+  [self.btnSearch setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+  [self.btnSearch addTarget:self action:@selector(onClickSearch) forControlEvents:UIControlEventTouchUpInside];
+
 }
 
 - (void)initRefreshControl {
@@ -128,6 +148,47 @@
   }
 }
 
+- (void)onClickSearch {
+  [self removeButtonsFromNva];
+  [self initSearch];
+  [self addSearch];
+  [self.searchController.searchBar becomeFirstResponder];
+//  [self.view addSubview:self.searchController.searchBar];
+//  SearchViewController *s = [[SearchViewController alloc] initWithNibName:nil bundle:nil];
+//  
+////  [self.view addSubview:s.view];
+//  [self presentViewController:s animated:YES completion:^{
+//    
+//  }];
+}
+
+- (void)addSearch {
+  [self.navigationController.view addSubview:self.searchView];
+  [self.navigationController.view addSubview:self.searchResultView];
+}
+
+- (void)removeSearch {
+  [self.searchView removeFromSuperview];
+  [self.searchResultView removeFromSuperview];
+}
+
+- (void)initSearch {
+  if (!self.searchView) {
+    self.searchView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, 320, 44)];
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.hidesNavigationBarDuringPresentation = NO;
+    [self.searchController.searchBar sizeToFit];
+    self.searchController.searchBar.barTintColor = [AURA themeColor];
+    self.searchController.searchBar.tintColor = [UIColor whiteColor];
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    [self.searchView addSubview:self.searchController.searchBar];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:@"取消"];
+    self.searchController.searchBar.delegate = self;
+  }
+  
+  self.searchResultView.frame = CGRectMake(0, 64, 320, 457);
+}
+
 #pragma mark - handle refresh
 - (void)handleRefresh {
   if (self.disType == DIS_TYPE_ALL) {
@@ -168,6 +229,18 @@
   [cell initWithPhoto:[[DataManager discoveryArray] objectAtIndex:indexPath.row] andIndexPath:indexPath];
   cell.supperController = self;
   return cell;
+}
+
+#pragma mark - search bar delegate
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+  SearchAlbumByNameRequest *req = [[SearchAlbumByNameRequest alloc] init];
+  [req setalbumname:searchBar.text];
+  [APIManager searchAlbumByName:req success:^{} failure:^{}];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+  [self removeSearch];
+  [self addButtonsToNav];
 }
 
 @end

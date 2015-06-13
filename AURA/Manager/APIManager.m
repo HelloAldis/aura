@@ -402,4 +402,16 @@ static AFHTTPRequestOperationManager *_oos;
          }];
 }
 
++ (void)searchAlbumByName:(SearchAlbumByNameRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [_manager POST:@"/aura/searchNickname"
+      parameters:request.data
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+           failure();
+           [ResponseHandler handleNetworkIssue];
+         }];
+}
+
 @end
