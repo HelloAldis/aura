@@ -19,7 +19,7 @@
 }
 
 - (NSString *)userId {
-  return [self.data objectForKey:@"userId"];
+  return [self.data objectForKey:@"userid"];
 }
 
 - (NSString *)nickname {

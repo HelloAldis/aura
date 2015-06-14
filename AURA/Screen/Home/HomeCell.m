@@ -89,6 +89,8 @@
     } failure:^{}];
   }]];
   
+  DDLogDebug(@"%@", self.supperController.presentedViewController);
+  
   [self.supperController presentViewController:alertController animated:YES completion:nil];
   [MainToolbar hideMainToolbar];
 }

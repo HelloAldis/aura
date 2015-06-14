@@ -403,10 +403,24 @@ static AFHTTPRequestOperationManager *_oos;
 }
 
 + (void)searchAlbumByName:(SearchAlbumByNameRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [DataManager setSearchAlbumArray:nil];
+  [_manager POST:@"/aura/searchAlbumByName"
+      parameters:request.data
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           [ResponseHandler handleResponse:[[SearchAlbumByNameResponse alloc] initWithData:responseObject] success:success failure:failure];
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+           failure();
+           [ResponseHandler handleNetworkIssue];
+         }];
+}
+
++ (void)searchNickname:(SearchNicknameRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [DataManager setSearchUserArray:nil];
   [_manager POST:@"/aura/searchNickname"
       parameters:request.data
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-           
+           [ResponseHandler handleResponse:[[SearchNicknameResponse alloc] initWithData:responseObject] success:success failure:failure];
          }
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
            failure();

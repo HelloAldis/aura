@@ -19,6 +19,11 @@
 		AD716DC11ADA0AE3006750F9 /* QueryAlbumDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD716DC01ADA0AE3006750F9 /* QueryAlbumDataHandler.m */; };
 		AD716DC71ADA258C006750F9 /* QueryPhotoInfoDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD716DC61ADA258C006750F9 /* QueryPhotoInfoDataHandler.m */; };
 		AD716DCA1ADA274F006750F9 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD716DC91ADA274F006750F9 /* Photo.m */; };
+		AD7E59711B2D2E4700A59560 /* SearchAlbumByNameDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E59701B2D2E4700A59560 /* SearchAlbumByNameDataHandler.m */; };
+		AD7E59741B2D2E8B00A59560 /* SearchAlbumByNameResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E59731B2D2E8B00A59560 /* SearchAlbumByNameResponse.m */; };
+		AD7E59771B2D55D100A59560 /* SearchNicknameRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E59761B2D55D100A59560 /* SearchNicknameRequest.m */; };
+		AD7E597A1B2D565400A59560 /* SearchNicknameResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E59791B2D565400A59560 /* SearchNicknameResponse.m */; };
+		AD7E59801B2D58FA00A59560 /* SearchNicknameDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E597F1B2D58FA00A59560 /* SearchNicknameDataHandler.m */; };
 		AD8125191AB9B24200CB4768 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AD8124AC1AB9B24200CB4768 /* 1.jpeg */; };
 		AD81251A1AB9B24200CB4768 /* 10通知_icon_互相关注@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8124AD1AB9B24200CB4768 /* 10通知_icon_互相关注@2x.png */; };
 		AD81251B1AB9B24200CB4768 /* 10通知_icon_加关注@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8124AE1AB9B24200CB4768 /* 10通知_icon_加关注@2x.png */; };
@@ -339,6 +344,16 @@
 		AD716DC61ADA258C006750F9 /* QueryPhotoInfoDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryPhotoInfoDataHandler.m; sourceTree = "<group>"; };
 		AD716DC81ADA274F006750F9 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		AD716DC91ADA274F006750F9 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		AD7E596F1B2D2E4700A59560 /* SearchAlbumByNameDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAlbumByNameDataHandler.h; sourceTree = "<group>"; };
+		AD7E59701B2D2E4700A59560 /* SearchAlbumByNameDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAlbumByNameDataHandler.m; sourceTree = "<group>"; };
+		AD7E59721B2D2E8B00A59560 /* SearchAlbumByNameResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAlbumByNameResponse.h; sourceTree = "<group>"; };
+		AD7E59731B2D2E8B00A59560 /* SearchAlbumByNameResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAlbumByNameResponse.m; sourceTree = "<group>"; };
+		AD7E59751B2D55D100A59560 /* SearchNicknameRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchNicknameRequest.h; sourceTree = "<group>"; };
+		AD7E59761B2D55D100A59560 /* SearchNicknameRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchNicknameRequest.m; sourceTree = "<group>"; };
+		AD7E59781B2D565400A59560 /* SearchNicknameResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchNicknameResponse.h; sourceTree = "<group>"; };
+		AD7E59791B2D565400A59560 /* SearchNicknameResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchNicknameResponse.m; sourceTree = "<group>"; };
+		AD7E597E1B2D58FA00A59560 /* SearchNicknameDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchNicknameDataHandler.h; sourceTree = "<group>"; };
+		AD7E597F1B2D58FA00A59560 /* SearchNicknameDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchNicknameDataHandler.m; sourceTree = "<group>"; };
 		AD8124AC1AB9B24200CB4768 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 		AD8124AD1AB9B24200CB4768 /* 10通知_icon_互相关注@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10通知_icon_互相关注@2x.png"; sourceTree = "<group>"; };
 		AD8124AE1AB9B24200CB4768 /* 10通知_icon_加关注@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10通知_icon_加关注@2x.png"; sourceTree = "<group>"; };
@@ -1100,6 +1115,8 @@
 				ADD1313D1B24899200AE9972 /* AddCommentRequest.m */,
 				AD94C7491B2C6FF800516297 /* SearchAlbumByNameRequest.h */,
 				AD94C74A1B2C6FF800516297 /* SearchAlbumByNameRequest.m */,
+				AD7E59751B2D55D100A59560 /* SearchNicknameRequest.h */,
+				AD7E59761B2D55D100A59560 /* SearchNicknameRequest.m */,
 			);
 			name = Request;
 			path = ../Model/Request;
@@ -1145,6 +1162,10 @@
 				ADD3AF8A1AEB4C1D003A5FFC /* DiscoveryResponse.m */,
 				ADD1313F1B248EC500AE9972 /* QueryCommentResponse.h */,
 				ADD131401B248EC500AE9972 /* QueryCommentResponse.m */,
+				AD7E59721B2D2E8B00A59560 /* SearchAlbumByNameResponse.h */,
+				AD7E59731B2D2E8B00A59560 /* SearchAlbumByNameResponse.m */,
+				AD7E59781B2D565400A59560 /* SearchNicknameResponse.h */,
+				AD7E59791B2D565400A59560 /* SearchNicknameResponse.m */,
 			);
 			name = Response;
 			path = ../Model/Response;
@@ -1448,6 +1469,10 @@
 				ADD3AF871AEB49F8003A5FFC /* DiscoveryDataHandler.m */,
 				ADD131421B248F2A00AE9972 /* QueryCommentDataHandler.h */,
 				ADD131431B248F2A00AE9972 /* QueryCommentDataHandler.m */,
+				AD7E596F1B2D2E4700A59560 /* SearchAlbumByNameDataHandler.h */,
+				AD7E59701B2D2E4700A59560 /* SearchAlbumByNameDataHandler.m */,
+				AD7E597E1B2D58FA00A59560 /* SearchNicknameDataHandler.h */,
+				AD7E597F1B2D58FA00A59560 /* SearchNicknameDataHandler.m */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -1869,6 +1894,7 @@
 				ADCA6F5D19D45D990055E46A /* MainToolbar.m in Sources */,
 				ADBD48FD1A624FAF003F3B6A /* GetAllFollowerResponse.m in Sources */,
 				ADB2D28B19E97BC100AC58C1 /* BaseResponse.m in Sources */,
+				AD7E59801B2D58FA00A59560 /* SearchNicknameDataHandler.m in Sources */,
 				C0553D9219EF9D3D00FCB616 /* ConfirmRequest.m in Sources */,
 				ADD131411B248EC500AE9972 /* QueryCommentResponse.m in Sources */,
 				ADD131271B24365D00AE9972 /* CommentTableViewCell.m in Sources */,
@@ -1877,6 +1903,7 @@
 				C0A747061ABC2C8D00C3FFFF /* CLIColor.m in Sources */,
 				AD96AA761AC7C3DB00E5DEF4 /* ShareActivityCell.m in Sources */,
 				C099BBC01A0390940070A5D9 /* NSData+Util.m in Sources */,
+				AD7E597A1B2D565400A59560 /* SearchNicknameResponse.m in Sources */,
 				AD90BAC51A50437800EAFF2D /* GetAllFolloweeRequest.m in Sources */,
 				C0A747161ABC3AF900C3FFFF /* QueryPhotoInfoByFcountResponse.m in Sources */,
 				ADBB74D81A17981D0041C1C1 /* RecommendAlbumResponse.m in Sources */,
@@ -1898,6 +1925,7 @@
 				C0A746E91ABC0ED300C3FFFF /* LogFormatter.m in Sources */,
 				AD950F6B1ADA71EF0097AA08 /* QueryMostPopPhotoResponse.m in Sources */,
 				C07D5AAE19F50C250076F591 /* EmailRegistResponse.m in Sources */,
+				AD7E59741B2D2E8B00A59560 /* SearchAlbumByNameResponse.m in Sources */,
 				ADB4B89F19F3E8DA00D4E5A7 /* ResponseHandler.m in Sources */,
 				C0B4333C1ADF8E8700DE2CE9 /* QueryRecentlyInfoRequest.m in Sources */,
 				C0C993991AAD90AA00E59F0E /* NeedLoginRequest.m in Sources */,
@@ -1963,6 +1991,7 @@
 				ADD3AF9C1AEB83E7003A5FFC /* UsingViewController.m in Sources */,
 				ADB2D28E19E97C3200AC58C1 /* BaseRequest.m in Sources */,
 				ADD1313B1B247FB800AE9972 /* QueryCommentRequest.m in Sources */,
+				AD7E59711B2D2E4700A59560 /* SearchAlbumByNameDataHandler.m in Sources */,
 				AD950F6E1ADA732B0097AA08 /* QueryMostPopPhotoDataHandler.m in Sources */,
 				C0A7A5FA1A5A6CA800E3E017 /* FolloweeViewController.m in Sources */,
 				C0A747091ABC2C8D00C3FFFF /* DDASLLogger.m in Sources */,
@@ -1992,6 +2021,7 @@
 				AD8125801AB9B9CC00CB4768 /* QueryAlbumRequest.m in Sources */,
 				C0C9939C1AAD959000E59F0E /* QueryPhotoInfoByCtimeRequest.m in Sources */,
 				ADC024D31A616CD000D96B5D /* MathUtil.m in Sources */,
+				AD7E59771B2D55D100A59560 /* SearchNicknameRequest.m in Sources */,
 				ADB837E01A1B8EC300FA5AC2 /* TagLabel.m in Sources */,
 				ADD131161B242D8D00AE9972 /* LeakMoniter.m in Sources */,
 				C0B4334C1ADFA34400DE2CE9 /* BaseTableViewController.m in Sources */,

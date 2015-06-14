@@ -32,5 +32,6 @@
 #import "QueryCommentRequest.h"
 #import "AddCommentRequest.h"
 #import "SearchAlbumByNameRequest.h"
+#import "SearchNicknameRequest.h"
 
 #endif

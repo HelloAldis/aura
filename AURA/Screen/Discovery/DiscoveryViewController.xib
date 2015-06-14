@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiscoveryViewController">
             <connections>
+                <outlet property="lblNoResult" destination="e2B-sY-8me" id="edT-aL-fGf"/>
                 <outlet property="scope" destination="NNo-BQ-uJx" id="6eR-sc-qOU"/>
                 <outlet property="searchResultTableView" destination="7ix-9E-XSI" id="agZ-0C-S1f"/>
                 <outlet property="searchResultView" destination="OSz-A1-oNH" id="HCA-A4-kWF"/>
@@ -37,11 +38,24 @@
                         <segment title="用户"/>
                     </segments>
                     <color key="tintColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="onScopeValueChange:" destination="-1" eventType="valueChanged" id="Jxc-av-tfY"/>
+                    </connections>
                 </segmentedControl>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7ix-9E-XSI">
                     <rect key="frame" x="0.0" y="49" width="329" height="408"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="6x1-IV-YOw"/>
+                        <outlet property="delegate" destination="-1" id="gdq-ru-kgo"/>
+                    </connections>
                 </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="没有搜到匹配结果" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2B-sY-8me">
+                    <rect key="frame" x="82" y="218" width="165" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

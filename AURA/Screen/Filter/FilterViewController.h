@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface FilterViewController : BaseViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface FilterViewController : BaseViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIImage *orignalImage;
 

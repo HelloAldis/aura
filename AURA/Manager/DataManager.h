@@ -52,5 +52,9 @@
 
 + (BOOL)isMe:(NSString *)userId;
 + (void)logout;
++ (void)setSearchAlbumArray:(NSMutableArray *)array;
++ (NSMutableArray *)searchAlbumArray;
++ (void)setSearchUserArray:(NSMutableArray *)array;
++ (NSMutableArray *)searchUserArray;
 
 @end

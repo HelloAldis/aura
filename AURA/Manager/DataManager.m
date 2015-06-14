@@ -30,6 +30,8 @@
 @property(strong, nonatomic) NSArray *recommendAlbumArray;
 @property(strong, nonatomic) NSMutableArray *discoveryArray;
 @property(strong, nonatomic) NSMutableArray *comments;
+@property(strong, nonatomic) NSMutableArray *searchAlbumArray;
+@property(strong, nonatomic) NSMutableArray *searchUserArray;
 
 @end
 
@@ -228,6 +230,22 @@ static DataManager *dataManager;
   [DataManager setToken:nil];
   [DataManager setTokenDate:nil];
   [DataManager setMyNickname:nil];
+}
+
++ (void)setSearchAlbumArray:(NSMutableArray *)array {
+  dataManager.searchAlbumArray = array;
+}
+
++ (NSMutableArray *)searchAlbumArray {
+  return dataManager.searchAlbumArray;
+}
+
++ (void)setSearchUserArray:(NSMutableArray *)array {
+  dataManager.searchUserArray = array;
+}
+
++ (NSMutableArray *)searchUserArray {
+  return dataManager.searchUserArray;
 }
 
 @end

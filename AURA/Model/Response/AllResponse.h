@@ -26,5 +26,7 @@
 #import "QueryRecentlyInfoResponse.h"
 #import "DiscoveryResponse.h"
 #import "QueryCommentResponse.h"
+#import "SearchAlbumByNameResponse.h"
+#import "SearchNicknameResponse.h"
 
 #endif

@@ -22,5 +22,7 @@
 #import "QueryRecentlyInfoDataHandler.h"
 #import "DiscoveryDataHandler.h"
 #import "QueryCommentDataHandler.h"
+#import "SearchAlbumByNameDataHandler.h"
+#import "SearchNicknameDataHandler.h"
 
 #endif

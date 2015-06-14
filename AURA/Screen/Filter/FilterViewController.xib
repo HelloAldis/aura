@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterViewController">
             <connections>
                 <outlet property="collectionView" destination="tUK-Cs-JR7" id="DAk-9A-wYr"/>
                 <outlet property="imageView" destination="Kwh-0B-lyx" id="kg8-Ms-5r0"/>
+                <outlet property="scrollView" destination="1AP-DZ-5rT" id="b6Q-QJ-0Ru"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,20 +17,28 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-0B-lyx">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AP-DZ-5rT">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1d-bt-XGL">
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-0B-lyx">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                        </imageView>
+                    </subviews>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="S4G-53-TK0"/>
+                    </connections>
+                </scrollView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1d-bt-XGL">
                     <rect key="frame" x="80" y="320" width="50" height="50"/>
                     <state key="normal" image="09滤镜_icon_滤镜.png"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tns-VS-ut0">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tns-VS-ut0">
                     <rect key="frame" x="185" y="320" width="50" height="50"/>
                     <state key="normal" image="09滤镜__icon_裁剪.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tUK-Cs-JR7">
+                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tUK-Cs-JR7">
                     <rect key="frame" x="0.0" y="370" width="320" height="134"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="opk-AO-qNg">
                         <size key="itemSize" width="90" height="90"/>

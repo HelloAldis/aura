@@ -62,7 +62,12 @@
     [DiscoveryDataHandler handleResponse:baseResponse];
   } else if ([baseResponse class] == [QueryCommentResponse class]) {
     [QueryCommentDataHandler handleResponse:baseResponse];
+  } else if ([baseResponse class] == [SearchAlbumByNameResponse class]) {
+    [SearchAlbumByNameDataHandler handleResponse:baseResponse];
+  } else if ([baseResponse class] == [SearchNicknameResponse class]) {
+    [SearchNicknameDataHandler handleResponse:baseResponse];
   }
+
 
   [SVProgressHUD dismiss];
 }

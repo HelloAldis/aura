@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -24,6 +25,11 @@
   [self initNav];
   [self initStatusBar];
   [self.collectionView registerNib:[UINib nibWithNibName:@"FilterOptionCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"FilterOptionCollectionViewCell"];
+  self.scrollView.contentSize = CGSizeMake(320, 320);
+  self.scrollView.maximumZoomScale = 3.0;
+  self.scrollView.minimumZoomScale = 1.0;
+  
+  DDLogDebug(@"photo size %@", NSStringFromCGSize(self.orignalImage.size));
 }
 
 - (void)initStatusBar {
@@ -60,6 +66,20 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   FilterOptionCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"FilterOptionCollectionViewCell" forIndexPath:indexPath];
   return cell;
+}
+
+#pragma mark - scroll view delegate
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+  return self.imageView;
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+  [self.view setNeedsLayout];
+  [self.view layoutIfNeeded];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+  
 }
 
 @end
