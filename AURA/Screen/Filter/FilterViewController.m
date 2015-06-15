@@ -45,7 +45,7 @@
 - (void)initNav {
   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"返回"] style:UIBarButtonItemStylePlain target:self action:@selector(onClickBack)];
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(onClickOk)];
-  self.title = @"滤镜";
+  self.title = @"修改";
 }
 
 - (void)onClickBack {

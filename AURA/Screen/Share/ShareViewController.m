@@ -69,7 +69,7 @@
 
 - (void)initNav {
   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"返回"] style:UIBarButtonItemStylePlain target:self action:@selector(onClickBack)];
-  self.title = @"滤镜";
+  self.title = @"分享";
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -85,6 +85,14 @@
 }
 
 - (IBAction)onClickShare:(id)sender {
+  if ([self.type isEqualToString:PRIVATE]) {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"请选择相册类型！" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+    }]];
+    [self presentViewController:alert animated:YES completion:nil];
+    return;
+  }
+  
   [self shareInprogress];
   
   CreateAlbumRequest *request = [[CreateAlbumRequest alloc] init];
