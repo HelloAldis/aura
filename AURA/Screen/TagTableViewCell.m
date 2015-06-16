@@ -7,7 +7,7 @@
 //
 
 #import "TagTableViewCell.h"
-#import "TagLabel.h"
+
 
 @implementation TagTableViewCell
 
@@ -22,13 +22,7 @@
 }
 
 - (void)initWithTags:(NSArray *)tags {
-  CGFloat next = 10;
-  for (NSString *tag in tags) {
-    TagLabel *label = [TagLabel tagLabelWithTagString:tag];
-    [label setFrame:CGRectMake(next, 35, label.frame.size.width, 22)];
-    next = label.frame.origin.x + label.frame.size.width + 10;
-    [self.contentView addSubview:label];
-  }
+
 }
 
 @end

@@ -112,22 +112,13 @@
 }
 
 //tableView Scroll to bottom
-- (void)tableViewScrollToBottom
-{
-  
+- (void)tableViewScrollToBottom {
   NSInteger row = 0;
-  
-  if ([self hasTag]) {
-    row += 1;
-  }
   row += [DataManager comments].count;
   
   [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
-- (NSInteger)hasTag {
-  return self.photo.tag != nil && self.photo.tag.length > 0;
-}
 //res_showResDetail('683364','酶反应器分类及其操作参数','1','ppt','6172')
 #pragma - mark UUInputFunctionView delegate
 - (void)UUInputFunctionView:(UUInputFunctionView *)funcView sendMessage:(NSString *)message {
@@ -152,11 +143,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   NSInteger row = 1;
-  
-  if ([self hasTag]) {
-    row += 1;
-  }
-  
   row += [DataManager comments].count;
   
   return row;
@@ -164,22 +150,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath; {
   if (indexPath.row == 0) {
-    return 375;
+    return 483;
   } else {
-    if ([self hasTag]) {
-      if (indexPath.row == 1) {
-        return 65;
-      } else {
-        // init with comments
-        return 60;
-      }
-    } else {
-      // init with comments
-      return 60;
-    }
+    // init with comments
+    return 60;
   }
-  
-  return 44;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -189,22 +164,9 @@
     PhotoTableViewCell *pCell = (PhotoTableViewCell *)cell;
     [pCell initWithPhoto:self.photo];
   } else {
-    if (self.photo.tag.length > 0) {
-      if (indexPath.row == 1) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"TagTableViewCell" forIndexPath:indexPath];
-        NSArray *tags = [self.photo.tag componentsSeparatedByString:@","];
-        TagTableViewCell *tCell = (TagTableViewCell *)cell;
-        [tCell initWithTags:tags];
-      } else {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"CommentTableViewCell" forIndexPath:indexPath];
-        CommentTableViewCell *cCell = (CommentTableViewCell *)cell;
-        [cCell initWithComment:[[DataManager comments] objectAtIndex:indexPath.row - 2]];
-      }
-    } else {
-      cell = [tableView dequeueReusableCellWithIdentifier:@"CommentTableViewCell" forIndexPath:indexPath];
-      CommentTableViewCell *cCell = (CommentTableViewCell *)cell;
-      [cCell initWithComment:[[DataManager comments] objectAtIndex:indexPath.row - 1]];
-    }
+    cell = [tableView dequeueReusableCellWithIdentifier:@"CommentTableViewCell" forIndexPath:indexPath];
+    CommentTableViewCell *cCell = (CommentTableViewCell *)cell;
+    [cCell initWithComment:[[DataManager comments] objectAtIndex:indexPath.row - 1]];
   }
   
   return cell;

@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 @property (weak, nonatomic) IBOutlet UILabel *lblInfo;
+@property (weak, nonatomic) IBOutlet UILabel *lblFCount;
+@property (weak, nonatomic) IBOutlet UIButton *btnLike;
+@property (weak, nonatomic) IBOutlet UILabel *lblTag;
 
 - (void)initWithPhoto:(Photo *)photo;
 
