@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Photo.h"
 
+#define ACTIVITY_TYPE 0
+#define DISCOVERY_TYPE 1
+#define SEARCH_TYPE 2
+
 @interface HomeCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgPhoto;
@@ -22,7 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageArrow;
 
 @property (weak, nonatomic) UITableViewController *supperController;
+@property (nonatomic, assign) NSInteger type;
 
-- (void)initWithPhoto:(Photo *)photo andIndexPath:(NSIndexPath *)indexPath;
+- (void)initWithPhoto:(Photo *)photo andIndexPath:(NSIndexPath *)indexPath andType:(NSInteger)type;
 
 @end

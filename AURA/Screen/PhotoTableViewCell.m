@@ -12,6 +12,9 @@
 #import "UIView+Util.h"
 #import "NSDate+Util.h"
 #import "TagLabel.h"
+#import "APIManager.h"
+#import "NSString+Util.h"
+#import "SVProgressHUD.h"
 
 @interface PhotoTableViewCell ()
 
@@ -38,6 +41,12 @@
   [self.userImageView setBorder:1 andColor:[[UIColor whiteColor] CGColor]];
   self.lblFCount.text = photo.fcount;
   
+  if (photo.haveFavourte) {
+    [self.btnLike setImage:[UIImage imageNamed:@"05相册外_赞点击态"] forState:UIControlStateNormal];
+  } else {
+    [self.btnLike setImage:[UIImage imageNamed:@"05相册外_赞"] forState:UIControlStateNormal];
+  }
+  
   NSArray *tags = [self.photo.tag componentsSeparatedByString:@","];
   if (tags.count == 0) {
     self.lblTag.hidden = YES;
@@ -57,9 +66,33 @@
 }
 
 - (IBAction)onClickLike:(id)sender {
+  if (!self.photo.haveFavourte) {
+    FavouriteRequest *request = [[FavouriteRequest alloc] init];
+    [request setPhotoid:self.photo.photoid];
+    [APIManager favourite:request success:^{
+      self.lblFCount.text = [self.photo.fcount add:1];
+      [self.btnLike setImage:[UIImage imageNamed:@"05相册外_赞点击态"] forState:UIControlStateNormal];
+      self.photo.haveFavourte = YES;
+    } failure:^{}];
+  }
 }
 
 - (IBAction)onClickMore:(id)sender {
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+  [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+  }]];
+  [alertController addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+    [SVProgressHUD showSuccessWithStatus:@"你的举报我们已经收到"];
+  }]];
+  [alertController addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+    DeletePhotoRequest *request = [[DeletePhotoRequest alloc] init];
+    [request setPhotoid:self.photo.photoid];
+    [APIManager deletePhoto:request success:^{
+      [self.supperController.navigationController popViewControllerAnimated:YES];
+    } failure:^{}];
+  }]];
+  
+  [self.supperController presentViewController:alertController animated:YES completion:nil];
 }
 
 @end

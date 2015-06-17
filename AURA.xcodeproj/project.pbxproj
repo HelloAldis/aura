@@ -183,8 +183,6 @@
 		ADD131271B24365D00AE9972 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131251B24365D00AE9972 /* CommentTableViewCell.m */; };
 		ADD131281B24365D00AE9972 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD131261B24365D00AE9972 /* CommentTableViewCell.xib */; };
 		ADD1312B1B24390F00AE9972 /* UUInputFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD1312A1B24390F00AE9972 /* UUInputFunctionView.m */; };
-		ADD1312F1B244F2500AE9972 /* TagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD1312D1B244F2500AE9972 /* TagTableViewCell.m */; };
-		ADD131301B244F2500AE9972 /* TagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD1312E1B244F2500AE9972 /* TagTableViewCell.xib */; };
 		ADD131371B244FC000AE9972 /* PhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131351B244FC000AE9972 /* PhotoTableViewCell.m */; };
 		ADD131381B244FC000AE9972 /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD131361B244FC000AE9972 /* PhotoTableViewCell.xib */; };
 		ADD1313B1B247FB800AE9972 /* QueryCommentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD1313A1B247FB800AE9972 /* QueryCommentRequest.m */; };
@@ -560,9 +558,6 @@
 		ADD131261B24365D00AE9972 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		ADD131291B24390F00AE9972 /* UUInputFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUInputFunctionView.h; sourceTree = "<group>"; };
 		ADD1312A1B24390F00AE9972 /* UUInputFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUInputFunctionView.m; sourceTree = "<group>"; };
-		ADD1312C1B244F2500AE9972 /* TagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagTableViewCell.h; sourceTree = "<group>"; };
-		ADD1312D1B244F2500AE9972 /* TagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagTableViewCell.m; sourceTree = "<group>"; };
-		ADD1312E1B244F2500AE9972 /* TagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagTableViewCell.xib; sourceTree = "<group>"; };
 		ADD131341B244FC000AE9972 /* PhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTableViewCell.h; sourceTree = "<group>"; };
 		ADD131351B244FC000AE9972 /* PhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTableViewCell.m; sourceTree = "<group>"; };
 		ADD131361B244FC000AE9972 /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
@@ -1254,9 +1249,6 @@
 				ADD131241B24365D00AE9972 /* CommentTableViewCell.h */,
 				ADD131251B24365D00AE9972 /* CommentTableViewCell.m */,
 				ADD131261B24365D00AE9972 /* CommentTableViewCell.xib */,
-				ADD1312C1B244F2500AE9972 /* TagTableViewCell.h */,
-				ADD1312D1B244F2500AE9972 /* TagTableViewCell.m */,
-				ADD1312E1B244F2500AE9972 /* TagTableViewCell.xib */,
 				ADD131341B244FC000AE9972 /* PhotoTableViewCell.h */,
 				ADD131351B244FC000AE9972 /* PhotoTableViewCell.m */,
 				ADD131361B244FC000AE9972 /* PhotoTableViewCell.xib */,
@@ -1787,7 +1779,6 @@
 				AD8125691AB9B24200CB4768 /* signin@2x.png in Resources */,
 				C02A9D8619D3B75B00D3113C /* GoViewController.xib in Resources */,
 				AD8125211AB9B24200CB4768 /* 12个人中心_icon_图片@2x.png in Resources */,
-				ADD131301B244F2500AE9972 /* TagTableViewCell.xib in Resources */,
 				ADCA6F5F19D45DAB0055E46A /* MainToolbar.xib in Resources */,
 				C099BB9B1A021EFF0070A5D9 /* AlbumPhotoCell.xib in Resources */,
 				ADD3AF931AEB81B6003A5FFC /* AboutViewController.xib in Resources */,
@@ -2006,7 +1997,6 @@
 				ADBD490A1A62C250003F3B6A /* APIObject.m in Sources */,
 				C02A9D9819D4024A00D3113C /* AURA.m in Sources */,
 				ADC0124E1AE7D45100F1C92F /* CreatorInfo.m in Sources */,
-				ADD1312F1B244F2500AE9972 /* TagTableViewCell.m in Sources */,
 				AD90BAC81A5043C200EAFF2D /* GetAllFollowerRequest.m in Sources */,
 				C0A7470C1ABC2C8D00C3FFFF /* DDTTYLogger.m in Sources */,
 				ADD131371B244FC000AE9972 /* PhotoTableViewCell.m in Sources */,

@@ -262,7 +262,7 @@
   if (self.isInSearch) {
     if (self.scope.selectedSegmentIndex == SCOPE_ALBUM) {
       HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell" forIndexPath:indexPath];
-      [cell initWithPhoto:[[DataManager searchAlbumArray] objectAtIndex:indexPath.row] andIndexPath:indexPath];
+      [cell initWithPhoto:[[DataManager searchAlbumArray] objectAtIndex:indexPath.row] andIndexPath:indexPath andType:SEARCH_TYPE];
       cell.supperController = self;
       return cell;
     } else {
@@ -272,7 +272,7 @@
     }
   } else {
     HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell" forIndexPath:indexPath];
-    [cell initWithPhoto:[[DataManager discoveryArray] objectAtIndex:indexPath.row] andIndexPath:indexPath];
+    [cell initWithPhoto:[[DataManager discoveryArray] objectAtIndex:indexPath.row] andIndexPath:indexPath andType:DISCOVERY_TYPE];
     cell.supperController = self;
     return cell;
   }

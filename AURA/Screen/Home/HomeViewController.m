@@ -82,7 +82,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell" forIndexPath:indexPath];
-  [cell initWithPhoto:[[DataManager activityArray] objectAtIndex:indexPath.row] andIndexPath:indexPath];
+  [cell initWithPhoto:[[DataManager activityArray] objectAtIndex:indexPath.row] andIndexPath:indexPath andType:ACTIVITY_TYPE];
   cell.supperController = self;
   return cell;
 }

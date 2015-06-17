@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnLike;
 @property (weak, nonatomic) IBOutlet UILabel *lblTag;
 
+@property (weak, nonatomic) UIViewController *supperController;
+
 - (void)initWithPhoto:(Photo *)photo;
 
 @end

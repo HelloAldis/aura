@@ -27,9 +27,10 @@
 
 @implementation HomeCell
 
-- (void)initWithPhoto:(Photo *)photo andIndexPath:(NSIndexPath *)indexPath {
+- (void)initWithPhoto:(Photo *)photo andIndexPath:(NSIndexPath *)indexPath andType:(NSInteger)type{
   self.photo = photo;
   self.indexPath = indexPath;
+  self.type = type;
   [self.imgPhoto setImageeWithSha1:[photo sha1] withPlaceHolder:nil];
   self.lblAlbumName.text = [[photo albuminfo] name];
   self.imageArrow.image = [UIImage imageNamed:[self getArrow:[[photo albuminfo] type]]];
@@ -84,12 +85,17 @@
     DeletePhotoRequest *request = [[DeletePhotoRequest alloc] init];
     [request setPhotoid:self.photo.photoid];
     [APIManager deletePhoto:request success:^{
-      [[DataManager activityArray] removeObjectAtIndex:self.indexPath.row];
+      if (self.type == ACTIVITY_TYPE) {
+        [[DataManager activityArray] removeObjectAtIndex:self.indexPath.row];
+      } else if (self.type == DISCOVERY_TYPE) {
+        [[DataManager discoveryArray] removeObjectAtIndex:self.indexPath.row];
+      } else if (self.type == SEARCH_TYPE){
+        [[DataManager searchAlbumArray] removeObjectAtIndex:self.indexPath.row];
+      }
+      
       [self.supperController.tableView deleteRowsAtIndexPaths:@[self.indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     } failure:^{}];
   }]];
-  
-  DDLogDebug(@"%@", self.supperController.presentedViewController);
   
   [self.supperController presentViewController:alertController animated:YES completion:nil];
   [MainToolbar hideMainToolbar];

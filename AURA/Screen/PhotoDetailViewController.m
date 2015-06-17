@@ -9,7 +9,6 @@
 #import "PhotoDetailViewController.h"
 #import "CommentTableViewCell.h"
 #import "PhotoTableViewCell.h"
-#import "TagTableViewCell.h"
 #import "APIManager.h"
 #import "DataManager.h"
 #import "MainToolbar.h"
@@ -163,6 +162,7 @@
     cell = [tableView dequeueReusableCellWithIdentifier:@"PhotoTableViewCell" forIndexPath:indexPath];
     PhotoTableViewCell *pCell = (PhotoTableViewCell *)cell;
     [pCell initWithPhoto:self.photo];
+    pCell.supperController = self;
   } else {
     cell = [tableView dequeueReusableCellWithIdentifier:@"CommentTableViewCell" forIndexPath:indexPath];
     CommentTableViewCell *cCell = (CommentTableViewCell *)cell;
