@@ -119,7 +119,7 @@ typedef enum : NSUInteger {
 }
 
 - (IBAction)onClickCamera:(id)sender {
-  [ViewControllerContainer showCameraViewController];
+  
 }
 
 - (IBAction)onClickMore:(id)sender {

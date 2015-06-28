@@ -78,6 +78,8 @@
   if ([DataManager recommendAlbumArray].count > 0) {
     [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
   }
+  
+  [self onClickTravel:nil];
 }
 
 - (void)onClickBack {
@@ -85,23 +87,13 @@
 }
 
 - (IBAction)onClickShare:(id)sender {
-  if ([self.type isEqualToString:PRIVATE]) {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"请选择相册类型！" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-    }]];
-    [self presentViewController:alert animated:YES completion:nil];
-    return;
-  }
-  
   [self shareInprogress];
-  
-  CreateAlbumRequest *request = [[CreateAlbumRequest alloc] init];
-  [request setName:[self.text.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
-  [request setTpye:self.type];
-  [request setonlyfindbyfriend:self.switchOnlyShare.isOn];
-  
   if (self.addPanel.hidden) {
     //create and share
+    CreateAlbumRequest *request = [[CreateAlbumRequest alloc] init];
+    [request setName:[self.text.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    [request setTpye:self.type];
+    [request setonlyfindbyfriend:self.switchOnlyShare.isOn];
     [APIManager createAlbum:request success:^{
       [APIManager uploadImage:self.image success:^{
         CommitRequest *cReq = [[CommitRequest alloc] init];
@@ -196,6 +188,15 @@
   [self refreshLableAndButton];
 }
 
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+  if ([text isEqualToString:@"\n"]) {
+    [textView endEditing:YES];
+    return NO;
+  }
+  
+  return YES;
+}
+
 - (void)refreshLableAndButton {
   if ([self.text.text trim].length == 0) {
     self.lblPlaceHolder.hidden = NO;
@@ -256,6 +257,7 @@
   [self.tagView addSubview:tagLabel];
   self.nextTagX = tagLabel.frame.origin.x + tagLabel.frame.size.width + 10;
   textField.text = nil;
+  textField.placeholder = @"";
   
   return YES;
 }
@@ -264,7 +266,10 @@
   if (self.nextTagX < 260) {
     self.btnTag.hidden = NO;
   }
-  self.fldTagInput.hidden = YES;
+  
+  if (self.tags.count > 0) {
+    self.fldTagInput.hidden = YES;
+  }
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

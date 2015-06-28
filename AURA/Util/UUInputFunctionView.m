@@ -38,14 +38,14 @@
 - (id)initWithSuperVC:(UIViewController *)superVC
 {
     self.superVC = superVC;
-    CGRect frame = CGRectMake(0, Main_Screen_Height-40-64, Main_Screen_Width, 40);
+    CGRect frame = CGRectMake(0, Main_Screen_Height-46-64, Main_Screen_Width, 46);
     
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         //发送消息
         self.btnSendMessage = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.btnSendMessage.frame = CGRectMake(Main_Screen_Width-40, 5, 30, 30);
+        self.btnSendMessage.frame = CGRectMake(Main_Screen_Width-40, 8, 30, 30);
       [self.btnSendMessage setBackgroundColor:[AURA themeColor]];
       self.btnSendMessage.layer.cornerRadius = 4;
       self.btnSendMessage.layer.masksToBounds = YES;
@@ -59,7 +59,7 @@
       [self addSubview:self.btnSendMessage];
         
         //输入框
-        self.TextViewInput = [[UITextView alloc]initWithFrame:CGRectMake(5, 5, Main_Screen_Width-50, 30)];
+        self.TextViewInput = [[UITextView alloc]initWithFrame:CGRectMake(5, 8, Main_Screen_Width-50, 30)];
         self.TextViewInput.layer.cornerRadius = 4;
         self.TextViewInput.layer.masksToBounds = YES;
         self.TextViewInput.delegate = self;

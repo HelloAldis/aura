@@ -56,7 +56,10 @@
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
-  [self handleRefresh];
+  
+  if (!self.isInSearch) {
+    [self handleRefresh];
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -114,8 +117,8 @@
   [self.btnDisCity setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
   [self.btnDisCity addTarget:self action:@selector(onClickDiscoveryCity) forControlEvents:UIControlEventTouchUpInside];
   
-  self.btnSearch = [[UIButton alloc] initWithFrame:CGRectMake(260, 20, 40, 44)];
-  [self.btnSearch setTitle:@"搜索" forState:UIControlStateNormal];
+  self.btnSearch = [[UIButton alloc] initWithFrame:CGRectMake(280, 20, 44, 44)];
+  [self.btnSearch setImage:[UIImage imageNamed:@"seach"] forState:UIControlStateNormal];
   [self.btnSearch.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
   [self.btnSearch setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
   [self.btnSearch setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];

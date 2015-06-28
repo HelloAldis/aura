@@ -62,7 +62,7 @@
   self.frame = CGRectMake(self.frame.origin.x + deltaX, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
 }
 
-- (IBAction)onClickImage:(id)sender {
+- (void)onClickImage {
   [ViewControllerContainer showAlbumDetail:self.photo.albuminfo];
 }
 

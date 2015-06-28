@@ -358,7 +358,7 @@ static AFHTTPRequestOperationManager *_oos;
 
 + (void)discoveryCity:(void (^)(void))success failure:(void (^)(void))failure {
   RecommendPhotoesByCityRequest *request = [[RecommendPhotoesByCityRequest alloc] init];
-  [request setCity:@"武汉市"];
+  [request setCity:@"2"];
   [request setCursor:0];
   [request setSize:1000];
   

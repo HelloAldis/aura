@@ -129,7 +129,7 @@ typedef enum : NSUInteger {
     [request setsize:1000];
     
     [APIManager queryPhotoInfoByCtime:request success:^{
-      self.firstPhoto = [[DataManager photoArray] firstObject];
+      self.firstPhoto = [[DataManager photoArray] lastObject];
       [self.tableView reloadData];
       [self.refreshControl endRefreshing];
     } failure:^{

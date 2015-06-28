@@ -16,5 +16,6 @@
 - (void)setFrameForLeftHide;
 - (void)setFrameForRightHide;
 - (void)setFrameByDeltaX:(CGFloat)deltaX;
+- (void)onClickImage;
 
 @end

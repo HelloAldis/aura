@@ -14,6 +14,8 @@
 		AD2C4D6919FD2EE900F3424D /* RecommendAlbumRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2C4D6819FD2EE900F3424D /* RecommendAlbumRequest.m */; };
 		AD2C4D6C19FD31DA00F3424D /* GPSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2C4D6B19FD31DA00F3424D /* GPSManager.m */; };
 		AD2C4D6E19FD35C700F3424D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2C4D6D19FD35C700F3424D /* CoreLocation.framework */; };
+		AD2DC5B31B40266900CAC7B4 /* seach@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2DC5B21B40266900CAC7B4 /* seach@2x.png */; };
+		AD2DC5B51B4028DD00CAC7B4 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2DC5B41B4028DD00CAC7B4 /* map@2x.png */; };
 		AD62DE3E1AAC023B00485013 /* RecommendAlbumDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD62DE3D1AAC023B00485013 /* RecommendAlbumDataHandler.m */; };
 		AD62DE431AAC802100485013 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = AD62DE421AAC802100485013 /* UIView+Util.m */; };
 		AD716DC11ADA0AE3006750F9 /* QueryAlbumDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD716DC01ADA0AE3006750F9 /* QueryAlbumDataHandler.m */; };
@@ -54,7 +56,6 @@
 		AD8125351AB9B24200CB4768 /* comment icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8124CB1AB9B24200CB4768 /* comment icon@2x.png */; };
 		AD8125361AB9B24200CB4768 /* heart icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8124CC1AB9B24200CB4768 /* heart icon@2x.png */; };
 		AD8125371AB9B24200CB4768 /* icon home 未选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8124CD1AB9B24200CB4768 /* icon home 未选中@2x.png */; };
-		AD8125381AB9B24200CB4768 /* map icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8124CE1AB9B24200CB4768 /* map icon@2x.png */; };
 		AD8125391AB9B24200CB4768 /* personal center icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8124CF1AB9B24200CB4768 /* personal center icon@2x.png */; };
 		AD81253A1AB9B24200CB4768 /* time icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8124D01AB9B24200CB4768 /* time icon@2x.png */; };
 		AD81253B1AB9B24200CB4768 /* 下拉箭头@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8124D11AB9B24200CB4768 /* 下拉箭头@2x.png */; };
@@ -329,6 +330,8 @@
 		AD2C4D6A19FD31DA00F3424D /* GPSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSManager.h; sourceTree = "<group>"; };
 		AD2C4D6B19FD31DA00F3424D /* GPSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSManager.m; sourceTree = "<group>"; };
 		AD2C4D6D19FD35C700F3424D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AD2DC5B21B40266900CAC7B4 /* seach@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seach@2x.png"; sourceTree = "<group>"; };
+		AD2DC5B41B4028DD00CAC7B4 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
 		AD62DE3C1AAC023B00485013 /* RecommendAlbumDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendAlbumDataHandler.h; sourceTree = "<group>"; };
 		AD62DE3D1AAC023B00485013 /* RecommendAlbumDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendAlbumDataHandler.m; sourceTree = "<group>"; };
 		AD62DE411AAC802100485013 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
@@ -382,7 +385,6 @@
 		AD8124CB1AB9B24200CB4768 /* comment icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comment icon@2x.png"; sourceTree = "<group>"; };
 		AD8124CC1AB9B24200CB4768 /* heart icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart icon@2x.png"; sourceTree = "<group>"; };
 		AD8124CD1AB9B24200CB4768 /* icon home 未选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon home 未选中@2x.png"; sourceTree = "<group>"; };
-		AD8124CE1AB9B24200CB4768 /* map icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map icon@2x.png"; sourceTree = "<group>"; };
 		AD8124CF1AB9B24200CB4768 /* personal center icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personal center icon@2x.png"; sourceTree = "<group>"; };
 		AD8124D01AB9B24200CB4768 /* time icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time icon@2x.png"; sourceTree = "<group>"; };
 		AD8124D11AB9B24200CB4768 /* 下拉箭头@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下拉箭头@2x.png"; sourceTree = "<group>"; };
@@ -849,12 +851,12 @@
 		AD8124C81AB9B24200CB4768 /* 探索页 */ = {
 			isa = PBXGroup;
 			children = (
+				AD2DC5B21B40266900CAC7B4 /* seach@2x.png */,
 				AD8124C91AB9B24200CB4768 /* camera icon @2x.png */,
 				AD8124CA1AB9B24200CB4768 /* camera icon未选中@2x.png */,
 				AD8124CB1AB9B24200CB4768 /* comment icon@2x.png */,
 				AD8124CC1AB9B24200CB4768 /* heart icon@2x.png */,
 				AD8124CD1AB9B24200CB4768 /* icon home 未选中@2x.png */,
-				AD8124CE1AB9B24200CB4768 /* map icon@2x.png */,
 				AD8124CF1AB9B24200CB4768 /* personal center icon@2x.png */,
 				AD8124D01AB9B24200CB4768 /* time icon@2x.png */,
 				AD8124D11AB9B24200CB4768 /* 下拉箭头@2x.png */,
@@ -873,6 +875,7 @@
 		AD8124DA1AB9B24200CB4768 /* 相册内 */ = {
 			isa = PBXGroup;
 			children = (
+				AD2DC5B41B4028DD00CAC7B4 /* map@2x.png */,
 				ADD1BFA71ADFE15400DBA7D0 /* 筛选框@2x.png */,
 				ADD18C891ADBFF8400FA514A /* 04相册_默认赞@2x.png */,
 				AD8124DB1AB9B24200CB4768 /* 04相册_人数@2x.png */,
@@ -1713,6 +1716,7 @@
 				AD81254B1AB9B24200CB4768 /* 04相册_相册封面@2x.png in Resources */,
 				ADD3AF9D1AEB83E7003A5FFC /* UsingViewController.xib in Resources */,
 				AD8125391AB9B24200CB4768 /* personal center icon@2x.png in Resources */,
+				AD2DC5B31B40266900CAC7B4 /* seach@2x.png in Resources */,
 				AD81255B1AB9B24200CB4768 /* 闪光灯icon@2x.png in Resources */,
 				AD96AA711AC7B14F00E5DEF4 /* 05相册外_箭头_yellow@2x.png in Resources */,
 				C0ACC0C81AB82FE500F78B06 /* FilterOptionCollectionViewCell.xib in Resources */,
@@ -1750,6 +1754,7 @@
 				C099BBA01A0220B90070A5D9 /* AlbumInfoCell.xib in Resources */,
 				AD8125201AB9B24200CB4768 /* 12个人中心_icon_喜欢@2x.png in Resources */,
 				AD81256B1AB9B24200CB4768 /* 对勾@2x.png in Resources */,
+				AD2DC5B51B4028DD00CAC7B4 /* map@2x.png in Resources */,
 				AD8125431AB9B24200CB4768 /* 矩形蒙板@2x.png in Resources */,
 				AD8125721AB9B24200CB4768 /* icon heart@2x.png in Resources */,
 				AD96AA6C1AC7B14F00E5DEF4 /* 04相册_标签_red@2x.png in Resources */,
@@ -1822,7 +1827,6 @@
 				ADD131231B24329D00AE9972 /* PhotoDetailViewController.xib in Resources */,
 				C0ACC0C01AB82D2100F78B06 /* ShareViewController.xib in Resources */,
 				AD8125321AB9B24200CB4768 /* 缩略图 效果图@2x.png in Resources */,
-				AD8125381AB9B24200CB4768 /* map icon@2x.png in Resources */,
 				AD8125681AB9B24200CB4768 /* logoaura@2x.png in Resources */,
 				ADF9B8901ADEA439007443DB /* 创建@2x.png in Resources */,
 				C0E5DA1D19E77DD6002CC027 /* CameraControlView.xib in Resources */,

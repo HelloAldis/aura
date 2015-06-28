@@ -256,6 +256,8 @@
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+  [super touchesMoved:touches withEvent:event];
+  
   UITouch *touch = [touches anyObject];
   if (touch) {
     CGPoint currentLocation = [touch locationInView:touch.view];
@@ -271,7 +273,13 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-
+  [super touchesEnded:touches withEvent:event];
+  
+  if (self.sumDx == 0) {
+    [[self currentAlbumView] onClickImage];
+    return;
+  }
+  
   if (fabsf((float)self.sumDx) <= 30) {
     [self goCurrent];
   } else if (self.sumDx < -30) {
@@ -292,31 +300,5 @@
   
   self.sumDx = 0;
 }
-
-//#pragma mark - gesture delegate 
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-//  DDLogDebug(@"shouldBeRequiredToFailByGestureRecognizer");
-//  return NO;
-//}
-//
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-//  DDLogDebug(@"shouldReceiveTouch");
-//  return YES;
-//}
-//
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-//  DDLogDebug(@"shouldRecognizeSimultaneouslyWithGestureRecognizer");
-//  return NO;
-//}
-//
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-//  DDLogDebug(@"shouldRequireFailureOfGestureRecognizer");
-//  return NO;
-//}
-//
-//- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-//  DDLogDebug(@"gestureRecognizerShouldBegin");
-//  return YES;
-//}
 
 @end
