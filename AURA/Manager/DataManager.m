@@ -19,8 +19,8 @@
 
 @property(strong, nonatomic) NSString *resultCode;
 @property(strong, nonatomic) UIImage *image;
-@property(strong, nonatomic) NSMutableArray *followee;
-@property(strong, nonatomic) NSMutableArray *follower;
+//@property(strong, nonatomic) NSMutableArray *followee;
+//@property(strong, nonatomic) NSMutableArray *follower;
 @property(strong, nonatomic) NSString *latestCreatedAlbumId;
 @property(strong, nonatomic) NSString *latestUploadedImageId;
 @property(strong, nonatomic) NSString *latestCommitPhotoId;
@@ -32,6 +32,7 @@
 @property(strong, nonatomic) NSMutableArray *comments;
 @property(strong, nonatomic) NSMutableArray *searchAlbumArray;
 @property(strong, nonatomic) NSMutableArray *searchUserArray;
+@property(strong, nonatomic) UserInfo *userInfo;
 
 @end
 
@@ -81,6 +82,30 @@ static DataManager *dataManager;
   return GET_OBJECT(@"nickname");
 }
 
++ (NSString *)username {
+  return GET_OBJECT(@"username");
+}
+
++ (void)setUsername:(NSString *)username {
+  SET_OBJECT(username, @"username");
+}
+
++ (NSString *)password {
+  return GET_OBJECT(@"password");
+}
+
++ (void)setPassword:(NSString *)password {
+  SET_OBJECT(password, @"password");
+}
+
++ (NSString *)myThumbnail {
+  return GET_OBJECT(@"thumbnail");
+}
+
++ (void)setMyThumbnail:(NSString *)thumbnail {
+  SET_OBJECT(thumbnail, @"thumbnail");
+}
+
 + (void)setTokenDate:(NSDate *)date {
   SET_OBJECT(date, @"tokendate");
 }
@@ -115,21 +140,21 @@ static DataManager *dataManager;
   dataManager.image = image;
 }
 
-+ (void)setFollowee:(NSMutableArray *)followee {
-  dataManager.followee = followee;
-}
-
-+ (NSMutableArray *)followee {
-  return dataManager.followee;
-}
-
-+ (void)setFollower:(NSMutableArray *)follower {
-  dataManager.follower = follower;
-}
-
-+ (NSMutableArray *)follower {
-  return dataManager.follower;
-}
+//+ (void)setFollowee:(NSMutableArray *)followee {
+//  dataManager.followee = followee;
+//}
+//
+//+ (NSMutableArray *)followee {
+//  return dataManager.followee;
+//}
+//
+//+ (void)setFollower:(NSMutableArray *)follower {
+//  dataManager.follower = follower;
+//}
+//
+//+ (NSMutableArray *)follower {
+//  return dataManager.follower;
+//}
 
 + (NSString *)latestCreatedAlbumId {
   return  dataManager.latestCreatedAlbumId;
@@ -246,6 +271,14 @@ static DataManager *dataManager;
 
 + (NSMutableArray *)searchUserArray {
   return dataManager.searchUserArray;
+}
+
++ (UserInfo *)userInfo {
+  return dataManager.userInfo;
+}
+
++ (void)setUserInfo:(UserInfo *)userInfo {
+  dataManager.userInfo = userInfo;
 }
 
 @end

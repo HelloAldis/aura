@@ -13,5 +13,6 @@
 - (NSString *)token;
 - (NSString *)userid;
 - (NSString *)nickname;
+- (NSString *)thumbnail;
 
 @end

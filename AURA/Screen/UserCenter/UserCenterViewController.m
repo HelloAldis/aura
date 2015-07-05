@@ -13,6 +13,8 @@
 #import "UIView+Util.h"
 #import "DataManager.h"
 #import "APIManager.h"
+#import "NSString+Util.h"
+#import "Business.h"
 
 @interface UserCenterViewController ()
 
@@ -36,39 +38,54 @@
   [self.userImage setBorder:2 andColor:[[UIColor whiteColor] CGColor]];
   
   [self initNav];
-  [self initUI];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  QueryUserInfoRequest *req = [[QueryUserInfoRequest alloc] init];
+  [req setuserid:self.userId];
+  
+  [APIManager queryUserInfo:req success:^{
+    [self initDisplay];
+    [self initConttrol];
+  } failure:^{}];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
 }
 
-- (void)initUI {
-  NSString *signature = @"";
+- (void)initDisplay {
+  self.title = self.nickname;
+  NSString *signature = [DataManager userInfo].sign;
   [self.lblSignature setTextWithAutoSize:signature maxWidth:280];
   self.lblSignature.center = CGPointMake(160, self.lblSignature.center.y);
   self.lblPicCount.text = @"";
   self.lblFcount.text = @"";
-  self.lblFolloweeCount.text = @"0";
-  self.lblFollowerCount.text = @"0";
-  self.lblName.text = self.user.nickname;
+  self.lblFolloweeCount.text = [NSString stringWithFormat:@"%ld", [DataManager userInfo].followee.count];
+  self.lblFollowerCount.text = [NSString stringWithFormat:@"%ld", [DataManager userInfo].follower.count];;
+  self.lblName.text = self.nickname;
   self.userBackgroundImageView.image = [DataManager defaultUserImage];
-  
-  if ([DataManager isMe:self.user.userid]) {
-    [self.btnEdit setTitle:@"设置" forState:UIControlStateNormal];
-  } else {
-    [self.btnEdit setTitle:@"关注" forState:UIControlStateNormal];
-  }
-  
   self.userImage.image = [DataManager defaultUserImage];
 }
 
 - (void)initNav {
-  if ([DataManager isMe:self.user.userid]) {
+  if ([self.userId isMe]) {
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"设置"] style:UIBarButtonItemStylePlain target:self action:@selector(onClickAppSetting)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"消息"] style:UIBarButtonItemStyleDone target:self action:@selector(message)];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"消息"] style:UIBarButtonItemStyleDone target:self action:@selector(message)];
   } else {
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"返回"] style:UIBarButtonItemStylePlain target:self action:@selector(onClickBack)];
+  }
+}
+
+- (void)initConttrol {
+  if ([self.userId isMe]) {
+    [self.btnEdit setTitle:@"设置" forState:UIControlStateNormal];
+  } else {
+    if ([Business isUserArray:[DataManager userInfo].follower hashId:[DataManager meId]]) {
+      [self.btnEdit setTitle:@"取消关注" forState:UIControlStateNormal];
+    } else {
+      [self.btnEdit setTitle:@"关注" forState:UIControlStateNormal];
+    }
   }
 }
 
@@ -81,15 +98,26 @@
 }
 
 - (IBAction)onClickUserSetting:(id)sender {
-  if ([DataManager isMe:self.user.userid]) {
+  if ([self.userId isMe]) {
     [ViewControllerContainer showUserSetting];
   } else {
-    FollowRequest *request = [[FollowRequest alloc] init];
-    [request setFolloweeid:self.user.userid];
-    
-    [APIManager follow:request success:^{
-      [self.btnEdit setTitle:@"已关注" forState:UIControlStateNormal];
-    } failure:^{}];
+    if ([self.btnEdit.titleLabel.text isEqualToString:@"取消关注"]) {
+      DelFollowerRequest *req = [[DelFollowerRequest alloc] init];
+      [req setfollowerid:self.userId];
+      
+      [APIManager delFollower:req success:^{
+        [self.btnEdit setTitle:@"关注" forState:UIControlStateNormal];
+      } failure:^{
+        
+      }];
+    } else {
+      FollowRequest *request = [[FollowRequest alloc] init];
+      [request setFolloweeid:self.userId];
+      
+      [APIManager follow:request success:^{
+        [self.btnEdit setTitle:@"取消关注" forState:UIControlStateNormal];
+      } failure:^{}];
+    }
   }
 }
 
@@ -98,11 +126,15 @@
 }
 
 - (IBAction)onClickFollower:(id)sender {
-  [ViewControllerContainer showFollower];
+  if ([self.userId isMe]) {
+    [ViewControllerContainer showFollower];
+  }
 }
 
 - (IBAction)onClickFollwee:(id)sender {
-  [ViewControllerContainer showFollowee];
+  if ([self.userId isMe]) {
+    [ViewControllerContainer showFollowee];
+  }
 }
 
 @end

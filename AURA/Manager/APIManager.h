@@ -24,6 +24,7 @@
 + (void)downImage:(NSString *)sha1 success:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)commit:(CommitRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)follow:(FollowRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
++ (void)delFollower:(DelFollowerRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)getAllFollowee:(GetAllFolloweeRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)getAllFollower:(GetAllFollowerRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)queryAlbum:(QueryAlbumRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
@@ -42,5 +43,7 @@
 + (void)queryComment:(QueryCommentRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)searchAlbumByName:(SearchAlbumByNameRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)searchNickname:(SearchNicknameRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
++ (void)queryUserInfo:(QueryUserInfoRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
+
 
 @end

@@ -44,16 +44,16 @@
 
 #pragma mark - tableview
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return [DataManager followee].count;
+  return [DataManager userInfo].followee.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  return 50;
+  return 64;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   FollowerCell *followerCell = [tableView dequeueReusableCellWithIdentifier:@"FollowerCell" forIndexPath:indexPath];
-  [followerCell initwithFollowee:[[DataManager followee] objectAtIndex:indexPath.row]];
+  [followerCell initwithFollowee:[[DataManager userInfo].followee objectAtIndex:indexPath.row]];
   return followerCell;
 }
 

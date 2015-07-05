@@ -19,7 +19,9 @@
   
   NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:resp.photoes.count];
   for (NSDictionary *dict in resp.photoes) {
-    [array addObject:[[Photo alloc] initWithData:dict]];
+    NSMutableDictionary *mdict = [[NSMutableDictionary alloc] initWithDictionary:dict];
+    [mdict setValue:[[mdict objectForKey:@"albuminfo"] objectForKey:@"creatorinfo"] forKey:@"creatorinfo"];
+    [array addObject:[[Photo alloc] initWithData:mdict]];
   }
   
   [DataManager setDiscoveryArray:array];

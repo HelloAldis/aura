@@ -33,5 +33,7 @@
 #import "AddCommentRequest.h"
 #import "SearchAlbumByNameRequest.h"
 #import "SearchNicknameRequest.h"
+#import "QueryUserInfoRequest.h"
+#import "DelFollowerRequest.h"
 
 #endif

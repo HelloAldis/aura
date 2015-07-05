@@ -66,6 +66,8 @@
     [SearchAlbumByNameDataHandler handleResponse:baseResponse];
   } else if ([baseResponse class] == [SearchNicknameResponse class]) {
     [SearchNicknameDataHandler handleResponse:baseResponse];
+  } else if ([baseResponse class] == [QueryUserInfoResponse class]) {
+    [QueryUserInfoDataHandler handleResponse:baseResponse];
   }
 
 

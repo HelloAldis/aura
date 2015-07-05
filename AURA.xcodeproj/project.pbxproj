@@ -16,6 +16,9 @@
 		AD2C4D6E19FD35C700F3424D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2C4D6D19FD35C700F3424D /* CoreLocation.framework */; };
 		AD2DC5B31B40266900CAC7B4 /* seach@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2DC5B21B40266900CAC7B4 /* seach@2x.png */; };
 		AD2DC5B51B4028DD00CAC7B4 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2DC5B41B4028DD00CAC7B4 /* map@2x.png */; };
+		AD4F46F41B4184A70059A3EF /* PhotoTweaksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4F46EF1B4184A70059A3EF /* PhotoTweaksViewController.m */; };
+		AD4F46F51B4184A70059A3EF /* PhotoTweakView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4F46F11B4184A70059A3EF /* PhotoTweakView.m */; };
+		AD4F46F61B4184A70059A3EF /* UIColor+Tweak.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4F46F31B4184A70059A3EF /* UIColor+Tweak.m */; };
 		AD62DE3E1AAC023B00485013 /* RecommendAlbumDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD62DE3D1AAC023B00485013 /* RecommendAlbumDataHandler.m */; };
 		AD62DE431AAC802100485013 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = AD62DE421AAC802100485013 /* UIView+Util.m */; };
 		AD716DC11ADA0AE3006750F9 /* QueryAlbumDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD716DC01ADA0AE3006750F9 /* QueryAlbumDataHandler.m */; };
@@ -126,6 +129,14 @@
 		AD81257D1AB9B24200CB4768 /* 选中personal center icon @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8125181AB9B24200CB4768 /* 选中personal center icon @2x.png */; };
 		AD8125801AB9B9CC00CB4768 /* QueryAlbumRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD81257F1AB9B9CC00CB4768 /* QueryAlbumRequest.m */; };
 		AD8125831AB9B9EC00CB4768 /* QueryAlbumResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8125821AB9B9EC00CB4768 /* QueryAlbumResponse.m */; };
+		AD8400061B4804A400EF30F5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8400041B4804A400EF30F5 /* MapViewController.m */; };
+		AD8400071B4804A400EF30F5 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8400051B4804A400EF30F5 /* MapViewController.xib */; };
+		AD8400091B48055C00EF30F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8400081B48055C00EF30F5 /* MapKit.framework */; };
+		AD84000C1B48083000EF30F5 /* Geo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD84000B1B48083000EF30F5 /* Geo.m */; };
+		AD84000F1B480C3300EF30F5 /* AlbumAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD84000E1B480C3300EF30F5 /* AlbumAnnotation.m */; };
+		AD8400121B48168100EF30F5 /* QueryUserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8400111B48168100EF30F5 /* QueryUserInfoRequest.m */; };
+		AD8400151B4816F100EF30F5 /* QueryUserInfoResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8400141B4816F100EF30F5 /* QueryUserInfoResponse.m */; };
+		AD8400181B48172000EF30F5 /* QueryUserInfoDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8400171B48172000EF30F5 /* QueryUserInfoDataHandler.m */; };
 		AD8CF8CD1B25C9B100565C7E /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = AD8CF8CC1B25C9B100565C7E /* iTunesArtwork */; };
 		AD90BAC21A5042CE00EAFF2D /* FollowRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC11A5042CE00EAFF2D /* FollowRequest.m */; };
 		AD90BAC51A50437800EAFF2D /* GetAllFolloweeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC41A50437800EAFF2D /* GetAllFolloweeRequest.m */; };
@@ -202,6 +213,9 @@
 		ADD3AF981AEB8329003A5FFC /* LicenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3AF961AEB8329003A5FFC /* LicenseViewController.xib */; };
 		ADD3AF9C1AEB83E7003A5FFC /* UsingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3AF9A1AEB83E7003A5FFC /* UsingViewController.m */; };
 		ADD3AF9D1AEB83E7003A5FFC /* UsingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3AF9B1AEB83E7003A5FFC /* UsingViewController.xib */; };
+		ADEA6B211B4937DD0022AF14 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEA6B201B4937DD0022AF14 /* UserInfo.m */; };
+		ADEA6B281B493CC60022AF14 /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEA6B271B493CC60022AF14 /* Business.m */; };
+		ADEA6B2B1B4963280022AF14 /* DelFollowerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEA6B2A1B4963280022AF14 /* DelFollowerRequest.m */; };
 		ADEA965F19E6BCEB00549BB5 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEA965E19E6BCEB00549BB5 /* APIManager.m */; };
 		ADF9B8901ADEA439007443DB /* 创建@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF9B88F1ADEA439007443DB /* 创建@2x.png */; };
 		C0042FA419F8E8640017DA8F /* UILabel+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = C0042FA319F8E8640017DA8F /* UILabel+Util.m */; };
@@ -332,6 +346,12 @@
 		AD2C4D6D19FD35C700F3424D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AD2DC5B21B40266900CAC7B4 /* seach@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seach@2x.png"; sourceTree = "<group>"; };
 		AD2DC5B41B4028DD00CAC7B4 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
+		AD4F46EE1B4184A70059A3EF /* PhotoTweaksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTweaksViewController.h; sourceTree = "<group>"; };
+		AD4F46EF1B4184A70059A3EF /* PhotoTweaksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTweaksViewController.m; sourceTree = "<group>"; };
+		AD4F46F01B4184A70059A3EF /* PhotoTweakView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTweakView.h; sourceTree = "<group>"; };
+		AD4F46F11B4184A70059A3EF /* PhotoTweakView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTweakView.m; sourceTree = "<group>"; };
+		AD4F46F21B4184A70059A3EF /* UIColor+Tweak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Tweak.h"; sourceTree = "<group>"; };
+		AD4F46F31B4184A70059A3EF /* UIColor+Tweak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tweak.m"; sourceTree = "<group>"; };
 		AD62DE3C1AAC023B00485013 /* RecommendAlbumDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendAlbumDataHandler.h; sourceTree = "<group>"; };
 		AD62DE3D1AAC023B00485013 /* RecommendAlbumDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendAlbumDataHandler.m; sourceTree = "<group>"; };
 		AD62DE411AAC802100485013 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
@@ -457,6 +477,20 @@
 		AD81257F1AB9B9CC00CB4768 /* QueryAlbumRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryAlbumRequest.m; sourceTree = "<group>"; };
 		AD8125811AB9B9EC00CB4768 /* QueryAlbumResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryAlbumResponse.h; sourceTree = "<group>"; };
 		AD8125821AB9B9EC00CB4768 /* QueryAlbumResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryAlbumResponse.m; sourceTree = "<group>"; };
+		AD8400031B4804A400EF30F5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		AD8400041B4804A400EF30F5 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		AD8400051B4804A400EF30F5 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		AD8400081B48055C00EF30F5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AD84000A1B48083000EF30F5 /* Geo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geo.h; sourceTree = "<group>"; };
+		AD84000B1B48083000EF30F5 /* Geo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geo.m; sourceTree = "<group>"; };
+		AD84000D1B480C3300EF30F5 /* AlbumAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumAnnotation.h; sourceTree = "<group>"; };
+		AD84000E1B480C3300EF30F5 /* AlbumAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumAnnotation.m; sourceTree = "<group>"; };
+		AD8400101B48168100EF30F5 /* QueryUserInfoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryUserInfoRequest.h; sourceTree = "<group>"; };
+		AD8400111B48168100EF30F5 /* QueryUserInfoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryUserInfoRequest.m; sourceTree = "<group>"; };
+		AD8400131B4816F100EF30F5 /* QueryUserInfoResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryUserInfoResponse.h; sourceTree = "<group>"; };
+		AD8400141B4816F100EF30F5 /* QueryUserInfoResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryUserInfoResponse.m; sourceTree = "<group>"; };
+		AD8400161B48172000EF30F5 /* QueryUserInfoDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryUserInfoDataHandler.h; sourceTree = "<group>"; };
+		AD8400171B48172000EF30F5 /* QueryUserInfoDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryUserInfoDataHandler.m; sourceTree = "<group>"; };
 		AD8CF8CC1B25C9B100565C7E /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		AD90BAC01A5042CE00EAFF2D /* FollowRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowRequest.h; sourceTree = "<group>"; };
 		AD90BAC11A5042CE00EAFF2D /* FollowRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowRequest.m; sourceTree = "<group>"; };
@@ -590,6 +624,12 @@
 		ADD3AF991AEB83E7003A5FFC /* UsingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsingViewController.h; sourceTree = "<group>"; };
 		ADD3AF9A1AEB83E7003A5FFC /* UsingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsingViewController.m; sourceTree = "<group>"; };
 		ADD3AF9B1AEB83E7003A5FFC /* UsingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsingViewController.xib; sourceTree = "<group>"; };
+		ADEA6B1F1B4937DD0022AF14 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		ADEA6B201B4937DD0022AF14 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		ADEA6B261B493CC60022AF14 /* Business.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Business.h; sourceTree = "<group>"; };
+		ADEA6B271B493CC60022AF14 /* Business.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Business.m; sourceTree = "<group>"; };
+		ADEA6B291B4963280022AF14 /* DelFollowerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelFollowerRequest.h; sourceTree = "<group>"; };
+		ADEA6B2A1B4963280022AF14 /* DelFollowerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelFollowerRequest.m; sourceTree = "<group>"; };
 		ADEA965D19E6BCEB00549BB5 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		ADEA965E19E6BCEB00549BB5 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		ADF9B88F1ADEA439007443DB /* 创建@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "创建@2x.png"; sourceTree = "<group>"; };
@@ -774,6 +814,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD8400091B48055C00EF30F5 /* MapKit.framework in Frameworks */,
 				C0A746EB1ABC110300C3FFFF /* CoreGraphics.framework in Frameworks */,
 				AD2C4D6E19FD35C700F3424D /* CoreLocation.framework in Frameworks */,
 				C0E5DA4419E8C9E7002CC027 /* MobileCoreServices.framework in Frameworks */,
@@ -794,12 +835,26 @@
 		A0184847E14F4043B180DD8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD8400081B48055C00EF30F5 /* MapKit.framework */,
 				C0A746EA1ABC110300C3FFFF /* CoreGraphics.framework */,
 				AD2C4D6D19FD35C700F3424D /* CoreLocation.framework */,
 				C0E5DA4319E8C9E7002CC027 /* MobileCoreServices.framework */,
 				53EBA1BFFC9C469A820D4551 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD4F46ED1B4184420059A3EF /* PhotoTweak */ = {
+			isa = PBXGroup;
+			children = (
+				AD4F46EE1B4184A70059A3EF /* PhotoTweaksViewController.h */,
+				AD4F46EF1B4184A70059A3EF /* PhotoTweaksViewController.m */,
+				AD4F46F01B4184A70059A3EF /* PhotoTweakView.h */,
+				AD4F46F11B4184A70059A3EF /* PhotoTweakView.m */,
+				AD4F46F21B4184A70059A3EF /* UIColor+Tweak.h */,
+				AD4F46F31B4184A70059A3EF /* UIColor+Tweak.m */,
+			);
+			name = PhotoTweak;
 			sourceTree = "<group>";
 		};
 		AD8124AB1AB9B24200CB4768 /* 12 个人中心 */ = {
@@ -1027,6 +1082,7 @@
 		ADAAAF7219EAA47C00070A63 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				AD4F46ED1B4184420059A3EF /* PhotoTweak */,
 				ADD131291B24390F00AE9972 /* UUInputFunctionView.h */,
 				ADD1312A1B24390F00AE9972 /* UUInputFunctionView.m */,
 				ADD131111B242D8D00AE9972 /* Aspects.h */,
@@ -1115,6 +1171,10 @@
 				AD94C74A1B2C6FF800516297 /* SearchAlbumByNameRequest.m */,
 				AD7E59751B2D55D100A59560 /* SearchNicknameRequest.h */,
 				AD7E59761B2D55D100A59560 /* SearchNicknameRequest.m */,
+				AD8400101B48168100EF30F5 /* QueryUserInfoRequest.h */,
+				AD8400111B48168100EF30F5 /* QueryUserInfoRequest.m */,
+				ADEA6B291B4963280022AF14 /* DelFollowerRequest.h */,
+				ADEA6B2A1B4963280022AF14 /* DelFollowerRequest.m */,
 			);
 			name = Request;
 			path = ../Model/Request;
@@ -1164,6 +1224,8 @@
 				AD7E59731B2D2E8B00A59560 /* SearchAlbumByNameResponse.m */,
 				AD7E59781B2D565400A59560 /* SearchNicknameResponse.h */,
 				AD7E59791B2D565400A59560 /* SearchNicknameResponse.m */,
+				AD8400131B4816F100EF30F5 /* QueryUserInfoResponse.h */,
+				AD8400141B4816F100EF30F5 /* QueryUserInfoResponse.m */,
 			);
 			name = Response;
 			path = ../Model/Response;
@@ -1190,6 +1252,11 @@
 				C0B433451ADF935900DE2CE9 /* OrderView.h */,
 				C0B433461ADF935900DE2CE9 /* OrderView.m */,
 				C0B433481ADF936E00DE2CE9 /* OrderView.xib */,
+				AD8400031B4804A400EF30F5 /* MapViewController.h */,
+				AD8400041B4804A400EF30F5 /* MapViewController.m */,
+				AD8400051B4804A400EF30F5 /* MapViewController.xib */,
+				AD84000D1B480C3300EF30F5 /* AlbumAnnotation.h */,
+				AD84000E1B480C3300EF30F5 /* AlbumAnnotation.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1209,6 +1276,10 @@
 				ADC0124D1AE7D45100F1C92F /* CreatorInfo.m */,
 				ADD131451B248F8B00AE9972 /* Comment.h */,
 				ADD131461B248F8B00AE9972 /* Comment.m */,
+				AD84000A1B48083000EF30F5 /* Geo.h */,
+				AD84000B1B48083000EF30F5 /* Geo.m */,
+				ADEA6B1F1B4937DD0022AF14 /* UserInfo.h */,
+				ADEA6B201B4937DD0022AF14 /* UserInfo.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -1259,6 +1330,15 @@
 			name = PhotoDetail;
 			sourceTree = "<group>";
 		};
+		ADEA6B251B493C970022AF14 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				ADEA6B261B493CC60022AF14 /* Business.h */,
+				ADEA6B271B493CC60022AF14 /* Business.m */,
+			);
+			name = Business;
+			sourceTree = "<group>";
+		};
 		C0042FE019FE33520017DA8F /* Filter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1302,6 +1382,7 @@
 				ADA0287D19D99FDD00ED102D /* Macro */,
 				ADA8C15D19D6F55C0064125D /* Manager */,
 				ADA8C15C19D6F5370064125D /* Model */,
+				ADEA6B251B493C970022AF14 /* Business */,
 				C02A9D7719D3AA2A00D3113C /* Screen */,
 				C02A9D5B19D3A9C300D3113C /* Images */,
 				C02A9D3919D25C5600D3113C /* AppDelegate.h */,
@@ -1468,6 +1549,8 @@
 				AD7E59701B2D2E4700A59560 /* SearchAlbumByNameDataHandler.m */,
 				AD7E597E1B2D58FA00A59560 /* SearchNicknameDataHandler.h */,
 				AD7E597F1B2D58FA00A59560 /* SearchNicknameDataHandler.m */,
+				AD8400161B48172000EF30F5 /* QueryUserInfoDataHandler.h */,
+				AD8400171B48172000EF30F5 /* QueryUserInfoDataHandler.m */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -1697,6 +1780,7 @@
 				AD8125221AB9B24200CB4768 /* 12个人中心_icon_被关注@2x.png in Resources */,
 				AD8125461AB9B24200CB4768 /* 04相册_按下赞@2x.png in Resources */,
 				AD8125511AB9B24200CB4768 /* 08相机_icon_关闭@2x.png in Resources */,
+				AD8400071B4804A400EF30F5 /* MapViewController.xib in Resources */,
 				C0E5DAA819EBC78A002CC027 /* AppSettingViewController.xib in Resources */,
 				AD81253C1AB9B24200CB4768 /* 地球icon@2x.png in Resources */,
 				AD96AA771AC7C3DB00E5DEF4 /* ShareActivityCell.xib in Resources */,
@@ -1892,11 +1976,13 @@
 				AD7E59801B2D58FA00A59560 /* SearchNicknameDataHandler.m in Sources */,
 				C0553D9219EF9D3D00FCB616 /* ConfirmRequest.m in Sources */,
 				ADD131411B248EC500AE9972 /* QueryCommentResponse.m in Sources */,
+				AD84000F1B480C3300EF30F5 /* AlbumAnnotation.m in Sources */,
 				ADD131271B24365D00AE9972 /* CommentTableViewCell.m in Sources */,
 				ADD3AF851AEB4809003A5FFC /* RecommendPhotoesByCityRequest.m in Sources */,
 				C0ACC0A21AB6CD4F00F78B06 /* ActivityCell.m in Sources */,
 				C0A747061ABC2C8D00C3FFFF /* CLIColor.m in Sources */,
 				AD96AA761AC7C3DB00E5DEF4 /* ShareActivityCell.m in Sources */,
+				AD4F46F61B4184A70059A3EF /* UIColor+Tweak.m in Sources */,
 				C099BBC01A0390940070A5D9 /* NSData+Util.m in Sources */,
 				AD7E597A1B2D565400A59560 /* SearchNicknameResponse.m in Sources */,
 				AD90BAC51A50437800EAFF2D /* GetAllFolloweeRequest.m in Sources */,
@@ -1934,6 +2020,7 @@
 				ADA6265519D5AF87005A4B49 /* WelcomeAlbumViewController.m in Sources */,
 				C0C993931AAD8D4F00E59F0E /* QueryPhotoInfoByFcountRequest.m in Sources */,
 				C0ACC0CD1AB967FE00F78B06 /* CommitDataHandler.m in Sources */,
+				AD8400061B4804A400EF30F5 /* MapViewController.m in Sources */,
 				C0553D8F19EF6EBE00FCB616 /* RegistRequest.m in Sources */,
 				C099BB9A1A021EFF0070A5D9 /* AlbumPhotoCell.m in Sources */,
 				ADAAAF7119EAA46B00070A63 /* NSString+Util.m in Sources */,
@@ -1942,6 +2029,7 @@
 				C07D5A9B19F4AED20076F591 /* LoginResponse.m in Sources */,
 				C0A7471C1ABC3B7400C3FFFF /* DelFavouriteResponse.m in Sources */,
 				ADD131471B248F8B00AE9972 /* Comment.m in Sources */,
+				AD84000C1B48083000EF30F5 /* Geo.m in Sources */,
 				AD2C4D6619FD2EC500F3424D /* CreateAlbumResponse.m in Sources */,
 				C0A7A5EA1A5A3B5D00E3E017 /* FollowerViewController.m in Sources */,
 				ADA8C16019D6F57F0064125D /* AlbumInfo.m in Sources */,
@@ -1981,7 +2069,10 @@
 				AD2C4D6C19FD31DA00F3424D /* GPSManager.m in Sources */,
 				C0C9938A1AAD8B8600E59F0E /* FavouriteRequest.m in Sources */,
 				AD94D2591A0270D800660529 /* UIImage+Util.m in Sources */,
+				AD8400151B4816F100EF30F5 /* QueryUserInfoResponse.m in Sources */,
+				AD4F46F41B4184A70059A3EF /* PhotoTweaksViewController.m in Sources */,
 				C0B433471ADF935900DE2CE9 /* OrderView.m in Sources */,
+				ADEA6B2B1B4963280022AF14 /* DelFollowerRequest.m in Sources */,
 				ADBD48FA1A624F7B003F3B6A /* GetAllFolloweeResponse.m in Sources */,
 				ADD3AF9C1AEB83E7003A5FFC /* UsingViewController.m in Sources */,
 				ADB2D28E19E97C3200AC58C1 /* BaseRequest.m in Sources */,
@@ -1993,12 +2084,16 @@
 				C099BB811A00CCDF0070A5D9 /* HomeCell.m in Sources */,
 				AD716DC71ADA258C006750F9 /* QueryPhotoInfoDataHandler.m in Sources */,
 				C02A9D3819D25C5600D3113C /* main.m in Sources */,
+				AD8400181B48172000EF30F5 /* QueryUserInfoDataHandler.m in Sources */,
+				AD8400121B48168100EF30F5 /* QueryUserInfoRequest.m in Sources */,
 				AD716DCA1ADA274F006750F9 /* Photo.m in Sources */,
 				ADD131221B24329D00AE9972 /* PhotoDetailViewController.m in Sources */,
 				C0A7470B1ABC2C8D00C3FFFF /* DDLog.m in Sources */,
 				ADEA965F19E6BCEB00549BB5 /* APIManager.m in Sources */,
 				C0A747071ABC2C8D00C3FFFF /* DDAbstractDatabaseLogger.m in Sources */,
 				ADBD490A1A62C250003F3B6A /* APIObject.m in Sources */,
+				AD4F46F51B4184A70059A3EF /* PhotoTweakView.m in Sources */,
+				ADEA6B281B493CC60022AF14 /* Business.m in Sources */,
 				C02A9D9819D4024A00D3113C /* AURA.m in Sources */,
 				ADC0124E1AE7D45100F1C92F /* CreatorInfo.m in Sources */,
 				AD90BAC81A5043C200EAFF2D /* GetAllFollowerRequest.m in Sources */,
@@ -2010,6 +2105,7 @@
 				ADD3AF881AEB49F8003A5FFC /* DiscoveryDataHandler.m in Sources */,
 				AD716DC11ADA0AE3006750F9 /* QueryAlbumDataHandler.m in Sources */,
 				C02A9D8A19D3F86700D3113C /* SignUpViewController.m in Sources */,
+				ADEA6B211B4937DD0022AF14 /* UserInfo.m in Sources */,
 				C02A9D8019D3AAA300D3113C /* LoginViewController.m in Sources */,
 				C0A747131ABC3AD900C3FFFF /* QueryPhotoInfoByCtimeResponse.m in Sources */,
 				AD8125801AB9B9CC00CB4768 /* QueryAlbumRequest.m in Sources */,

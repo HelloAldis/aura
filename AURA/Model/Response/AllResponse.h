@@ -28,5 +28,6 @@
 #import "QueryCommentResponse.h"
 #import "SearchAlbumByNameResponse.h"
 #import "SearchNicknameResponse.h"
+#import "QueryUserInfoResponse.h"
 
 #endif

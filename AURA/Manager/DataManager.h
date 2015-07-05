@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserInfo.h"
 
 @interface DataManager : NSObject
 
@@ -16,20 +17,28 @@
 + (NSString *)token;
 + (void)setTokenDate:(NSDate *)date;
 + (NSDate *)tokenDate;
+
 + (NSString *)meId;
 + (void)setMeId:(NSString *)meId;
 + (void)setMyNickname:(NSString *)nickname;
 + (NSString *)myNickname;
++ (NSString *)username;
++ (void)setUsername:(NSString *)username;
++ (NSString *)password;
++ (void)setPassword:(NSString *)password;
++ (NSString *)myThumbnail;
++ (void)setMyThumbnail:(NSString *)thumbnail;
+
 + (void)setLatitude:(double)latitude;
 + (double)latitude;
 + (void)setLongitude:(double)longitude;
 + (double)longitude;
 + (UIImage *)image;
 + (void)setImage:(UIImage *)image;
-+ (void)setFollowee:(NSMutableArray *)followee;
-+ (NSMutableArray *)followee;
-+ (void)setFollower:(NSMutableArray *)follower;
-+ (NSMutableArray *)follower;
+//+ (void)setFollowee:(NSMutableArray *)followee;
+//+ (NSMutableArray *)followee;
+//+ (void)setFollower:(NSMutableArray *)follower;
+//+ (NSMutableArray *)follower;
 + (NSString *)latestCreatedAlbumId;
 + (void)setLatestCreatedAlbumId:(NSString *)albumId;
 + (NSString *)latestUploadedImageId;
@@ -56,5 +65,7 @@
 + (NSMutableArray *)searchAlbumArray;
 + (void)setSearchUserArray:(NSMutableArray *)array;
 + (NSMutableArray *)searchUserArray;
++ (UserInfo *)userInfo;
++ (void)setUserInfo:(UserInfo *)userInfo;
 
 @end

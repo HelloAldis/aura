@@ -19,7 +19,12 @@
 }
 
 - (NSString *)thumbnail {
-  return [self.data objectForKey:@"thumbnail"];
+  id o = [self.data objectForKey:@"thumbnail"];
+  if (o == [NSNull null] || o == nil) {
+    return @"";
+  } else {
+    return [self.data objectForKey:@"thumbnail"];
+  }
 }
 
 @end

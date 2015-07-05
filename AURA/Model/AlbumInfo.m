@@ -46,4 +46,12 @@
   return [[CreatorInfo alloc] initWithData:[self.data objectForKey:@"creatorinfo"]];
 }
 
+- (Geo *)geo {
+  return [[Geo alloc] initWithData:[self.data objectForKey:@"geo"]];
+}
+
+- (NSString *)tags {
+  return [self.data objectForKey:@"tags"];
+}
+
 @end

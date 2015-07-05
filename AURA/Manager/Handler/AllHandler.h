@@ -24,5 +24,6 @@
 #import "QueryCommentDataHandler.h"
 #import "SearchAlbumByNameDataHandler.h"
 #import "SearchNicknameDataHandler.h"
+#import "QueryUserInfoDataHandler.h"
 
 #endif

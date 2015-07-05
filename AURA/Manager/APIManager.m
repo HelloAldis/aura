@@ -208,6 +208,18 @@ static AFHTTPRequestOperationManager *_oos;
          }];
 }
 
++ (void)delFollower:(DelFollowerRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [_manager POST:@"/aura/delFollower"
+      parameters:request.data
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           success();
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+           failure();
+           [ResponseHandler handleNetworkIssue];
+         }];
+}
+
 + (void)getAllFollowee:(GetAllFolloweeRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
   [_manager POST:@"/aura/getAllFollowee"
       parameters:request.data
@@ -421,6 +433,18 @@ static AFHTTPRequestOperationManager *_oos;
       parameters:request.data
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
            [ResponseHandler handleResponse:[[SearchNicknameResponse alloc] initWithData:responseObject] success:success failure:failure];
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+           failure();
+           [ResponseHandler handleNetworkIssue];
+         }];
+}
+
++ (void)queryUserInfo:(QueryUserInfoRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [_manager POST:@"/aura/queryUserInfo"
+      parameters:request.data
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           [ResponseHandler handleResponse:[[QueryUserInfoResponse alloc] initWithData:responseObject] success:success failure:failure];
          }
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
            failure();

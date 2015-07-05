@@ -11,33 +11,38 @@
 @implementation UIImage (Util)
 
 - (NSData *)data {
-  return UIImageJPEGRepresentation(self, 0.7);
+  NSData *data = nil;
+  if (self.size.width > 640) {
+    CGRect rect = CGRectMake(0, 0, 640, 640);
+    UIGraphicsBeginImageContext(rect.size);
+    [self drawInRect:rect];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    data = UIImageJPEGRepresentation(img, 0.7);
+  } else {
+    data = UIImageJPEGRepresentation(self, 0.7);
+  }
+  
+  DDLogDebug(@"data bytes %ld", [data length]);
+  
+  return data;
 }
 
 - (UIImage *)getSubImage:(CGRect)rect {
-//  UIGraphicsBeginImageContext(rect.size);
-//  [self drawInRect:rect];
-//  UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
-//  UIGraphicsEndImageContext();
-  DDLogDebug(@"o size : %lu", (unsigned long)[self data].length);
-  
-  
   CGImageRef cImage = CGImageCreateWithImageInRect(self.CGImage, rect);
   UIImage *smallImage = [UIImage imageWithCGImage:cImage scale:self.scale orientation:self.imageOrientation];
   CGImageRelease(cImage);
   
-  if (rect.size.width > 640) {
-    rect = CGRectMake(0, 0, 640, 640);
-  } else {
+//  if (rect.size.width > 640) {
+//    rect = CGRectMake(0, 0, 640, 640);
+//  } else {
     rect = CGRectMake(0, 0, rect.size.width, rect.size.height);
-  }
+//  }
 
   UIGraphicsBeginImageContext(rect.size);
   [smallImage drawInRect:rect];
   smallImage = UIGraphicsGetImageFromCurrentImageContext();
   UIGraphicsEndImageContext();
-  
-  DDLogDebug(@"new size : %lu", (unsigned long)[smallImage data].length);
   
   return smallImage;
 }

@@ -119,7 +119,7 @@ typedef enum : NSUInteger {
 }
 
 - (IBAction)onClickCamera:(id)sender {
-  
+  [ViewControllerContainer showMapWith:self.albumInfo];
 }
 
 - (IBAction)onClickMore:(id)sender {

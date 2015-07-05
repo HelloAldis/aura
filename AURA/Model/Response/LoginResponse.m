@@ -22,4 +22,13 @@
   return [self.data objectForKey:@"nickname"];
 }
 
+- (NSString *)thumbnail {
+  id o = [self.data objectForKey:@"thumbnail"];
+  if (o == [NSNull null] || o == nil) {
+    return @"";
+  } else {
+    return [self.data objectForKey:@"thumbnail"];
+  }
+}
+
 @end

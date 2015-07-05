@@ -160,7 +160,7 @@
 }
 
 -(void)shareSuccessfully {
-  [ViewControllerContainer showOriginalScreenAfterShare];
+  [ViewControllerContainer showHomeTopAfterShare];
 }
 
 #pragma mark - tableview delegate

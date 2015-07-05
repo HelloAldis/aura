@@ -28,6 +28,7 @@
 + (void)hideMainToolbar;
 + (void)bringToolbarToFront;
 + (void)clickSecond;
++ (void)clickFirst;
 + (void)clearToolbar;
 + (void)goDiscovery;
 

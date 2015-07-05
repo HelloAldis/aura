@@ -8,6 +8,7 @@
 
 #import "NSString+Util.h"
 #include <CommonCrypto/CommonHMAC.h>
+#import "DataManager.h"
 
 @implementation NSString (Util)
 
@@ -55,6 +56,27 @@
 - (NSString *)add:(NSInteger)add {
   NSInteger i = [self integerValue];
   return [NSString stringWithFormat:@"%ld", (i + add)];
+}
+
+- (NSSet *)tags {
+  NSArray *array = [self componentsSeparatedByString:@","];
+  NSMutableSet *tags = [[NSMutableSet alloc] initWithCapacity:array.count];
+  
+  if (array == nil) {
+    return tags;
+  }
+  
+  for (NSString *tag in array) {
+    if (![@"none" isEqualToString:[tag lowercaseString]] && ![tag isEmpty]) {
+      [tags addObject:tag];
+    }
+  }
+  
+  return tags;
+}
+
+- (BOOL)isMe {
+  return [[DataManager meId] isEqualToString:self];
 }
 
 @end

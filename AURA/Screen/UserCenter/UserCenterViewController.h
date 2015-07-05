@@ -11,6 +11,8 @@
 
 @interface UserCenterViewController : BaseViewController
 
-@property (nonatomic, strong) CreatorInfo *user;
+@property (nonatomic, strong) NSString *userId;
+@property (nonatomic, strong) NSString *nickname;
+@property (nonatomic, strong) NSString *thumbnail;
 
 @end

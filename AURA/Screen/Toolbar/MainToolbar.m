@@ -115,6 +115,11 @@ static MainToolbar *toolbar = nil;
   [[AppDelegate sharedInstance].window bringSubviewToFront:toolbar.menu];
 }
 
++ (void)clickFirst {
+  MainToolbar *toolbar = [MainToolbar mainToolBar];
+  [toolbar onBtnFirstClick:nil];
+}
+
 + (void)clickSecond {
   MainToolbar *toolbar = [MainToolbar mainToolBar];
   [toolbar onBtnSecondClick:nil];

@@ -20,7 +20,7 @@
     [array addObject:[[FollowUser alloc] initWithData:data]];
   }
   
-  [DataManager setFollowee:array];
+  [DataManager userInfo].followee = array;
 }
 
 @end

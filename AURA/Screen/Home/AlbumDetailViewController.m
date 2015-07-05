@@ -14,6 +14,7 @@
 #import "AURA.h"
 #import "OrderView.h"
 #import "BaseTableView.h"
+#import "NSString+Util.h"
 
 typedef enum : NSUInteger {
   OrderByFcount,
@@ -150,18 +151,6 @@ typedef enum : NSUInteger {
   }
 }
 
-- (NSSet *)allTags {
-  NSMutableSet *set = [[NSMutableSet alloc] init];
-  for ( Photo *photo in [DataManager photoArray]) {
-    NSArray *array = [photo.tag componentsSeparatedByString:@","];
-    if (array != nil) {
-      [set addObjectsFromArray:array];
-    }
-  }
-  
-  return set;
-}
-
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -184,7 +173,7 @@ typedef enum : NSUInteger {
   
   if (indexPath.row == 0) {
     AlbumInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlbumInfoCell" forIndexPath:indexPath];
-    [cell initwithAlbumInfo:self.albumInfo andFirstImage:self.firstPhoto andTags:[self allTags]];
+    [cell initwithAlbumInfo:self.albumInfo andFirstImage:self.firstPhoto andTags:[self.albumInfo.tags tags]];
     cell.supperController = self;
     return cell;
   } else {

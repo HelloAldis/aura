@@ -11,6 +11,7 @@
 #import "ViewControllerContainer.h"
 #import "APIManager.h"
 #import "NSString+Util.h"
+#import "DataManager.h"
 
 @interface GoViewController ()
 
@@ -87,7 +88,11 @@
 #ifdef ADEBUG
   [self loginSuccess];
 #else
-  [APIManager login:request success:^{[self loginSuccess];} failure:^{}];
+  [APIManager login:request success:^{
+    [DataManager setPassword:self.fldPassword.text];
+    [DataManager setUsername:self.fldPhone.text];
+    [self loginSuccess];
+  } failure:^{}];
 #endif
   
 }

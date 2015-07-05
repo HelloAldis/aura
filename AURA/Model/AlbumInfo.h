@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "APIObject.h"
 #import "CreatorInfo.h"
+#import "Geo.h"
 
 @interface AlbumInfo : APIObject
 
@@ -21,5 +22,7 @@
 - (NSString *)fcount;
 - (CreatorInfo *)creatorinfo;
 - (NSString *)location;
+- (Geo *)geo;
+- (NSString *)tags;
 
 @end

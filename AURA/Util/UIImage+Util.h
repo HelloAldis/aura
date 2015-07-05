@@ -13,5 +13,6 @@
 - (NSData *)data;
 - (UIImage *)getSquareImage;
 - (UIImage *)getCenterSquareImage;
+- (UIImage *)getSubImage:(CGRect)rect;
 
 @end

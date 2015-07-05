@@ -29,6 +29,7 @@
 #import "UsingViewController.h"
 #import "LicenseViewController.h"
 #import "PhotoDetailViewController.h"
+#import "MapViewController.h"
 
 @interface ViewControllerContainer ()
 
@@ -36,8 +37,6 @@
 @property(strong, nonatomic) UINavigationController *mainNav;
 @property(strong, nonatomic) UINavigationController *userCenterNav;
 @property(strong, nonatomic) UINavigationController *dicoveryNav;
-@property(weak, nonatomic) UIViewController *originalScreenBeforeCamera;
-
 
 @end
 
@@ -64,7 +63,6 @@ static ViewControllerContainer *container;
   container.mainNav = nil;
   container.userCenterNav = nil;
   container.dicoveryNav = nil;
-  container.originalScreenBeforeCamera = nil;
   [MainToolbar clearToolbar];
 }
 
@@ -96,7 +94,9 @@ static ViewControllerContainer *container;
 + (void)showMyCenter {
   if (!container.userCenterNav) {
     UserCenterViewController *center = [[UserCenterViewController alloc] initWithNibName:nil bundle:nil];
-    center.user = [[CreatorInfo alloc] initWithData:@{@"nickname":[DataManager myNickname], @"userid":[DataManager meId]}];
+    center.userId = [DataManager meId];
+    center.nickname = [DataManager myNickname];
+    center.thumbnail = [DataManager myThumbnail];
     container.userCenterNav = [[UINavigationController alloc] initWithRootViewController:center];
   }
 
@@ -106,7 +106,9 @@ static ViewControllerContainer *container;
 
 + (void)showUserCenter:(CreatorInfo *)user {
   UserCenterViewController *vc = [[UserCenterViewController alloc] initWithNibName:nil bundle:nil];
-  vc.user = user;
+  vc.userId = user.userid;
+  vc.nickname = user.nickname;
+  vc.thumbnail = user.thumbnail;
   UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
   [nav pushViewController:vc animated:YES];
 }
@@ -129,7 +131,6 @@ static ViewControllerContainer *container;
   FilterViewController *filter = [[FilterViewController alloc] initWithNibName:nil bundle:nil];
   filter.orignalImage = image;
   UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
-  container.originalScreenBeforeCamera = nav.topViewController;
   [nav pushViewController:filter animated:NO];
 }
 
@@ -168,10 +169,10 @@ static ViewControllerContainer *container;
   [nav pushViewController:sv animated:YES];
 }
 
-+ (void)showOriginalScreenAfterShare {
-  UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
-  [nav popToViewController:container.originalScreenBeforeCamera animated:YES];
++ (void)showHomeTopAfterShare {
   [MainToolbar showMainToolbar];
+  [MainToolbar clickFirst];
+  [container.mainNav popToRootViewControllerAnimated:NO];
 }
 
 + (void)showDiscouvery {
@@ -206,6 +207,13 @@ static ViewControllerContainer *container;
   UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
   [MainToolbar hideMainToolbar];
   [nav pushViewController:p animated:YES];
+}
+
++ (void)showMapWith:(AlbumInfo *)albumInfo {
+  MapViewController *m = [[MapViewController alloc] initWithNibName:nil bundle:nil];
+  m.albumInfo = albumInfo;
+  UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
+  [nav pushViewController:m animated:YES];
 }
 
 @end

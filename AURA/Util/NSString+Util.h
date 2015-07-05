@@ -16,5 +16,7 @@
 - (NSString *)urlEncode;
 - (NSString *)replaceEmptyToPlus;
 - (NSString *)add:(NSInteger)add;
+- (NSSet *)tags;
+- (BOOL)isMe;
 
 @end

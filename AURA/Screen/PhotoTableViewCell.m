@@ -15,6 +15,7 @@
 #import "APIManager.h"
 #import "NSString+Util.h"
 #import "SVProgressHUD.h"
+#import "NSString+Util.h"
 
 @interface PhotoTableViewCell ()
 
@@ -47,7 +48,7 @@
     [self.btnLike setImage:[UIImage imageNamed:@"05相册外_赞"] forState:UIControlStateNormal];
   }
   
-  NSArray *tags = [self.photo.tag componentsSeparatedByString:@","];
+  NSSet *tags = [self.photo.tag tags];
   if (tags.count == 0) {
     self.lblTag.hidden = YES;
   } else {
