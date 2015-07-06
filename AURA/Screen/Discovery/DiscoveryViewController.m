@@ -203,7 +203,11 @@
     [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:@"取消"];
   }
   
-  self.searchResultView.frame = CGRectMake(0, 0, 320, 457);
+//  DDLogDebug(@"%@", NSStringFromCGPoint(self.tableView.contentOffset));
+//  self.tableView.scrollEnabled = NO;
+  
+  [self.tableView setContentOffset:self.tableView.contentOffset animated:NO];
+  self.searchResultView.frame = CGRectMake(0, self.tableView.contentOffset.y, 320, 457);
 }
 
 #pragma mark - handle refresh

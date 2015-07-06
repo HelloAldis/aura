@@ -141,7 +141,6 @@ static AFHTTPRequestOperationManager *_oos;
   [DataManager setLatestUploadedImageId:nil];
 //  image = [UIImage imageNamed:@"1.jpeg"];
   NSData *data = [image data];
-  DDLogDebug(@"size %lu", (unsigned long)data.length);
   
   NSString *sha1 = [data sha1];
   NSString *date = [NSDate get10MinAfterNow];
