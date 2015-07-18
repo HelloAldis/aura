@@ -13,6 +13,9 @@
 @property (nonatomic, strong) NSArray *follower;
 @property (nonatomic, strong) NSArray *followee;
 @property (nonatomic, strong) NSString *sign;
+@property (nonatomic, strong) NSString *nickname;
+@property (nonatomic, strong) NSString *thumbnail;
+@property (nonatomic, strong) NSMutableArray *myAlbum;
 
 //- (NSArray *)follower;
 //- (NSArray *)followee;

@@ -59,7 +59,9 @@ static ViewControllerContainer *container;
 
 + (void)showLoginViewController {
   LoginViewController *vc = [[LoginViewController alloc] initWithNibName:nil bundle:nil];
-  container.window.rootViewController = vc;
+  UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:vc];
+  
+  container.window.rootViewController = nav;
   container.mainNav = nil;
   container.userCenterNav = nil;
   container.dicoveryNav = nil;
@@ -72,7 +74,10 @@ static ViewControllerContainer *container;
     container.mainNav = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] initWithNibName:nil bundle:nil]];
   }
   
-  [container.mainNav pushViewController:[[WelcomeAlbumViewController alloc] initWithNibName:nil bundle:nil] animated:NO];
+  if (![container.mainNav.topViewController isKindOfClass:[WelcomeAlbumViewController class]]) {
+    [container.mainNav pushViewController:[[WelcomeAlbumViewController alloc] initWithNibName:nil bundle:nil] animated:NO];
+  }
+
   [container performSelector:@selector(showLater) withObject:nil afterDelay:0.1];
   container.window.rootViewController = container.mainNav;
   [MainToolbar bringToolbarToFront];
@@ -95,8 +100,7 @@ static ViewControllerContainer *container;
   if (!container.userCenterNav) {
     UserCenterViewController *center = [[UserCenterViewController alloc] initWithNibName:nil bundle:nil];
     center.userId = [DataManager meId];
-    center.nickname = [DataManager myNickname];
-    center.thumbnail = [DataManager myThumbnail];
+    center.showAppSetting = YES;
     container.userCenterNav = [[UINavigationController alloc] initWithRootViewController:center];
   }
 
@@ -104,11 +108,10 @@ static ViewControllerContainer *container;
   [MainToolbar bringToolbarToFront];
 }
 
-+ (void)showUserCenter:(CreatorInfo *)user {
++ (void)showUserCenter:(NSString *)userid {
   UserCenterViewController *vc = [[UserCenterViewController alloc] initWithNibName:nil bundle:nil];
-  vc.userId = user.userid;
-  vc.nickname = user.nickname;
-  vc.thumbnail = user.thumbnail;
+  vc.userId = userid;
+  vc.showAppSetting = NO;
   UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
   [nav pushViewController:vc animated:YES];
 }
@@ -130,6 +133,15 @@ static ViewControllerContainer *container;
 + (void)showFilter:(UIImage *)image {
   FilterViewController *filter = [[FilterViewController alloc] initWithNibName:nil bundle:nil];
   filter.orignalImage = image;
+  filter.type = TYPE_EDIT_IMAGE;
+  UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
+  [nav pushViewController:filter animated:NO];
+}
+
++ (void)showEditUserImage:(UIImage *)image {
+  FilterViewController *filter = [[FilterViewController alloc] initWithNibName:nil bundle:nil];
+  filter.orignalImage = image;
+  filter.type = TYPE_EDIT_USER;
   UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
   [nav pushViewController:filter animated:NO];
 }
@@ -170,6 +182,7 @@ static ViewControllerContainer *container;
 }
 
 + (void)showHomeTopAfterShare {
+  [container.mainNav popToRootViewControllerAnimated:NO];
   [MainToolbar showMainToolbar];
   [MainToolbar clickFirst];
   [container.mainNav popToRootViewControllerAnimated:NO];
@@ -193,7 +206,8 @@ static ViewControllerContainer *container;
 
 + (void)showLicense {
   LicenseViewController *a = [[LicenseViewController alloc] initWithNibName:nil bundle:nil];
-  [container.userCenterNav pushViewController:a animated:YES];
+  UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
+  [nav pushViewController:a animated:YES];
 }
 
 + (void)showUsing {

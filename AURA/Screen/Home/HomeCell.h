@@ -12,6 +12,7 @@
 #define ACTIVITY_TYPE 0
 #define DISCOVERY_TYPE 1
 #define SEARCH_TYPE 2
+#define MYALBUM_TYPE 3
 
 @interface HomeCell : UITableViewCell
 

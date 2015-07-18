@@ -13,4 +13,6 @@
 + (instancetype)tagLabelWithTagString:(NSString *)tag;
 + (CGFloat)calcTagLength:(NSString *)tagText;
 
+- (void)setColor:(UIColor *)color;
+
 @end

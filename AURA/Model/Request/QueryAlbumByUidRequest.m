@@ -10,4 +10,8 @@
 
 @implementation QueryAlbumByUidRequest
 
+- (void)setuserid:(NSString *)userid {
+  [self.data setObject:userid forKey:@"userid"];
+}
+
 @end

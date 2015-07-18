@@ -14,5 +14,6 @@
 - (NSString *)mobile;
 - (NSString *)nickname;
 - (NSString *)userId;
+- (NSString *)thumbnail;
 
 @end

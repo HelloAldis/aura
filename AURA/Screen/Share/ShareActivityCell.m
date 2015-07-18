@@ -11,6 +11,7 @@
 #import "AURA.h"
 #import "DataManager.h"
 #import "NSDate+Util.h"
+#import "UIImageView+Util.h"
 
 @interface ShareActivityCell ()
 
@@ -29,7 +30,7 @@
   self.photo = photo;
   
   self.category.backgroundColor = [AURA getColorByType:photo.albuminfo.type];
-  self.userImageView.image = [DataManager defaultUserImage];
+  [self.userImageView setUserImageWithSha1:photo.creatorinfo.thumbnail];
   self.info.text = [NSDate getTimeStringFrom:photo.ctime];
   self.title.text = self.photo.albuminfo.name;
 }

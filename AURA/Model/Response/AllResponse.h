@@ -29,5 +29,6 @@
 #import "SearchAlbumByNameResponse.h"
 #import "SearchNicknameResponse.h"
 #import "QueryUserInfoResponse.h"
+#import "QueryAlbumByUidResponse.h"
 
 #endif

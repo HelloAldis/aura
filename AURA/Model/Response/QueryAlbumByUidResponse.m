@@ -10,4 +10,8 @@
 
 @implementation QueryAlbumByUidResponse
 
+- (NSArray *)albums {
+  return [self.data objectForKey:@"albums"];
+}
+
 @end

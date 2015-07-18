@@ -20,6 +20,12 @@
   [self initNav];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  
+  self.navigationController.navigationBarHidden = NO;
+}
+
 - (void)initNav {
   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"返回"] style:UIBarButtonItemStylePlain target:self action:@selector(onClickBack)];
   self.title = @"服务条款";

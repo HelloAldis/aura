@@ -68,8 +68,9 @@
     [SearchNicknameDataHandler handleResponse:baseResponse];
   } else if ([baseResponse class] == [QueryUserInfoResponse class]) {
     [QueryUserInfoDataHandler handleResponse:baseResponse];
+  } else if ([baseResponse class] == [QueryAlbumByUidResponse class]) {
+    [QueryAlbumByUidDataHandler handleResponse:baseResponse];
   }
-
 
   [SVProgressHUD dismiss];
 }

@@ -451,4 +451,52 @@ static AFHTTPRequestOperationManager *_oos;
          }];
 }
 
++ (void)updateNickname:(UpdateNicknameRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [_manager POST:@"/aura/updateNickname"
+      parameters:request.data
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           [ResponseHandler handleResponse:[[BaseResponse alloc] initWithData:responseObject] success:success failure:failure];
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+           failure();
+           [ResponseHandler handleNetworkIssue];
+         }];
+}
+
++ (void)updateSign:(UpdateSignRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [_manager POST:@"/aura/updateSign"
+      parameters:request.data
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           [ResponseHandler handleResponse:[[BaseResponse alloc] initWithData:responseObject] success:success failure:failure];
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+           failure();
+           [ResponseHandler handleNetworkIssue];
+         }];
+}
+
++ (void)updateThumbnail:(UpdateThumbnailRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [_manager POST:@"/aura/updateThumbnail"
+      parameters:request.data
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           success();
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+           failure();
+           [ResponseHandler handleNetworkIssue];
+         }];
+}
+
++ (void)queryAlbumByUid:(QueryAlbumByUidRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure {
+  [_manager POST:@"/aura/queryAlbumByUid"
+      parameters:request.data
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           [ResponseHandler handleResponse:[[QueryAlbumByUidResponse alloc] initWithData:responseObject] success:success failure:failure];
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+           failure();
+           [ResponseHandler handleNetworkIssue];
+         }];
+}
+
 @end

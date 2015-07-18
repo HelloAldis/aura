@@ -10,4 +10,6 @@
 
 @interface QueryAlbumByUidRequest : NeedLoginRequest
 
+- (void)setuserid:(NSString *)userid;
+
 @end

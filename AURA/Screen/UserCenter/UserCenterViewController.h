@@ -6,13 +6,12 @@
 //  Copyright (c) 2014年 AURA. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseTableViewController.h"
 #import "CreatorInfo.h"
 
-@interface UserCenterViewController : BaseViewController
+@interface UserCenterViewController : BaseTableViewController
 
 @property (nonatomic, strong) NSString *userId;
-@property (nonatomic, strong) NSString *nickname;
-@property (nonatomic, strong) NSString *thumbnail;
+@property (nonatomic, assign) BOOL showAppSetting;
 
 @end

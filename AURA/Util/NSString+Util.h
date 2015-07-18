@@ -18,5 +18,6 @@
 - (NSString *)add:(NSInteger)add;
 - (NSSet *)tags;
 - (BOOL)isMe;
+- (BOOL)isValidateEmail;
 
 @end

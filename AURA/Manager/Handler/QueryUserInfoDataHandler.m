@@ -32,6 +32,8 @@
   userInfo.followee = followee;
   userInfo.follower = follower;
   userInfo.sign = [resp sign];
+  userInfo.nickname = [resp nickname];
+  userInfo.thumbnail = [resp thumbnail];
   
   [DataManager setUserInfo:userInfo];
 }

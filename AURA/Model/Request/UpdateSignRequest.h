@@ -10,4 +10,6 @@
 
 @interface UpdateSignRequest : NeedLoginRequest
 
+- (void)setsign:(NSString *)sign;
+
 @end

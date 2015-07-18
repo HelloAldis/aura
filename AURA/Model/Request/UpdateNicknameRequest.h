@@ -8,6 +8,8 @@
 
 #import "NeedLoginRequest.h"
 
-@interface UpdateNickname : NeedLoginRequest
+@interface UpdateNicknameRequest : NeedLoginRequest
+
+- (void)setnickname:(NSString *)nickname;
 
 @end

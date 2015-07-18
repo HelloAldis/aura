@@ -44,6 +44,10 @@
 + (void)searchAlbumByName:(SearchAlbumByNameRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)searchNickname:(SearchNicknameRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
 + (void)queryUserInfo:(QueryUserInfoRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
++ (void)updateNickname:(UpdateNicknameRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
++ (void)updateSign:(UpdateSignRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
++ (void)updateThumbnail:(UpdateThumbnailRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
++ (void)queryAlbumByUid:(QueryAlbumByUidRequest *)request success:(void (^)(void))success failure:(void (^)(void))failure;
 
 
 @end

@@ -37,7 +37,7 @@
   self.photo = photo;
   [self.photoImageView setImageeWithSha1:photo.sha1 withPlaceHolder:nil];
   self.lblInfo.text = [NSString stringWithFormat:@"%@ %@", photo.creatorinfo.nickname, [NSDate getTimeStringFrom:photo.ctime]];
-  self.userImageView.image = [DataManager defaultUserImage];
+  [self.userImageView setUserImageWithSha1:photo.creatorinfo.thumbnail];
   [self.userImageView setCornerRadius:20];
   [self.userImageView setBorder:1 andColor:[[UIColor whiteColor] CGColor]];
   self.lblFCount.text = photo.fcount;
@@ -52,7 +52,7 @@
   if (tags.count == 0) {
     self.lblTag.hidden = YES;
   } else {
-    CGFloat next = 45;
+    CGFloat next = 10;
     for (NSString *tag in tags) {
       TagLabel *label = [TagLabel tagLabelWithTagString:tag];
       [label setFrame:CGRectMake(next, 379, label.frame.size.width, 22)];
@@ -85,14 +85,17 @@
   [alertController addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
     [SVProgressHUD showSuccessWithStatus:@"你的举报我们已经收到"];
   }]];
-  [alertController addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-    DeletePhotoRequest *request = [[DeletePhotoRequest alloc] init];
-    [request setPhotoid:self.photo.photoid];
-    [APIManager deletePhoto:request success:^{
-      [self.supperController.navigationController popViewControllerAnimated:YES];
-    } failure:^{}];
-  }]];
   
+  if ([self.photo.creatorinfo.userid isMe]) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+      DeletePhotoRequest *request = [[DeletePhotoRequest alloc] init];
+      [request setPhotoid:self.photo.photoid];
+      [APIManager deletePhoto:request success:^{
+        [self.supperController.navigationController popViewControllerAnimated:YES];
+      } failure:^{}];
+    }]];
+  }
+
   [self.supperController presentViewController:alertController animated:YES completion:nil];
 }
 

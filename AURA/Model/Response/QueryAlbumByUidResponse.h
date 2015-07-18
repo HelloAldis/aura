@@ -10,4 +10,6 @@
 
 @interface QueryAlbumByUidResponse : BaseResponse
 
+- (NSArray *)albums;
+
 @end

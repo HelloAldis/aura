@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface UserSettingViewController : BaseViewController<UITextFieldDelegate>
+@interface UserSettingViewController : BaseViewController<UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end

@@ -9,6 +9,7 @@
 #import "CommentTableViewCell.h"
 #import "DataManager.h"
 #import "UIView+Util.h"
+#import "UIImageView+Util.h"
 
 @implementation CommentTableViewCell
 
@@ -25,8 +26,8 @@
 - (void)initWithComment:(Comment *)comment {
   self.lblComment.text = comment.comment;
   self.lblUser.text = comment.from_user.nickname;
-  self.userImageView.image = [DataManager defaultUserImage];
-  [self.userImageView setCornerRadius:18];
+  [self.userImageView setUserImageWithSha1:comment.from_user.thumbnail];
+  [self.userImageView setCornerRadius:15];
   [self.userImageView setBorder:1 andColor:[[UIColor whiteColor] CGColor]];
 }
 

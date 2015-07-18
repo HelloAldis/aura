@@ -15,6 +15,7 @@
 #import "UIImageView+Util.h"
 #import "TagLabel.h"
 #import "SVProgressHUD.h"
+#import "NSString+Util.h"
 
 typedef enum : NSUInteger {
   indexOne,
@@ -65,6 +66,7 @@ typedef enum : NSUInteger {
   self.swipeIndex = indexOne;
   self.indexTwo.image = [UIImage imageNamed:@"04相册_轮播未选中"];
   self.indexOne.image = [UIImage imageNamed:@"04相册_轮播选中"];
+  self.tagView.frame = CGRectMake(320, 0, 320, 170);
   
   self.albumInfo = albumInfo;
   self.firstPhoto = photo;
@@ -80,9 +82,32 @@ typedef enum : NSUInteger {
   [self.coverImageView setImageeWithSha1:photo.sha1 withPlaceHolder:nil];
   [self.backgroundImageView setImageeWithSha1:photo.sha1 withPlaceHolder:nil];
   
-//  for (NSString *tag in tags) {
-//    [TagLabel tagLabelWithTagString:tags];
-//  }
+  if (photo.haveFavourte) {
+    [self.btnLike setImage:[UIImage imageNamed:@"04相册_按下赞"] forState:UIControlStateNormal];
+  } else {
+    [self.btnLike setImage:[UIImage imageNamed:@"04相册_默认赞"] forState:UIControlStateNormal];
+  }
+  
+  CGFloat xNext = 10;
+  CGFloat yNext = 30;
+  for (NSString *tag in tags) {
+    TagLabel *tagLabel = [TagLabel tagLabelWithTagString:tag];
+    [tagLabel setColor:[UIColor whiteColor]];
+    
+    if (xNext + tagLabel.frame.size.width > 310) {
+      xNext = 10;
+      yNext += 32;
+    }
+    
+    if (yNext > 145) {
+      break;
+    }
+    
+    [tagLabel setFrame:CGRectMake(xNext, yNext, tagLabel.frame.size.width, 22)];
+    xNext = xNext + tagLabel.frame.size.width + 10;
+    
+    [self.tagView addSubview:tagLabel];
+  }
 }
 
 - (void)swipeLeft:(UISwipeGestureRecognizer *)gesture{
@@ -131,21 +156,33 @@ typedef enum : NSUInteger {
     [SVProgressHUD showSuccessWithStatus:@"你的举报我们已经收到"];
     [MainToolbar showMainToolbar];
   }]];
-  [alertController addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-    [MainToolbar showMainToolbar];
-    DeleteAlbumRequest *request = [[DeleteAlbumRequest alloc] init];
-    [request setAlbumid:self.albumInfo.albumid];
-    [APIManager deleteAlbum:request success:^{
-      [self.supperController.navigationController popToRootViewControllerAnimated:YES];
-    } failure:^{}];
-  }]];
+  
+  if ([self.albumInfo.creatorinfo.userid isMe]) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+      [MainToolbar showMainToolbar];
+      DeleteAlbumRequest *request = [[DeleteAlbumRequest alloc] init];
+      [request setAlbumid:self.albumInfo.albumid];
+      [APIManager deleteAlbum:request success:^{
+        [self.supperController.navigationController popToRootViewControllerAnimated:YES];
+      } failure:^{}];
+    }]];
+  }
+
   
   [self.supperController presentViewController:alertController animated:YES completion:nil];
   [MainToolbar hideMainToolbar];
 }
 
 - (IBAction)onClickLike:(id)sender {
-  
+  if (!self.firstPhoto.haveFavourte) {
+    FavouriteRequest *request = [[FavouriteRequest alloc] init];
+    [request setPhotoid:self.firstPhoto.photoid];
+    [APIManager favourite:request success:^{
+      self.lblFcount.text = [self.firstPhoto.fcount add:1];
+      [self.btnLike setImage:[UIImage imageNamed:@"04相册_按下赞"] forState:UIControlStateNormal];
+      self.firstPhoto.haveFavourte = YES;
+    } failure:^{}];
+  }
 }
 
 + (NSString *)getLableByType:(NSString *)type {

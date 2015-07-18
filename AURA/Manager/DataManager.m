@@ -74,14 +74,6 @@ static DataManager *dataManager;
   return GET_OBJECT(@"meId");
 }
 
-+ (void)setMyNickname:(NSString *)nickname {
-  SET_OBJECT(nickname, @"nickname");
-}
-
-+ (NSString *)myNickname {
-  return GET_OBJECT(@"nickname");
-}
-
 + (NSString *)username {
   return GET_OBJECT(@"username");
 }
@@ -96,14 +88,6 @@ static DataManager *dataManager;
 
 + (void)setPassword:(NSString *)password {
   SET_OBJECT(password, @"password");
-}
-
-+ (NSString *)myThumbnail {
-  return GET_OBJECT(@"thumbnail");
-}
-
-+ (void)setMyThumbnail:(NSString *)thumbnail {
-  SET_OBJECT(thumbnail, @"thumbnail");
 }
 
 + (void)setTokenDate:(NSDate *)date {
@@ -254,7 +238,6 @@ static DataManager *dataManager;
   [DataManager setMeId:nil];
   [DataManager setToken:nil];
   [DataManager setTokenDate:nil];
-  [DataManager setMyNickname:nil];
 }
 
 + (void)setSearchAlbumArray:(NSMutableArray *)array {

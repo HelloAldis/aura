@@ -25,5 +25,6 @@
 #import "SearchAlbumByNameDataHandler.h"
 #import "SearchNicknameDataHandler.h"
 #import "QueryUserInfoDataHandler.h"
+#import "QueryAlbumByUidDataHandler.h"
 
 #endif

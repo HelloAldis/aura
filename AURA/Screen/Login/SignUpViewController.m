@@ -128,7 +128,7 @@
 }
 
 - (BOOL)validateUser {
-  return ![self.fldPhone.text isEmpty];
+  return ![self.fldPhone.text isEmpty] && [self.fldPhone.text isValidateEmail];
 }
 
 - (BOOL)validatePassword {

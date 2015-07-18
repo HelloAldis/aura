@@ -35,5 +35,9 @@
 #import "SearchNicknameRequest.h"
 #import "QueryUserInfoRequest.h"
 #import "DelFollowerRequest.h"
+#import "UpdateNicknameRequest.h"
+#import "UpdateSignRequest.h"
+#import "UpdateThumbnailRequest.h"
+#import "QueryAlbumByUidRequest.h"
 
 #endif

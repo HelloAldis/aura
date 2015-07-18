@@ -60,7 +60,8 @@
         
         //输入框
         self.TextViewInput = [[UITextView alloc]initWithFrame:CGRectMake(5, 8, Main_Screen_Width-50, 30)];
-        self.TextViewInput.layer.cornerRadius = 4;
+      self.TextViewInput.font = [UIFont systemFontOfSize:14];
+      self.TextViewInput.layer.cornerRadius = 4;
         self.TextViewInput.layer.masksToBounds = YES;
         self.TextViewInput.delegate = self;
         self.TextViewInput.layer.borderWidth = 1;

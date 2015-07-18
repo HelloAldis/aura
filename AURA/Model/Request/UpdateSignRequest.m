@@ -10,4 +10,8 @@
 
 @implementation UpdateSignRequest
 
+- (void)setsign:(NSString *)sign {
+  [self.data setObject:sign forKey:@"sign"];
+}
+
 @end

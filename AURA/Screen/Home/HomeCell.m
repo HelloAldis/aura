@@ -36,7 +36,7 @@
   self.imageArrow.image = [UIImage imageNamed:[self getArrow:[[photo albuminfo] type]]];
   self.lblLikeCount.text = [photo fcount];
   self.lblDescription.text = [NSString stringWithFormat:@"%@ %@", photo.creatorinfo.nickname, [NSDate getTimeStringFrom:photo.ctime]];
-  self.imgUser.image = [DataManager defaultUserImage];
+  [self.imgUser setUserImageWithSha1:photo.creatorinfo.thumbnail];
   [self.imgUser setCornerRadius:20];
   [self.imgUser setBorder:1 andColor:[[UIColor whiteColor] CGColor]];
   
@@ -48,11 +48,7 @@
 }
 
 - (IBAction)onClickUser:(id)sender {
-  if ([DataManager isMe:self.photo.creatorinfo.userid]) {
-    [MainToolbar clickSecond];
-  } else {
-    [ViewControllerContainer showUserCenter:self.photo.creatorinfo];
-  }
+    [ViewControllerContainer showUserCenter:self.photo.creatorinfo.userid];
 }
 
 - (IBAction)onClickLike:(id)sender {
@@ -80,22 +76,28 @@
     [SVProgressHUD showSuccessWithStatus:@"你的举报我们已经收到"];
     [MainToolbar showMainToolbar];
   }]];
-  [alertController addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-    [MainToolbar showMainToolbar];
-    DeletePhotoRequest *request = [[DeletePhotoRequest alloc] init];
-    [request setPhotoid:self.photo.photoid];
-    [APIManager deletePhoto:request success:^{
-      if (self.type == ACTIVITY_TYPE) {
-        [[DataManager activityArray] removeObjectAtIndex:self.indexPath.row];
-      } else if (self.type == DISCOVERY_TYPE) {
-        [[DataManager discoveryArray] removeObjectAtIndex:self.indexPath.row];
-      } else if (self.type == SEARCH_TYPE){
-        [[DataManager searchAlbumArray] removeObjectAtIndex:self.indexPath.row];
-      }
-      
-      [self.supperController.tableView deleteRowsAtIndexPaths:@[self.indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    } failure:^{}];
-  }]];
+  
+  if ([self.photo.creatorinfo.userid isMe]) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+      [MainToolbar showMainToolbar];
+      DeletePhotoRequest *request = [[DeletePhotoRequest alloc] init];
+      [request setPhotoid:self.photo.photoid];
+      [APIManager deletePhoto:request success:^{
+        if (self.type == ACTIVITY_TYPE) {
+          [[DataManager activityArray] removeObjectAtIndex:self.indexPath.row];
+        } else if (self.type == DISCOVERY_TYPE) {
+          [[DataManager discoveryArray] removeObjectAtIndex:self.indexPath.row];
+        } else if (self.type == SEARCH_TYPE){
+          [[DataManager searchAlbumArray] removeObjectAtIndex:self.indexPath.row];
+        } else if (self.type == MYALBUM_TYPE) {
+          [[DataManager userInfo].myAlbum removeObjectAtIndex:self.indexPath.row - 1];
+        }
+        
+        [self.supperController.tableView deleteRowsAtIndexPaths:@[self.indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+      } failure:^{}];
+    }]];
+  }
+  
   
   [self.supperController presentViewController:alertController animated:YES completion:nil];
   [MainToolbar hideMainToolbar];

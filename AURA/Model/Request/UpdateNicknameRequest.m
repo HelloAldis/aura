@@ -6,8 +6,12 @@
 //  Copyright (c) 2015年 AURA. All rights reserved.
 //
 
-#import "UpdateNickname.h"
+#import "UpdateNicknameRequest.h"
 
-@implementation UpdateNickname
+@implementation UpdateNicknameRequest
+
+- (void)setnickname:(NSString *)nickname {
+  [self.data setObject:nickname forKey:@"nickname"];
+}
 
 @end

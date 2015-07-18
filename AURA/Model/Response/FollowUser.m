@@ -26,4 +26,8 @@
   return [self.data objectForKey:@"nickname"];
 }
 
+- (NSString *)thumbnail {
+  return [self.data objectForKey:@"thumbnail"];
+}
+
 @end

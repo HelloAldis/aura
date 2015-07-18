@@ -10,6 +10,8 @@
 #import "ViewControllerContainer.h"
 #import "FilterOptionCollectionViewCell.h"
 #import "UIImage+Util.h"
+#import "APIManager.h"
+#import "DataManager.h"
 
 @interface FilterViewController ()
 
@@ -45,13 +47,27 @@
 
 - (void)initNav {
   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"返回"] style:UIBarButtonItemStylePlain target:self action:@selector(onClickBack)];
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"继续" style:UIBarButtonItemStyleDone target:self action:@selector(onClickOk)];
-  self.title = @"修改";
+  
+  NSString *ok = nil;
+  NSString *title = nil;
+  if (self.type == TYPE_EDIT_IMAGE) {
+    ok = @"继续";
+    title = @"修改";
+  } else if (self.type == TYPE_EDIT_USER) {
+    title = @"头像";
+    ok = @"完成";
+  }
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:ok style:UIBarButtonItemStyleDone target:self action:@selector(onClickOk)];
+  self.title = title;
 }
 
 - (void)onClickBack {
-  [self.navigationController popViewControllerAnimated:NO];
-  [ViewControllerContainer showCameraViewController];
+  if (self.type == TYPE_EDIT_IMAGE) {
+    [self.navigationController popViewControllerAnimated:NO];
+    [ViewControllerContainer showCameraViewController];
+  } else if (self.type == TYPE_EDIT_USER) {
+    [self.navigationController popViewControllerAnimated:YES];
+  }
 }
 
 - (void)onClickOk {
@@ -64,8 +80,22 @@
   float fw = (rect.size.width * self.scrollView.zoomScale) / self.imageView.frame.size.width;
   
   CGRect newImageRect = CGRectMake(self.orignalImage.size.width * fx, self.orignalImage.size.height * fy, self.orignalImage.size.width * fw, self.orignalImage.size.width * fw);
+  UIImage *newImage = [self.orignalImage getSubImage:newImageRect];
   
-  [ViewControllerContainer showShare:[self.orignalImage getSubImage:newImageRect]];
+  if (self.type == TYPE_EDIT_IMAGE) {
+    [ViewControllerContainer showShare:newImage];
+  } else if (self.type == TYPE_EDIT_USER) {
+    
+    [APIManager uploadImage:newImage success:^{
+      UpdateThumbnailRequest *req = [[UpdateThumbnailRequest alloc] init];
+      [req setthumbnail:[DataManager latestUploadedImageId]];
+      
+      [APIManager updateThumbnail:req success:^{
+        [self.navigationController popViewControllerAnimated:YES];
+      } failure:^{}];
+    } failure:^{
+    }];
+  }
 }
 
 #pragma mark - collection view

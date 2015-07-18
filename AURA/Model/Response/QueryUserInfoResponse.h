@@ -13,8 +13,7 @@
 - (NSArray *)follower;
 - (NSArray *)followee;
 - (NSString *)sign;
-//- (NSString *)nickname;
-//- (NSString *)userid;
-//- (NSString *)thumbnail;
+- (NSString *)nickname;
+- (NSString *)thumbnail;
 
 @end

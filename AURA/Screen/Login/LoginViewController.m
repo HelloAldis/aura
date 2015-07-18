@@ -19,6 +19,7 @@
 #import "DataManager.h"
 #import "UIImageView+AFNetworking.h"
 #import "UIImageView+Util.h"
+#import "ViewControllerContainer.h"
 
 @interface LoginViewController ()
 
@@ -39,6 +40,12 @@
   [super viewDidLoad];
   //MD5 C0151DA8F2A72E554140A377A7534650
   //SHA1 2ee7d2d34f4f7c01eebac62981336b3e0f27de57
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  
+  self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -73,6 +80,10 @@
   [UIView setAnimationDelay:0.1];
   self.logo1.frame = CGRectMake(109, 60, 102, 31);
   [UIView commitAnimations];
+}
+
+- (IBAction)onClickLi:(id)sender {
+  [ViewControllerContainer showLicense];
 }
 
 @end

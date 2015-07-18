@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -60,12 +60,6 @@
                             <action selector="onClickLike:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="g47-1z-xQs"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="标签" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08b-6M-ILr">
-                        <rect key="frame" x="10" y="379" width="31" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yi9-Qj-Wry">
                         <rect key="frame" x="-2" y="482" width="320" height="1"/>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,7 +73,6 @@
                 <outlet property="btnLike" destination="xXi-KY-dIV" id="lir-dw-gqK"/>
                 <outlet property="lblFCount" destination="f5m-Ra-wNC" id="tKq-0z-yxe"/>
                 <outlet property="lblInfo" destination="jtI-tL-AGa" id="4yA-NO-NKq"/>
-                <outlet property="lblTag" destination="08b-6M-ILr" id="V6J-VA-Pw8"/>
                 <outlet property="photoImageView" destination="Q4x-4e-inU" id="ho0-Fy-fF0"/>
                 <outlet property="userImageView" destination="tdF-0c-7sL" id="iCV-rP-xTy"/>
             </connections>

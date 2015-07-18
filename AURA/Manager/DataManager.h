@@ -20,14 +20,14 @@
 
 + (NSString *)meId;
 + (void)setMeId:(NSString *)meId;
-+ (void)setMyNickname:(NSString *)nickname;
-+ (NSString *)myNickname;
+//+ (void)setMyNickname:(NSString *)nickname;
+//+ (NSString *)myNickname;
 + (NSString *)username;
 + (void)setUsername:(NSString *)username;
 + (NSString *)password;
 + (void)setPassword:(NSString *)password;
-+ (NSString *)myThumbnail;
-+ (void)setMyThumbnail:(NSString *)thumbnail;
+//+ (NSString *)myThumbnail;
+//+ (void)setMyThumbnail:(NSString *)thumbnail;
 
 + (void)setLatitude:(double)latitude;
 + (double)latitude;

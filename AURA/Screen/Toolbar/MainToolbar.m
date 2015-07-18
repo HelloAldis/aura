@@ -218,7 +218,11 @@ static MainToolbar *toolbar = nil;
 
 - (void)awesomeMenuWillAnimateClose:(AwesomeMenu *)menu {
   DDLogDebug(@"awesomeMenuWillAnimateClose");
-  [self setAImage];
+  if (self.index == DiscoveryIndex) {
+    [self setDiscoveryImage];
+  } else {
+    [self setAImage];
+  }
 }
 
 - (void)setDiscoveryImage {

@@ -75,7 +75,6 @@
   NSDate *now = [NSDate date];
   
   NSTimeInterval diff = [now timeIntervalSinceReferenceDate] - [cDate timeIntervalSinceReferenceDate];
-  DDLogDebug(@"%f", diff);
   if (diff < 5*60) {
     return @"刚刚";
   } else if (diff >= 5*ONE_MIN && diff < ONE_HOUR) {

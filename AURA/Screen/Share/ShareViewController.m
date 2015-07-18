@@ -138,6 +138,8 @@
       [self shareFinished];
     }];
   }
+  
+  [DataManager setLatestUploadedImageId:nil];
 }
 
 - (void)shareInprogress {

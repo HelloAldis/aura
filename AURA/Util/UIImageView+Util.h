@@ -13,6 +13,6 @@
 @interface UIImageView (Util)
 
 - (void)setImageeWithSha1:(NSString *)sha1 withPlaceHolder:(UIImage *)holder;
-
+- (void)setUserImageWithSha1:(NSString *)sha1;
 
 @end

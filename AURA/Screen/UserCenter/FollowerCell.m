@@ -9,6 +9,12 @@
 #import "FollowerCell.h"
 #import "UIView+Util.h"
 #import "DataManager.h"
+#import "UIImageView+Util.h"
+#import "DataManager.h"
+#import "MainToolbar.h"
+#import "ViewControllerContainer.h"
+#import "NSString+Util.h"
+#import "CreatorInfo.h"
 
 @interface FollowerCell ()
 
@@ -21,7 +27,7 @@
 - (void)initwithFollowee:(FollowUser *)followUser {
   self.followUser = followUser;
   
-  self.userImage.image = [DataManager defaultUserImage];
+  [self.userImage setUserImageWithSha1:followUser.thumbnail];
   [self.userImage setCornerRadius:20];
   self.username.text = [followUser nickname];
   self.relationImage.image = [UIImage imageNamed:@"10通知_icon_已关注"];
@@ -29,11 +35,16 @@
 }
 
 - (void)initwithFollower:(FollowUser *)followUser {
-  self.userImage.image = [DataManager defaultUserImage];
+  self.followUser = followUser;
+  
+  [self.userImage setUserImageWithSha1:followUser.thumbnail];
   [self.userImage setCornerRadius:20];
   self.username.text = followUser.nickname;
   self.relationImage.image = [UIImage imageNamed:@"10通知_icon_加关注"];
   self.username.text = followUser.nickname;
+}
+- (IBAction)onClickUser:(id)sender {
+    [ViewControllerContainer showUserCenter:self.followUser.userId];
 }
 
 @end

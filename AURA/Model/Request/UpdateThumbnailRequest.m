@@ -10,4 +10,8 @@
 
 @implementation UpdateThumbnailRequest
 
+- (void)setthumbnail:(NSString *)thumbnail {
+  [self.data setObject:thumbnail forKey:@"thumbnail"];
+}
+
 @end

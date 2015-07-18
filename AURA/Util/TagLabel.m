@@ -35,4 +35,9 @@
   return size.width + 16;
 }
 
+- (void)setColor:(UIColor *)color {
+  self.layer.borderColor = [color CGColor];
+  [self  setTextColor:color];
+}
+
 @end

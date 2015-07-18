@@ -18,10 +18,11 @@
 + (void)showWPViewController;
 + (void)showCameraViewController;
 + (void)showMyCenter;
-+ (void)showUserCenter:(CreatorInfo *)user;
++ (void)showUserCenter:(NSString *)userid;
 + (void)showAppSetting;
 + (void)showUserSetting;
 + (void)showFilter:(UIImage *)image;
++ (void)showEditUserImage:(UIImage *)image;
 + (void)showHome;
 + (void)showAlbumDetail:(AlbumInfo *)alumbInfo;
 + (void)showFollower;

@@ -23,6 +23,7 @@
     if ([[dict objectForKey:@"coverinfo"] isKindOfClass:[NSDictionary class]]) {
       [data addEntriesFromDictionary:[dict objectForKey:@"coverinfo"]];
       [data setObject:dict forKey:@"albuminfo"];
+      [data setObject:[dict objectForKey:@"creatorinfo"] forKey:@"creatorinfo"];
       [array addObject:[[Photo alloc] initWithData:data]];
     }
   }

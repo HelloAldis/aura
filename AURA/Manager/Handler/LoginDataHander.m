@@ -17,8 +17,6 @@
   [DataManager setToken:[loginResponse token]];
   [DataManager setTokenDate:[NSDate date]];
   [DataManager setMeId:loginResponse.userid];
-  [DataManager setMyNickname:loginResponse.nickname];
-  [DataManager setMyThumbnail:loginResponse.thumbnail];
 }
 
 @end

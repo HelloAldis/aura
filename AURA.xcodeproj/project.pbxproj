@@ -24,6 +24,8 @@
 		AD716DC11ADA0AE3006750F9 /* QueryAlbumDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD716DC01ADA0AE3006750F9 /* QueryAlbumDataHandler.m */; };
 		AD716DC71ADA258C006750F9 /* QueryPhotoInfoDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD716DC61ADA258C006750F9 /* QueryPhotoInfoDataHandler.m */; };
 		AD716DCA1ADA274F006750F9 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD716DC91ADA274F006750F9 /* Photo.m */; };
+		AD72B6131B52922D00CC7641 /* UserCenterCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD72B6111B52922D00CC7641 /* UserCenterCellCell.m */; };
+		AD72B6141B52922D00CC7641 /* UserCenterCellCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD72B6121B52922D00CC7641 /* UserCenterCellCell.xib */; };
 		AD7E59711B2D2E4700A59560 /* SearchAlbumByNameDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E59701B2D2E4700A59560 /* SearchAlbumByNameDataHandler.m */; };
 		AD7E59741B2D2E8B00A59560 /* SearchAlbumByNameResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E59731B2D2E8B00A59560 /* SearchAlbumByNameResponse.m */; };
 		AD7E59771B2D55D100A59560 /* SearchNicknameRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E59761B2D55D100A59560 /* SearchNicknameRequest.m */; };
@@ -137,6 +139,7 @@
 		AD8400121B48168100EF30F5 /* QueryUserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8400111B48168100EF30F5 /* QueryUserInfoRequest.m */; };
 		AD8400151B4816F100EF30F5 /* QueryUserInfoResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8400141B4816F100EF30F5 /* QueryUserInfoResponse.m */; };
 		AD8400181B48172000EF30F5 /* QueryUserInfoDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8400171B48172000EF30F5 /* QueryUserInfoDataHandler.m */; };
+		AD84E54F1B554B6E00FDCB1C /* QueryAlbumByUidRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD84E54E1B554B6E00FDCB1C /* QueryAlbumByUidRequest.m */; };
 		AD8CF8CD1B25C9B100565C7E /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = AD8CF8CC1B25C9B100565C7E /* iTunesArtwork */; };
 		AD90BAC21A5042CE00EAFF2D /* FollowRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC11A5042CE00EAFF2D /* FollowRequest.m */; };
 		AD90BAC51A50437800EAFF2D /* GetAllFolloweeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC41A50437800EAFF2D /* GetAllFolloweeRequest.m */; };
@@ -202,6 +205,8 @@
 		ADD131411B248EC500AE9972 /* QueryCommentResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131401B248EC500AE9972 /* QueryCommentResponse.m */; };
 		ADD131441B248F2A00AE9972 /* QueryCommentDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131431B248F2A00AE9972 /* QueryCommentDataHandler.m */; };
 		ADD131471B248F8B00AE9972 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD131461B248F8B00AE9972 /* Comment.m */; };
+		ADD16D791B56A27D0014D485 /* QueryAlbumByUidDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD16D781B56A27D0014D485 /* QueryAlbumByUidDataHandler.m */; };
+		ADD16D7C1B56A31E0014D485 /* QueryAlbumByUidResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD16D7B1B56A31E0014D485 /* QueryAlbumByUidResponse.m */; };
 		ADD18C8A1ADBFF8400FA514A /* 04相册_默认赞@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD18C891ADBFF8400FA514A /* 04相册_默认赞@2x.png */; };
 		ADD1BFA81ADFE15400DBA7D0 /* 筛选框@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADD1BFA71ADFE15400DBA7D0 /* 筛选框@2x.png */; };
 		ADD3AF851AEB4809003A5FFC /* RecommendPhotoesByCityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3AF841AEB4809003A5FFC /* RecommendPhotoesByCityRequest.m */; };
@@ -213,6 +218,9 @@
 		ADD3AF981AEB8329003A5FFC /* LicenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3AF961AEB8329003A5FFC /* LicenseViewController.xib */; };
 		ADD3AF9C1AEB83E7003A5FFC /* UsingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3AF9A1AEB83E7003A5FFC /* UsingViewController.m */; };
 		ADD3AF9D1AEB83E7003A5FFC /* UsingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD3AF9B1AEB83E7003A5FFC /* UsingViewController.xib */; };
+		ADD3D6D71B52396C00880946 /* UpdateNicknameRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3D6D61B52396C00880946 /* UpdateNicknameRequest.m */; };
+		ADD3D6DA1B5239BE00880946 /* UpdateSignRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3D6D91B5239BE00880946 /* UpdateSignRequest.m */; };
+		ADD3D6DD1B524C8D00880946 /* UpdateThumbnailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3D6DC1B524C8D00880946 /* UpdateThumbnailRequest.m */; };
 		ADEA6B211B4937DD0022AF14 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEA6B201B4937DD0022AF14 /* UserInfo.m */; };
 		ADEA6B281B493CC60022AF14 /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEA6B271B493CC60022AF14 /* Business.m */; };
 		ADEA6B2B1B4963280022AF14 /* DelFollowerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEA6B2A1B4963280022AF14 /* DelFollowerRequest.m */; };
@@ -365,6 +373,9 @@
 		AD716DC61ADA258C006750F9 /* QueryPhotoInfoDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryPhotoInfoDataHandler.m; sourceTree = "<group>"; };
 		AD716DC81ADA274F006750F9 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		AD716DC91ADA274F006750F9 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		AD72B6101B52922D00CC7641 /* UserCenterCellCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterCellCell.h; sourceTree = "<group>"; };
+		AD72B6111B52922D00CC7641 /* UserCenterCellCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterCellCell.m; sourceTree = "<group>"; };
+		AD72B6121B52922D00CC7641 /* UserCenterCellCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCenterCellCell.xib; sourceTree = "<group>"; };
 		AD7E596F1B2D2E4700A59560 /* SearchAlbumByNameDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAlbumByNameDataHandler.h; sourceTree = "<group>"; };
 		AD7E59701B2D2E4700A59560 /* SearchAlbumByNameDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAlbumByNameDataHandler.m; sourceTree = "<group>"; };
 		AD7E59721B2D2E8B00A59560 /* SearchAlbumByNameResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAlbumByNameResponse.h; sourceTree = "<group>"; };
@@ -491,6 +502,8 @@
 		AD8400141B4816F100EF30F5 /* QueryUserInfoResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryUserInfoResponse.m; sourceTree = "<group>"; };
 		AD8400161B48172000EF30F5 /* QueryUserInfoDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryUserInfoDataHandler.h; sourceTree = "<group>"; };
 		AD8400171B48172000EF30F5 /* QueryUserInfoDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryUserInfoDataHandler.m; sourceTree = "<group>"; };
+		AD84E54D1B554B6E00FDCB1C /* QueryAlbumByUidRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryAlbumByUidRequest.h; sourceTree = "<group>"; };
+		AD84E54E1B554B6E00FDCB1C /* QueryAlbumByUidRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryAlbumByUidRequest.m; sourceTree = "<group>"; };
 		AD8CF8CC1B25C9B100565C7E /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		AD90BAC01A5042CE00EAFF2D /* FollowRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowRequest.h; sourceTree = "<group>"; };
 		AD90BAC11A5042CE00EAFF2D /* FollowRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowRequest.m; sourceTree = "<group>"; };
@@ -607,6 +620,10 @@
 		ADD131431B248F2A00AE9972 /* QueryCommentDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryCommentDataHandler.m; sourceTree = "<group>"; };
 		ADD131451B248F8B00AE9972 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		ADD131461B248F8B00AE9972 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		ADD16D771B56A27D0014D485 /* QueryAlbumByUidDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryAlbumByUidDataHandler.h; sourceTree = "<group>"; };
+		ADD16D781B56A27D0014D485 /* QueryAlbumByUidDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryAlbumByUidDataHandler.m; sourceTree = "<group>"; };
+		ADD16D7A1B56A31E0014D485 /* QueryAlbumByUidResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryAlbumByUidResponse.h; sourceTree = "<group>"; };
+		ADD16D7B1B56A31E0014D485 /* QueryAlbumByUidResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryAlbumByUidResponse.m; sourceTree = "<group>"; };
 		ADD18C891ADBFF8400FA514A /* 04相册_默认赞@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04相册_默认赞@2x.png"; sourceTree = "<group>"; };
 		ADD1BFA71ADFE15400DBA7D0 /* 筛选框@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "筛选框@2x.png"; sourceTree = "<group>"; };
 		ADD3AF831AEB4809003A5FFC /* RecommendPhotoesByCityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendPhotoesByCityRequest.h; sourceTree = "<group>"; };
@@ -624,6 +641,12 @@
 		ADD3AF991AEB83E7003A5FFC /* UsingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsingViewController.h; sourceTree = "<group>"; };
 		ADD3AF9A1AEB83E7003A5FFC /* UsingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsingViewController.m; sourceTree = "<group>"; };
 		ADD3AF9B1AEB83E7003A5FFC /* UsingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsingViewController.xib; sourceTree = "<group>"; };
+		ADD3D6D51B52396C00880946 /* UpdateNicknameRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateNicknameRequest.h; sourceTree = "<group>"; };
+		ADD3D6D61B52396C00880946 /* UpdateNicknameRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateNicknameRequest.m; sourceTree = "<group>"; };
+		ADD3D6D81B5239BE00880946 /* UpdateSignRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateSignRequest.h; sourceTree = "<group>"; };
+		ADD3D6D91B5239BE00880946 /* UpdateSignRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateSignRequest.m; sourceTree = "<group>"; };
+		ADD3D6DB1B524C8D00880946 /* UpdateThumbnailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateThumbnailRequest.h; sourceTree = "<group>"; };
+		ADD3D6DC1B524C8D00880946 /* UpdateThumbnailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateThumbnailRequest.m; sourceTree = "<group>"; };
 		ADEA6B1F1B4937DD0022AF14 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		ADEA6B201B4937DD0022AF14 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		ADEA6B261B493CC60022AF14 /* Business.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Business.h; sourceTree = "<group>"; };
@@ -1175,6 +1198,14 @@
 				AD8400111B48168100EF30F5 /* QueryUserInfoRequest.m */,
 				ADEA6B291B4963280022AF14 /* DelFollowerRequest.h */,
 				ADEA6B2A1B4963280022AF14 /* DelFollowerRequest.m */,
+				ADD3D6D51B52396C00880946 /* UpdateNicknameRequest.h */,
+				ADD3D6D61B52396C00880946 /* UpdateNicknameRequest.m */,
+				ADD3D6D81B5239BE00880946 /* UpdateSignRequest.h */,
+				ADD3D6D91B5239BE00880946 /* UpdateSignRequest.m */,
+				ADD3D6DB1B524C8D00880946 /* UpdateThumbnailRequest.h */,
+				ADD3D6DC1B524C8D00880946 /* UpdateThumbnailRequest.m */,
+				AD84E54D1B554B6E00FDCB1C /* QueryAlbumByUidRequest.h */,
+				AD84E54E1B554B6E00FDCB1C /* QueryAlbumByUidRequest.m */,
 			);
 			name = Request;
 			path = ../Model/Request;
@@ -1226,6 +1257,8 @@
 				AD7E59791B2D565400A59560 /* SearchNicknameResponse.m */,
 				AD8400131B4816F100EF30F5 /* QueryUserInfoResponse.h */,
 				AD8400141B4816F100EF30F5 /* QueryUserInfoResponse.m */,
+				ADD16D7A1B56A31E0014D485 /* QueryAlbumByUidResponse.h */,
+				ADD16D7B1B56A31E0014D485 /* QueryAlbumByUidResponse.m */,
 			);
 			name = Response;
 			path = ../Model/Response;
@@ -1551,6 +1584,8 @@
 				AD7E597F1B2D58FA00A59560 /* SearchNicknameDataHandler.m */,
 				AD8400161B48172000EF30F5 /* QueryUserInfoDataHandler.h */,
 				AD8400171B48172000EF30F5 /* QueryUserInfoDataHandler.m */,
+				ADD16D771B56A27D0014D485 /* QueryAlbumByUidDataHandler.h */,
+				ADD16D781B56A27D0014D485 /* QueryAlbumByUidDataHandler.m */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -1651,6 +1686,9 @@
 				C0E5DA9F19EBBBE3002CC027 /* UserSettingViewController.h */,
 				C0E5DAA019EBBBE3002CC027 /* UserSettingViewController.m */,
 				C0E5DAA119EBBBE3002CC027 /* UserSettingViewController.xib */,
+				AD72B6101B52922D00CC7641 /* UserCenterCellCell.h */,
+				AD72B6111B52922D00CC7641 /* UserCenterCellCell.m */,
+				AD72B6121B52922D00CC7641 /* UserCenterCellCell.xib */,
 				C0E5DAA419EBC78A002CC027 /* AppSettingViewController.h */,
 				C0E5DAA519EBC78A002CC027 /* AppSettingViewController.m */,
 				C0E5DAA619EBC78A002CC027 /* AppSettingViewController.xib */,
@@ -1815,6 +1853,7 @@
 				AD8125621AB9B24200CB4768 /* 05相册外_赞@2x.png in Resources */,
 				AD8125571AB9B24200CB4768 /* 照片缩略图@2x.png in Resources */,
 				AD81257D1AB9B24200CB4768 /* 选中personal center icon @2x.png in Resources */,
+				AD72B6141B52922D00CC7641 /* UserCenterCellCell.xib in Resources */,
 				C02A9D4619D25C5600D3113C /* LaunchScreen.xib in Resources */,
 				AD8125291AB9B24200CB4768 /* 用户头像@2x.png in Resources */,
 				AD8125551AB9B24200CB4768 /* 关闭icon@2x.png in Resources */,
@@ -1970,6 +2009,7 @@
 				C07D5AAB19F50AD70076F591 /* EmailRegistDataHandler.m in Sources */,
 				ADBD49061A62C1F0003F3B6A /* FollowUser.m in Sources */,
 				C0ACC0AC1AB6D04600F78B06 /* ActivitySearchingCell.m in Sources */,
+				AD72B6131B52922D00CC7641 /* UserCenterCellCell.m in Sources */,
 				ADCA6F5D19D45D990055E46A /* MainToolbar.m in Sources */,
 				ADBD48FD1A624FAF003F3B6A /* GetAllFollowerResponse.m in Sources */,
 				ADB2D28B19E97BC100AC58C1 /* BaseResponse.m in Sources */,
@@ -1987,6 +2027,7 @@
 				AD7E597A1B2D565400A59560 /* SearchNicknameResponse.m in Sources */,
 				AD90BAC51A50437800EAFF2D /* GetAllFolloweeRequest.m in Sources */,
 				C0A747161ABC3AF900C3FFFF /* QueryPhotoInfoByFcountResponse.m in Sources */,
+				ADD16D791B56A27D0014D485 /* QueryAlbumByUidDataHandler.m in Sources */,
 				ADBB74D81A17981D0041C1C1 /* RecommendAlbumResponse.m in Sources */,
 				C0E5DAA219EBBBE3002CC027 /* UserSettingViewController.m in Sources */,
 				C0553D9519EF9EC400FCB616 /* CheckNickNameRequest.m in Sources */,
@@ -1995,6 +2036,7 @@
 				2327FA371AE8DC8C00347981 /* DeleteAlbumRequest.m in Sources */,
 				ADB597AF19EEA445000EE693 /* LoginRequest.m in Sources */,
 				ADCA6F6719D45E0A0055E46A /* AwesomeMenuItem.m in Sources */,
+				ADD3D6DA1B5239BE00880946 /* UpdateSignRequest.m in Sources */,
 				C0AAD5721A1357F0000D24FC /* Model.xcdatamodeld in Sources */,
 				ADBB74DE1A179E680041C1C1 /* CommitResponse.m in Sources */,
 				ADBD49001A62B3CB003F3B6A /* GetAllFolloweeDataHandler.m in Sources */,
@@ -2003,6 +2045,7 @@
 				ADD3AF8B1AEB4C1D003A5FFC /* DiscoveryResponse.m in Sources */,
 				AD8125831AB9B9EC00CB4768 /* QueryAlbumResponse.m in Sources */,
 				AD62DE431AAC802100485013 /* UIView+Util.m in Sources */,
+				ADD16D7C1B56A31E0014D485 /* QueryAlbumByUidResponse.m in Sources */,
 				C0A746E91ABC0ED300C3FFFF /* LogFormatter.m in Sources */,
 				AD950F6B1ADA71EF0097AA08 /* QueryMostPopPhotoResponse.m in Sources */,
 				C07D5AAE19F50C250076F591 /* EmailRegistResponse.m in Sources */,
@@ -2057,6 +2100,7 @@
 				AD94C74B1B2C6FF800516297 /* SearchAlbumByNameRequest.m in Sources */,
 				C0AAD5751A135999000D24FC /* ImageCacheEntity.m in Sources */,
 				C0E5DA1C19E77DD6002CC027 /* CameraControlView.m in Sources */,
+				ADD3D6DD1B524C8D00880946 /* UpdateThumbnailRequest.m in Sources */,
 				C0B4333F1ADF8F0C00DE2CE9 /* QueryRecentlyInfoResponse.m in Sources */,
 				C0ACC0BF1AB82D2100F78B06 /* ShareViewController.m in Sources */,
 				ADD131441B248F2A00AE9972 /* QueryCommentDataHandler.m in Sources */,
@@ -2066,6 +2110,7 @@
 				C0ACC0B11AB808E600F78B06 /* CreateAlbumRequest.m in Sources */,
 				C05DB79C1AD3CE6700ED118E /* QueryMostPopPhotoRequest.m in Sources */,
 				ADD1313E1B24899200AE9972 /* AddCommentRequest.m in Sources */,
+				AD84E54F1B554B6E00FDCB1C /* QueryAlbumByUidRequest.m in Sources */,
 				AD2C4D6C19FD31DA00F3424D /* GPSManager.m in Sources */,
 				C0C9938A1AAD8B8600E59F0E /* FavouriteRequest.m in Sources */,
 				AD94D2591A0270D800660529 /* UIImage+Util.m in Sources */,
@@ -2115,6 +2160,7 @@
 				ADB837E01A1B8EC300FA5AC2 /* TagLabel.m in Sources */,
 				ADD131161B242D8D00AE9972 /* LeakMoniter.m in Sources */,
 				C0B4334C1ADFA34400DE2CE9 /* BaseTableViewController.m in Sources */,
+				ADD3D6D71B52396C00880946 /* UpdateNicknameRequest.m in Sources */,
 				ADBB74DB1A1798E60041C1C1 /* CommitRequest.m in Sources */,
 				C07D5AA219F4B2A50076F591 /* BaseDataHandler.m in Sources */,
 				C0042FE419FE33690017DA8F /* FilterViewController.m in Sources */,

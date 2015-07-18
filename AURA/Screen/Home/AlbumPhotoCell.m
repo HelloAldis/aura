@@ -28,7 +28,7 @@
 - (void)initWithPhoto:(Photo *)photo andIndexPath:(NSIndexPath *)indexPath {
   [self.photoImageView setImageeWithSha1:photo.sha1 withPlaceHolder:nil];
   self.lblFcount.text = photo.fcount;
-  self.userImageView.image = [DataManager defaultUserImage];
+  [self.userImageView setUserImageWithSha1:photo.creatorinfo.thumbnail];
   [self.userImageView setCornerRadius:20];
   [self.userImageView setBorder:1 andColor:[[UIColor whiteColor] CGColor]];
   self.lblUsername.text = photo.creatorinfo.nickname;
@@ -53,26 +53,25 @@
     [SVProgressHUD showSuccessWithStatus:@"你的举报我们已经收到"];
     [MainToolbar showMainToolbar];
   }]];
-  [alertController addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-    [MainToolbar showMainToolbar];
-    DeletePhotoRequest *request = [[DeletePhotoRequest alloc] init];
-    [request setPhotoid:self.photo.photoid];
-    [APIManager deletePhoto:request success:^{
-      [[DataManager photoArray] removeObjectAtIndex:self.indexPath.row];
-      [self.supperController.tableView deleteRowsAtIndexPaths:@[self.indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    } failure:^{}];
-  }]];
+  
+  if ([self.photo.creatorinfo.userid isMe]) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+      [MainToolbar showMainToolbar];
+      DeletePhotoRequest *request = [[DeletePhotoRequest alloc] init];
+      [request setPhotoid:self.photo.photoid];
+      [APIManager deletePhoto:request success:^{
+        [[DataManager photoArray] removeObjectAtIndex:self.indexPath.row - 1];
+        [self.supperController.tableView deleteRowsAtIndexPaths:@[self.indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+      } failure:^{}];
+    }]];
+  }
   
   [self.supperController presentViewController:alertController animated:YES completion:nil];
   [MainToolbar hideMainToolbar];
 }
 
 - (IBAction)onClickUser:(id)sender {
-  if ([DataManager isMe:self.photo.creatorinfo.userid]) {
-    [MainToolbar clickSecond];
-  } else {
-    [ViewControllerContainer showUserCenter:self.photo.creatorinfo];
-  }
+    [ViewControllerContainer showUserCenter:self.photo.creatorinfo.userid];
 }
 
 - (IBAction)onClickLike:(id)sender {

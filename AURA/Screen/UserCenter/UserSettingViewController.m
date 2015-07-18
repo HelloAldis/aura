@@ -8,20 +8,23 @@
 
 #import "UserSettingViewController.h"
 #import "NSDate+Util.h"
+#import "DataManager.h"
+#import "UIImageView+Util.h"
+#import "APIManager.h"
+#import "SVProgressHUD.h"
+#import "NSString+Util.h"
+#import "UIImage+Util.h"
+#import "ViewControllerContainer.h"
+#import "UIView+Util.h"
 
 @interface UserSettingViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *fldNickName;
 @property (weak, nonatomic) IBOutlet UITextField *fldSignature;
 @property (weak, nonatomic) IBOutlet UILabel *fldLoginName;
-@property (weak, nonatomic) IBOutlet UITextField *fldPassword;
-@property (weak, nonatomic) IBOutlet UILabel *fldBirthday;
-@property (weak, nonatomic) IBOutlet UITextField *fldCity;
-@property (weak, nonatomic) IBOutlet UIButton *btnMale;
-@property (weak, nonatomic) IBOutlet UIButton *btnFemale;
-@property (weak, nonatomic) IBOutlet UIButton *btnScrect;
-@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
-@property (weak, nonatomic) IBOutlet UIView *datePickerBackground;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *lblPassword;
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 
 @end
 
@@ -30,15 +33,24 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self initNav];
+  self.scrollView.contentSize = CGSizeMake(320, 600);
+  [self.userImageView setCornerRadius:35];
+  [self.userImageView setBorder:2 andColor:[[UIColor whiteColor] CGColor]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   
-  //Get user birthday
-  NSString *birthday = @"1990.01.01";
-  self.datePicker.date = [NSDate dateFromString:birthday];
-  self.fldBirthday.text = birthday;
+  self.fldNickName.text = [DataManager userInfo].nickname;
+  self.fldSignature.text = [DataManager userInfo].sign;
+  self.lblPassword.text = [DataManager password];
+  self.fldLoginName.text = [DataManager username];
+  
+  if ([DataManager latestUploadedImageId] != nil) {
+    [self.userImageView setUserImageWithSha1:[DataManager latestUploadedImageId]];
+  } else {
+    [self.userImageView setUserImageWithSha1:[DataManager userInfo].thumbnail];
+  }
 }
 
 - (void)initNav {
@@ -48,9 +60,8 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+  [super touchesEnded:touches withEvent:event];
   [self.view endEditing:YES];
-  [self saveBirthday];
-  [self hideDatePicker];
 }
 
 - (void)onClickBack {
@@ -59,6 +70,28 @@
 
 - (void)save {
   [self.view endEditing:YES];
+  
+  if ([self.fldNickName.text isEmpty]) {
+    [SVProgressHUD showErrorWithStatus:@"昵称不能为空"];
+    return;
+  }
+  
+  if (![self.fldSignature.text isEqualToString:[DataManager userInfo].sign]) {
+    UpdateSignRequest *req1 = [[UpdateSignRequest alloc] init];
+    [req1 setsign:self.fldSignature.text];
+    [APIManager updateSign:req1 success:^{} failure:^{}];
+  }
+  
+  if (![self.fldNickName.text isEqualToString:[DataManager userInfo].nickname]) {
+    UpdateNicknameRequest *req2 = [[UpdateNicknameRequest alloc] init];
+    [req2 setnickname:self.fldNickName.text];
+    [APIManager updateNickname:req2 success:^{
+      [SVProgressHUD showSuccessWithStatus:@"更新成功"];
+    } failure:^{
+      [SVProgressHUD showErrorWithStatus:@"昵称重复"];
+    }];
+  }
+
 }
 
 #pragma mark - text field delegate
@@ -66,35 +99,10 @@
   if (textField == self.fldNickName) {
     [self.fldSignature becomeFirstResponder];
   } else if (textField == self.fldSignature) {
-    [self.fldPassword becomeFirstResponder];
-  } else if(textField == self.fldPassword) {
-    [self.fldCity becomeFirstResponder];
-  } else if(textField == self.fldCity) {
-    [self save];
+    [self.view endEditing:YES];
   }
   
   return NO;
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-  if (textField == self.fldPassword) {
-    [UIView animateWithDuration:0.3 animations:^{
-      self.view.frame = CGRectMake(0, 64-50, 320, 504);
-    }];
-  } else if (textField == self.fldCity) {
-    [UIView animateWithDuration:0.3 animations:^{
-      self.view.frame = CGRectMake(0, 64-180, 320, 504);
-    }];
-  }
-  
-  [self saveBirthday];
-  [self hideDatePicker];
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-  [UIView animateWithDuration:0.3 animations:^{
-    self.view.frame = CGRectMake(0, 64, 320, 504);
-  }];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -114,47 +122,30 @@
   
 }
 
-- (void)showDatePicker {
-  [UIView animateWithDuration:0.3 animations:^{
-    self.datePickerBackground.frame = CGRectMake(0, 295, 320, 162);
-  } completion:^(BOOL finished){
-    self.datePickerBackground.frame = CGRectMake(0, 295, 320, 162);
-  }];
+- (IBAction)onClickImage:(id)sender {
+  UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+  imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+  
+  // Hides the controls for moving & scaling pictures, or for
+  // trimming movies. To instead show the controls, use YES.
+  imagePickerController.allowsEditing = NO;
+  imagePickerController.delegate = self;
+  
+  [self presentViewController:imagePickerController animated:YES completion:NULL];
 }
 
-- (void)hideDatePicker {
-  [UIView animateWithDuration:0.3 animations:^{
-    self.datePickerBackground.frame = CGRectMake(0, 504, 320, 162);
-  } completion:^(BOOL finished) {
-    self.datePickerBackground.frame = CGRectMake(0, 504, 320, 162);
-  }];
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+  UIImage *originalImage = (UIImage *) [info objectForKey:
+                                        UIImagePickerControllerOriginalImage];
+  
+  originalImage = [originalImage getCenterSquareImage];
+  
+  [self dismissViewControllerAnimated:NO completion:NULL];
+  [ViewControllerContainer showEditUserImage:originalImage];
 }
 
-- (IBAction)onTapBirthday:(id)sender {
-  [self.view endEditing:YES];
-  [self showDatePicker];
-}
-
-- (IBAction)onClickMale:(id)sender {
-  [self.btnMale setImage:[UIImage imageNamed:@"选中"] forState:UIControlStateNormal];
-  [self.btnFemale setImage:[UIImage imageNamed:@"未选中"] forState:UIControlStateNormal];
-  [self.btnScrect setImage:[UIImage imageNamed:@"未选中"] forState:UIControlStateNormal];
-}
-
-- (IBAction)onClickFemale:(id)sender {
-  [self.btnFemale setImage:[UIImage imageNamed:@"选中"] forState:UIControlStateNormal];
-  [self.btnMale setImage:[UIImage imageNamed:@"未选中"] forState:UIControlStateNormal];
-  [self.btnScrect setImage:[UIImage imageNamed:@"未选中"] forState:UIControlStateNormal];
-}
-
-- (IBAction)onClickScrect:(id)sender {
-  [self.btnScrect setImage:[UIImage imageNamed:@"选中"] forState:UIControlStateNormal];
-  [self.btnMale setImage:[UIImage imageNamed:@"未选中"] forState:UIControlStateNormal];
-  [self.btnFemale setImage:[UIImage imageNamed:@"未选中"] forState:UIControlStateNormal];
-}
-
-- (void)saveBirthday {
-  self.fldBirthday.text = [NSDate stringFromDate:self.datePicker.date];
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+  [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

@@ -11,6 +11,7 @@
 #import "APIDefines.h"
 #import "DataManager.h"
 #import "NSDate+Util.h"
+#import "UIImageView+Util.h"
 
 @interface ActivityCell ()
 
@@ -28,7 +29,7 @@
   self.photo = photo;
   
   self.category.backgroundColor = [AURA getColorByType:photo.albuminfo.type];
-  self.userImageView.image = [DataManager defaultUserImage];
+  [self.userImageView setUserImageWithSha1:photo.creatorinfo.thumbnail];
   self.lblCtime.text = [NSDate getTimeStringFrom:photo.ctime] ;
   self.lblAlbumName.text = photo.albuminfo.name;
 }

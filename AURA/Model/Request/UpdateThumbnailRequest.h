@@ -10,4 +10,6 @@
 
 @interface UpdateThumbnailRequest : NeedLoginRequest
 
+- (void)setthumbnail:(NSString *)thumbnail;
+
 @end
