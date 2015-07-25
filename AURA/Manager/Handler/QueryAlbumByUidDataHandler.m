@@ -9,6 +9,7 @@
 #import "QueryAlbumByUidDataHandler.h"
 #import "QueryAlbumByUidResponse.h"
 #import "Photo.h"
+#import "NSDate+Util.h"
 
 @implementation QueryAlbumByUidDataHandler
 
@@ -27,6 +28,15 @@
       [array addObject:[[Photo alloc] initWithData:data]];
     }
   }
+  
+  [array sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+    Photo *photo1 = obj1;
+    Photo *photo2 = obj2;
+    NSDate *date1 = [NSDate dateFromYYYYMMDDHHMMSS: photo1.ctime];
+    NSDate *date2 = [NSDate dateFromYYYYMMDDHHMMSS: photo2.ctime];
+    
+    return [date2 compare:date1];
+  }];
   
   [DataManager userInfo].myAlbum = array;
 }

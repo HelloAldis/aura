@@ -54,6 +54,14 @@ static DataManager *dataManager;
   return dataManager.resultCode;
 }
 
++ (BOOL)isShowWelcomeAlready {
+  return [[NSUserDefaults standardUserDefaults] boolForKey:@"welcome"];
+}
+
++ (void)setShowWelcomeAlready {
+  [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"welcome"];
+}
+
 + (void)setToken:(NSString *)token {
   SET_OBJECT(token, @"token");
 }

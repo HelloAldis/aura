@@ -39,13 +39,20 @@
   [self initImageCache];
   
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  if ([NSDate is10DayBeforeNow:[DataManager tokenDate]]) {
-    [ViewControllerContainer showLoginViewController];
+  
+  if ([DataManager isShowWelcomeAlready]) {
+    if ([NSDate is10DayBeforeNow:[DataManager tokenDate]]) {
+      [ViewControllerContainer showLoginViewController];
+    } else {
+      [ViewControllerContainer showWPViewController];
+    }
   } else {
-    [ViewControllerContainer showWPViewController];
+    [ViewControllerContainer showWelcome];
   }
 
   [self.window makeKeyAndVisible];
+  
+  [DataManager setShowWelcomeAlready];
   
   return YES;
 }

@@ -140,6 +140,11 @@
 		AD8400151B4816F100EF30F5 /* QueryUserInfoResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8400141B4816F100EF30F5 /* QueryUserInfoResponse.m */; };
 		AD8400181B48172000EF30F5 /* QueryUserInfoDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8400171B48172000EF30F5 /* QueryUserInfoDataHandler.m */; };
 		AD84E54F1B554B6E00FDCB1C /* QueryAlbumByUidRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD84E54E1B554B6E00FDCB1C /* QueryAlbumByUidRequest.m */; };
+		AD888C531B5BCF67009063DA /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD888C511B5BCF67009063DA /* WelcomeViewController.m */; };
+		AD888C541B5BCF67009063DA /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD888C521B5BCF67009063DA /* WelcomeViewController.xib */; };
+		AD888C591B5BD17F009063DA /* appstore-pic-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD888C561B5BD17F009063DA /* appstore-pic-1@2x.png */; };
+		AD888C5A1B5BD17F009063DA /* appstore-pic-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD888C571B5BD17F009063DA /* appstore-pic-2@2x.png */; };
+		AD888C5B1B5BD17F009063DA /* appstore-pic-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD888C581B5BD17F009063DA /* appstore-pic-3@2x.png */; };
 		AD8CF8CD1B25C9B100565C7E /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = AD8CF8CC1B25C9B100565C7E /* iTunesArtwork */; };
 		AD90BAC21A5042CE00EAFF2D /* FollowRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC11A5042CE00EAFF2D /* FollowRequest.m */; };
 		AD90BAC51A50437800EAFF2D /* GetAllFolloweeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD90BAC41A50437800EAFF2D /* GetAllFolloweeRequest.m */; };
@@ -504,6 +509,12 @@
 		AD8400171B48172000EF30F5 /* QueryUserInfoDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryUserInfoDataHandler.m; sourceTree = "<group>"; };
 		AD84E54D1B554B6E00FDCB1C /* QueryAlbumByUidRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryAlbumByUidRequest.h; sourceTree = "<group>"; };
 		AD84E54E1B554B6E00FDCB1C /* QueryAlbumByUidRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryAlbumByUidRequest.m; sourceTree = "<group>"; };
+		AD888C501B5BCF67009063DA /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		AD888C511B5BCF67009063DA /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		AD888C521B5BCF67009063DA /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		AD888C561B5BD17F009063DA /* appstore-pic-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appstore-pic-1@2x.png"; sourceTree = "<group>"; };
+		AD888C571B5BD17F009063DA /* appstore-pic-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appstore-pic-2@2x.png"; sourceTree = "<group>"; };
+		AD888C581B5BD17F009063DA /* appstore-pic-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appstore-pic-3@2x.png"; sourceTree = "<group>"; };
 		AD8CF8CC1B25C9B100565C7E /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		AD90BAC01A5042CE00EAFF2D /* FollowRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowRequest.h; sourceTree = "<group>"; };
 		AD90BAC11A5042CE00EAFF2D /* FollowRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowRequest.m; sourceTree = "<group>"; };
@@ -1054,6 +1065,26 @@
 			path = WP;
 			sourceTree = "<group>";
 		};
+		AD888C4C1B5BCF11009063DA /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				AD888C501B5BCF67009063DA /* WelcomeViewController.h */,
+				AD888C511B5BCF67009063DA /* WelcomeViewController.m */,
+				AD888C521B5BCF67009063DA /* WelcomeViewController.xib */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
+		AD888C551B5BD128009063DA /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				AD888C561B5BD17F009063DA /* appstore-pic-1@2x.png */,
+				AD888C571B5BD17F009063DA /* appstore-pic-2@2x.png */,
+				AD888C581B5BD17F009063DA /* appstore-pic-3@2x.png */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
 		AD96AA721AC7C2A600E5DEF4 /* Share */ = {
 			isa = PBXGroup;
 			children = (
@@ -1460,6 +1491,7 @@
 		C02A9D5B19D3A9C300D3113C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AD888C551B5BD128009063DA /* Welcome */,
 				AD96AA721AC7C2A600E5DEF4 /* Share */,
 				AD8124AB1AB9B24200CB4768 /* 12 个人中心 */,
 				AD8124BE1AB9B24200CB4768 /* 13 账户设置user */,
@@ -1477,6 +1509,7 @@
 		C02A9D7719D3AA2A00D3113C /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				AD888C4C1B5BCF11009063DA /* Welcome */,
 				ADD1311B1B24322B00AE9972 /* PhotoDetail */,
 				C05DB79D1ADB55EA00ED118E /* Discovery */,
 				C0ACC0BB1AB82D0B00F78B06 /* Share */,
@@ -1910,10 +1943,12 @@
 				ADCA6F5F19D45DAB0055E46A /* MainToolbar.xib in Resources */,
 				C099BB9B1A021EFF0070A5D9 /* AlbumPhotoCell.xib in Resources */,
 				ADD3AF931AEB81B6003A5FFC /* AboutViewController.xib in Resources */,
+				AD888C5A1B5BD17F009063DA /* appstore-pic-2@2x.png in Resources */,
 				AD81255D1AB9B24200CB4768 /* 05相册外_头像@2x.png in Resources */,
 				AD81253B1AB9B24200CB4768 /* 下拉箭头@2x.png in Resources */,
 				AD8125401AB9B24200CB4768 /* 探索icon @2x.png in Resources */,
 				AD81252A1AB9B24200CB4768 /* 设置@2x.png in Resources */,
+				AD888C541B5BCF67009063DA /* WelcomeViewController.xib in Resources */,
 				C0E5DA7F19EBA815002CC027 /* UserCenterViewController.xib in Resources */,
 				AD96AA6E1AC7B14F00E5DEF4 /* 05相册外_箭头_blue@2x.png in Resources */,
 				AD8125531AB9B24200CB4768 /* c矩形 2@2x.png in Resources */,
@@ -1923,6 +1958,7 @@
 				AD8125331AB9B24200CB4768 /* camera icon @2x.png in Resources */,
 				AD81256F1AB9B24200CB4768 /* a选中态@2x.png in Resources */,
 				AD81257A1AB9B24200CB4768 /* 点@2x.png in Resources */,
+				AD888C591B5BD17F009063DA /* appstore-pic-1@2x.png in Resources */,
 				AD8125311AB9B24200CB4768 /* 09滤镜_icon_滤镜@2x.png in Resources */,
 				AD96AA6A1AC7B14F00E5DEF4 /* 04相册_标签_green@2x.png in Resources */,
 				ADD18C8A1ADBFF8400FA514A /* 04相册_默认赞@2x.png in Resources */,
@@ -1933,6 +1969,7 @@
 				AD8125521AB9B24200CB4768 /* 08相机_icon_搜寻中@2x.png in Resources */,
 				AD8125631AB9B24200CB4768 /* 05相册外_赞点击态@2x.png in Resources */,
 				C0B433491ADF936E00DE2CE9 /* OrderView.xib in Resources */,
+				AD888C5B1B5BD17F009063DA /* appstore-pic-3@2x.png in Resources */,
 				AD8125541AB9B24200CB4768 /* c矩形1@2x.png in Resources */,
 				AD96AA6F1AC7B14F00E5DEF4 /* 05相册外_箭头_green@2x.png in Resources */,
 				C0042FE519FE33690017DA8F /* FilterViewController.xib in Resources */,
@@ -2081,6 +2118,7 @@
 				ADBA3C4A1A0FA0CE0025D2D9 /* UIImageView+Util.m in Sources */,
 				AD62DE3E1AAC023B00485013 /* RecommendAlbumDataHandler.m in Sources */,
 				C0E5DA7E19EBA815002CC027 /* UserCenterViewController.m in Sources */,
+				AD888C531B5BCF67009063DA /* WelcomeViewController.m in Sources */,
 				C0A7470A1ABC2C8D00C3FFFF /* DDFileLogger.m in Sources */,
 				C0A7470F1ABC2C8D00C3FFFF /* DDMultiFormatter.m in Sources */,
 				C0A7470E1ABC2C8D00C3FFFF /* DDDispatchQueueLogFormatter.m in Sources */,

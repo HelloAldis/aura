@@ -17,7 +17,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIg-wH-FOm">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <mutableString key="text">aura用户服务协议
+                    <string key="text">aura用户服务协议
 本aura服务使用协议（以下简称"使用协议"）是由用户 ( 您 ) 与aura就提供服务所订立的相关权利义务规范，本服务条款对您及aura均具有法律效力。
 1.总则
 aura根据以下服务条款为您提供服务。这些条款可由aura随时更新，且毋须另行通知。aura使用协议（以下简称“使用协议”）一旦发生变动，aura将在网页上公布修改内容。修改后的使用协议一旦在网页上公布即有效代替原来的使用协议。
@@ -114,7 +114,7 @@ aura尊重他人的任何权利（包括知识产权），同时也要求我们�
 
 
 
-</mutableString>
+</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>

@@ -19,7 +19,7 @@
   NSString *msg = [ErrorMessageManager handleMessage:[baseResponse resultCode]];
   
   if (msg) {
-//    [SVProgressHUD showErrorWithStatus:msg];
+    [SVProgressHUD showErrorWithStatus:msg];
     [DataManager setResultCode:baseResponse.resultCode];
     failure();
   } else {

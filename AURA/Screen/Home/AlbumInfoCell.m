@@ -181,6 +181,7 @@ typedef enum : NSUInteger {
       self.lblFcount.text = [self.firstPhoto.fcount add:1];
       [self.btnLike setImage:[UIImage imageNamed:@"04相册_按下赞"] forState:UIControlStateNormal];
       self.firstPhoto.haveFavourte = YES;
+      [self.supperController.tableView reloadData];
     } failure:^{}];
   }
 }

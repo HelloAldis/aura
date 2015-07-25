@@ -36,6 +36,14 @@
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(validateInput) name:UITextFieldTextDidChangeNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+  
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:nil object:nil];
 }
 
 - (void)showFrame {
@@ -61,12 +69,12 @@
   return NO;
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-  textField.text = [textField.text stringByReplacingCharactersInRange:range withString:string];
-  
-  [self validateInput];
-  return NO;
-}
+//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+//  textField.text = [textField.text stringByReplacingCharactersInRange:range withString:string];
+//  
+//  [self validateInput];
+//  return NO;
+//}
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
   textField.text = @"";

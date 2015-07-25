@@ -73,4 +73,9 @@
   [ViewControllerContainer showUsing];
 }
 
+- (IBAction)onClickWelcome:(id)sender {
+  [ViewControllerContainer showWelcome];
+  [MainToolbar clearToolbar];
+}
+
 @end

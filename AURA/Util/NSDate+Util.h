@@ -13,6 +13,7 @@
 + (BOOL)is10DayBeforeNow:(NSDate *)date;
 + (BOOL)is1DayBeforeNow:(NSDate *)date;
 + (NSDate *)dateFromString:(NSString *)date;
++ (NSDate *)dateFromYYYYMMDDHHMMSS:(NSString *)date;
 + (NSString *)stringFromDate:(NSDate *)date;
 + (NSString *)get10MinAfterNow;
 + (NSString *)getTimeStringFrom:(NSString *)ctime;

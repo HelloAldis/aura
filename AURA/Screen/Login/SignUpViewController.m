@@ -10,6 +10,7 @@
 #import "APIManager.h"
 #import "NSString+Util.h"
 #import "ViewControllerContainer.h"
+#import "SVProgressHUD.h"
 
 @interface SignUpViewController ()
 
@@ -31,6 +32,14 @@
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(validateInput) name:UITextFieldTextDidChangeNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+  
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:nil object:nil];
 }
 
 - (void)showFrame {
@@ -42,7 +51,11 @@
 }
 
 - (IBAction)onClickSign:(id)sender {
-  [self doSign];
+  if ([self.fldPhone.text isValidateEmail]) {
+    [self doSign];
+  } else {
+    [SVProgressHUD showErrorWithStatus:@"邮箱格式不正确"];
+  }
 }
 
 - (IBAction)onTouchBackground:(id)sender {
@@ -86,12 +99,12 @@
   return NO;
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-  textField.text = [textField.text stringByReplacingCharactersInRange:range withString:string];
-  
-  [self validateInput];
-  return NO;
-}
+//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+//  textField.text = [textField.text stringByReplacingCharactersInRange:range withString:string];
+//  
+//  [self validateInput];
+//  return NO;
+//}
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
   textField.text = @"";
@@ -128,7 +141,7 @@
 }
 
 - (BOOL)validateUser {
-  return ![self.fldPhone.text isEmpty] && [self.fldPhone.text isValidateEmail];
+  return ![self.fldPhone.text isEmpty];
 }
 
 - (BOOL)validatePassword {

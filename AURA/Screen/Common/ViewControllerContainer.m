@@ -30,6 +30,7 @@
 #import "LicenseViewController.h"
 #import "PhotoDetailViewController.h"
 #import "MapViewController.h"
+#import "WelcomeViewController.h"
 
 @interface ViewControllerContainer ()
 
@@ -228,6 +229,11 @@ static ViewControllerContainer *container;
   m.albumInfo = albumInfo;
   UINavigationController *nav = (UINavigationController *)container.window.rootViewController;
   [nav pushViewController:m animated:YES];
+}
+
++ (void)showWelcome {
+  WelcomeViewController *w = [[WelcomeViewController alloc] initWithNibName:nil bundle:nil];
+  container.window.rootViewController = w;
 }
 
 @end

@@ -28,7 +28,7 @@
   self.followUser = followUser;
   
   [self.userImage setUserImageWithSha1:followUser.thumbnail];
-  [self.userImage setCornerRadius:20];
+  [self.userImage setCornerRadius:25];
   self.username.text = [followUser nickname];
   self.relationImage.image = [UIImage imageNamed:@"10通知_icon_已关注"];
   self.username.text = followUser.nickname;
@@ -38,13 +38,14 @@
   self.followUser = followUser;
   
   [self.userImage setUserImageWithSha1:followUser.thumbnail];
-  [self.userImage setCornerRadius:20];
+  [self.userImage setCornerRadius:25];
   self.username.text = followUser.nickname;
   self.relationImage.image = [UIImage imageNamed:@"10通知_icon_加关注"];
   self.username.text = followUser.nickname;
 }
+
 - (IBAction)onClickUser:(id)sender {
-    [ViewControllerContainer showUserCenter:self.followUser.userId];
+  [ViewControllerContainer showUserCenter:self.followUser.userId];
 }
 
 @end

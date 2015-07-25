@@ -35,5 +35,6 @@
 + (void)showUsing;
 + (void)showPhotoDetail:(Photo *)photo;
 + (void)showMapWith:(AlbumInfo *)albumInfo;
++ (void)showWelcome;
 
 @end

@@ -29,14 +29,8 @@
       return @"昵称已存在";
     case CODE_SESSION_EXPIRED:
       return @"session过期";
-    case CODE_ALBUM_NOTEXIST:
-      return @"相册不存在";
-    case CODE_FOLLOWEE_NOTEXIST:
-      return @"无关注";
-    case CODE_FOLLOWER_NOTEXIST:
-      return @"无粉丝";
     default:
-      return @"未知错误";
+      return nil;
       break;
   }
 }

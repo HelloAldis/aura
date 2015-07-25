@@ -13,6 +13,8 @@
 
 + (void)setResultCode:(NSString *)resultCode;
 + (NSString *)resultCode;
++ (BOOL)isShowWelcomeAlready;
++ (void)setShowWelcomeAlready;
 + (void)setToken:(NSString *)token;
 + (NSString *)token;
 + (void)setTokenDate:(NSDate *)date;
