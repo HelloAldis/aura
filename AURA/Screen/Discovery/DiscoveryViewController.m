@@ -196,11 +196,12 @@
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 20, 320, 44)];
     [self.searchBar sizeToFit];
     self.searchBar.barTintColor = [AURA themeColor];
-    self.searchBar.tintColor = [UIColor whiteColor];
+    self.searchBar.tintColor = [UIColor blueColor];
     self.searchBar.delegate = self;
     self.searchBar.showsCancelButton = YES;
     [self.searchBar setBackgroundImage:[[UIImage alloc] init]];
     [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:@"取消"];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTintColor:[UIColor whiteColor]];
   }
   
 //  DDLogDebug(@"%@", NSStringFromCGPoint(self.tableView.contentOffset));
@@ -212,7 +213,7 @@
 
 #pragma mark - handle refresh
 - (void)handleRefresh {
-  if (self.disType == DIS_TYPE_ALL) {
+//  if (self.disType == DIS_TYPE_ALL) {
     [APIManager discoveryAll:^{
       [self.tableView reloadData];
       [self.refreshControl endRefreshing];
@@ -223,28 +224,28 @@
     } failure:^{
       [self.refreshControl endRefreshing];
     }];
-  } else if (self.disType == DIS_TYPE_NEAR) {
-    [APIManager discoveryNearSuccess:^{
-      [self.tableView reloadData];
-      [self.refreshControl endRefreshing];
-      
-      if ([self.tableView numberOfRowsInSection:0] > 0) {
-        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
-      }
-    } failure:^{
-      [self.refreshControl endRefreshing];
-    }];
-  } else if (self.disType == DIS_TYPE_CITY) {
-    [APIManager discoveryCity:^{
-      [self.tableView reloadData];
-      [self.refreshControl endRefreshing];
-      if ([self.tableView numberOfRowsInSection:0] > 0) {
-        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
-      }
-    } failure:^{
-      [self.refreshControl endRefreshing];
-    }];
-  }
+//  } else if (self.disType == DIS_TYPE_NEAR) {
+//    [APIManager discoveryNearSuccess:^{
+//      [self.tableView reloadData];
+//      [self.refreshControl endRefreshing];
+//      
+//      if ([self.tableView numberOfRowsInSection:0] > 0) {
+//        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//      }
+//    } failure:^{
+//      [self.refreshControl endRefreshing];
+//    }];
+//  } else if (self.disType == DIS_TYPE_CITY) {
+//    [APIManager discoveryCity:^{
+//      [self.tableView reloadData];
+//      [self.refreshControl endRefreshing];
+//      if ([self.tableView numberOfRowsInSection:0] > 0) {
+//        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//      }
+//    } failure:^{
+//      [self.refreshControl endRefreshing];
+//    }];
+//  }
 }
 - (IBAction)onScopeValueChange:(id)sender {
   [self.searchBar endEditing:YES];
@@ -310,6 +311,9 @@
     [req setalbumname:text];
     [APIManager searchAlbumByName:req success:^{
       [self.searchResultTableView reloadData];
+      if ([DataManager searchAlbumArray].count == 0) {
+        self.lblNoResult.hidden = NO;
+      }
     } failure:^{
       [self.searchResultTableView reloadData];
       if ([DataManager searchAlbumArray].count == 0) {
@@ -321,6 +325,9 @@
     [req setnickname:text];
     [APIManager searchNickname:req success:^{
       [self.searchResultTableView reloadData];
+      if ([DataManager searchUserArray].count == 0) {
+        self.lblNoResult.hidden = NO;
+      }
     } failure:^{
       [self.searchResultTableView reloadData];
       if ([DataManager searchUserArray].count == 0) {

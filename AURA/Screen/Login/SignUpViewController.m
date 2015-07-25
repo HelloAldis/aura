@@ -51,11 +51,7 @@
 }
 
 - (IBAction)onClickSign:(id)sender {
-  if ([self.fldPhone.text isValidateEmail]) {
-    [self doSign];
-  } else {
-    [SVProgressHUD showErrorWithStatus:@"邮箱格式不正确"];
-  }
+  [self doSign];
 }
 
 - (IBAction)onTouchBackground:(id)sender {
@@ -63,6 +59,11 @@
 }
 
 - (void)doSign {
+  if (![self.fldPhone.text isValidateEmail]) {
+    [SVProgressHUD showErrorWithStatus:@"邮箱格式不正确"];
+    return;
+  }
+  
   RegistRequest *request = [[RegistRequest alloc] init];
   [request setEmail:self.fldPhone.text];
   [request setPassword:self.fldPassword.text];

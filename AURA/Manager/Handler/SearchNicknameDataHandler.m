@@ -16,8 +16,10 @@
   
   SearchNicknameResponse *resp = (SearchNicknameResponse *)baseResponse;
   
-  NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:1];
-  [array addObject:resp.userinfo];
+  NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:0];
+  if (resp.userinfo.userId) {
+    [array addObject:resp.userinfo];
+  }
   [DataManager setSearchUserArray:array];
 }
 
